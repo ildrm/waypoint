@@ -1,0 +1,3 @@
+@if(isset($effort['range_hours']['low'],$effort['range_hours']['base'],$effort['range_hours']['high']))
+<section class="configured-effort-range" aria-labelledby="effort-range-title"><h3 dir="auto" id="effort-range-title">{{ __('Configured effort range') }}</h3><p dir="auto" class="small muted">{{ __('A planning range from the configured expert assumptions.') }}</p><dl class="effort-range-values">@foreach(['low'=>'Low','base'=>'Base','high'=>'High'] as $bound=>$label)<div><dt dir="auto">{{ __($label) }}</dt><dd dir="auto"><bdi dir="auto">{{ \App\Domain\LocaleFormat::number($effort['range_hours'][$bound],$formatLocale ?? 'en') }}</bdi> <span>{{ __('hours') }}</span></dd></div>@endforeach</dl></section>
+@endif

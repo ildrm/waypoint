@@ -1,0 +1,16 @@
+{
+  "owner": "R22",
+  "reviewers": [
+    "R27",
+    "R31"
+  ],
+  "status": "documentation schema validation only;not runtime test",
+  "date": "2026-10-29",
+  "validator": "jsonschema 4.25.1",
+  "meta_schema": "https://spec.openapis.org/oas/3.1/schema-base/2026-08-03",
+  "network_resolution_during_validation": false,
+  "format_checker": true,
+  "errors": [],
+  "passed": true,
+  "limitation": "Official informational JSON Schema cannot establish every OpenAPI normative or semantic requirement."
+}

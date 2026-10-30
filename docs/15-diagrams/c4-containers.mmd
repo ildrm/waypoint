@@ -1,0 +1,12 @@
+flowchart TB
+  Public["Public browser: responsive LTR/RTL"] -->|"HTTPS; scoped session"| App["PHP application: public API + SSR"]
+  Admin["Staff browser: Filament admin"] -->|"MFA; roles; CSRF"| App
+  App -->|"Transactions; immutable versions"| DB[("Relational database")]
+  App -->|"Bounded async operations"| Queue["Queue"]
+  Queue -->|"Idempotent job"| Worker["PHP worker"]
+  Worker -->|"Read snapshots; live auth checks"| DB
+  Worker -->|"Safe templates; no arbitrary network/files"| Renderer["Document renderer"]
+  Renderer -->|"Private report artifacts"| Storage["Object storage"]
+  App -->|"Short authorized download"| Storage
+  App -->|"Redacted metrics/traces"| Obs["Observability"]
+  Worker -->|"Job metrics"| Obs

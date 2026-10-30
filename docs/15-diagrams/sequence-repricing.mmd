@@ -1,0 +1,12 @@
+sequenceDiagram
+ actor U as Owner
+ participant A as Estimate service
+ participant B as Commercial catalog
+ participant D as Result store
+ U->>A: Explicit refresh(baseline,scope revision,key)
+ A->>D: Authorize/read original snapshot
+ A->>B: Resolve approved current book
+ B-->>A: Exact version/rates
+ A->>A: Recalculate active scope,price,schedule/team if affected
+ A->>D: New immutable revision linked to baseline
+ A-->>U: Old/new versions,delta,validity and unresolved

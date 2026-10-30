@@ -1,0 +1,82 @@
+erDiagram
+  FLOW ||--o{ RELEASE : versions
+  RELEASE ||--o{ QUESTION_VERSION : pins
+  RELEASE ||--o{ RULE_VERSION : pins
+  RELEASE ||--o{ TRANSLATION_VERSION : pins
+  PRINCIPAL ||--o{ PROJECT : owns
+  PROJECT ||--o{ RUN : contains
+  RELEASE ||--o{ RUN : pinned_by
+  RUN ||--o{ ANSWER_REVISION : records
+  QUESTION_VERSION ||--o{ ANSWER_REVISION : describes
+  RUN ||--o{ RESULT : produces
+  RESULT ||--o| ESTIMATE : includes
+  PRICE_BOOK ||--o{ ESTIMATE : snapshotted_by
+  ESTIMATE ||--o{ ESTIMATE_LINE : contains
+  RESULT ||--o{ EXPORT : renders
+  FLOW {
+    uuid id PK
+  }
+  RELEASE {
+    uuid id PK
+    uuid flow_id FK
+    string manifest_hash
+  }
+  QUESTION_VERSION {
+    uuid id PK
+    string stable_question_id
+  }
+  RULE_VERSION {
+    uuid id PK
+    string stable_rule_id
+  }
+  TRANSLATION_VERSION {
+    uuid id PK
+    string locale
+    string source_hash
+  }
+  PRINCIPAL {
+    uuid id PK
+  }
+  PROJECT {
+    uuid id PK
+    uuid owner_id FK
+  }
+  RUN {
+    uuid id PK
+    uuid project_id FK
+    uuid release_id FK
+    int revision
+  }
+  ANSWER_REVISION {
+    uuid id PK
+    uuid run_id FK
+    string question_id
+    int revision
+    string state
+  }
+  RESULT {
+    uuid id PK
+    uuid run_id FK
+    int input_revision
+  }
+  ESTIMATE {
+    uuid id PK
+    uuid result_id FK
+    uuid price_book_id FK
+  }
+  PRICE_BOOK {
+    uuid id PK
+    string currency
+    string version
+  }
+  ESTIMATE_LINE {
+    uuid id PK
+    uuid estimate_id FK
+    string charge_key
+    decimal amount
+  }
+  EXPORT {
+    uuid id PK
+    uuid result_id FK
+    string status
+  }

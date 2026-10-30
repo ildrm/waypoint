@@ -1,0 +1,56 @@
+{
+  "owner": "R27",
+  "reviewers": [
+    "R05",
+    "R31"
+  ],
+  "status": "full Draft2020-12 documentation validation;not product runtime test",
+  "date": "2026-10-29",
+  "validator": "jsonschema 4.25.1",
+  "schemas_checked": 123,
+  "fixtures": [
+    {
+      "file": "C01-informational-website.json",
+      "flow": "software",
+      "known_answers_validated": 52
+    },
+    {
+      "file": "C02-commerce-burst.json",
+      "flow": "software",
+      "known_answers_validated": 55
+    },
+    {
+      "file": "C03-web-and-native-apps.json",
+      "flow": "software",
+      "known_answers_validated": 59
+    },
+    {
+      "file": "C04-organization-portal.json",
+      "flow": "software",
+      "known_answers_validated": 52
+    },
+    {
+      "file": "C05-realtime-demand.json",
+      "flow": "software",
+      "known_answers_validated": 52
+    },
+    {
+      "file": "C06-uncertain-conflicting.json",
+      "flow": "software",
+      "known_answers_validated": 59
+    },
+    {
+      "file": "service-match.json",
+      "flow": "match",
+      "known_answers_validated": 7
+    },
+    {
+      "file": "startup-once-only.json",
+      "flow": "startup",
+      "known_answers_validated": 34
+    }
+  ],
+  "format_checker": true,
+  "errors": [],
+  "passed": true
+}

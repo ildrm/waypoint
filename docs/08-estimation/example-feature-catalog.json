@@ -1,0 +1,307 @@
+{
+  "owner": "R29",
+  "reviewers": [
+    "R04",
+    "R05",
+    "R27"
+  ],
+  "status": "hypothetical catalog;not production price book",
+  "source": "six fictitious cases and matching fixtures",
+  "open_decisions": [
+    "actual catalog/rates"
+  ],
+  "catalog_version": "CAT-EXAMPLE-v1",
+  "items": [
+    {
+      "id": "ITEM-CMS-FOUNDATION",
+      "kind": "feature",
+      "unit": "shared foundation",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-CMS-CONTENT",
+      "kind": "feature",
+      "unit": "pages across3 types",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-EDITORIAL-ROLES",
+      "kind": "feature",
+      "unit": "roles",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-LEAD-ROUTE",
+      "kind": "feature",
+      "unit": "route",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-SEO-SEARCH",
+      "kind": "feature",
+      "unit": "configuration",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-COMMERCE-CATALOG",
+      "kind": "feature",
+      "unit": "products;8000variants",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-PAYMENT-PROVIDER",
+      "kind": "feature",
+      "unit": "hosted provider",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-INVENTORY-LOCATIONS",
+      "kind": "feature",
+      "unit": "warehouses",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-ERP-ADAPTER",
+      "kind": "feature",
+      "unit": "adapter",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-REFUND-FULFILLMENT",
+      "kind": "feature",
+      "unit": "policy workflow",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-PROMOTION-RULES",
+      "kind": "feature",
+      "unit": "nonstacking ruleset",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-SHARED-API",
+      "kind": "feature",
+      "unit": "shared identity/backend",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-WEB-PORTAL",
+      "kind": "feature",
+      "unit": "surface",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-ANDROID-APP",
+      "kind": "feature",
+      "unit": "surface",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-IOS-APP",
+      "kind": "feature",
+      "unit": "surface",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-OFFLINE-SYNC",
+      "kind": "feature",
+      "unit": "8h offline workflow",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-DEVICE-CAPTURE",
+      "kind": "feature",
+      "unit": "camera/GPS feature set",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-PUSH",
+      "kind": "feature",
+      "unit": "notification feature",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-ORGANIZATION-ISOLATION",
+      "kind": "feature",
+      "unit": "launch organizations;1000horizon",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-PORTAL-WORKFLOWS",
+      "kind": "feature",
+      "unit": "approval process",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-DASHBOARDS",
+      "kind": "feature",
+      "unit": "dashboards",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-EXPORT-TYPES",
+      "kind": "feature",
+      "unit": "formats/workflows",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-AUDIT",
+      "kind": "feature",
+      "unit": "audit feature",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-REALTIME-CHANNEL",
+      "kind": "feature",
+      "unit": "50000connections,10000inbound messages/s forecast",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-MODERATION",
+      "kind": "feature",
+      "unit": "moderation feature",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-UPLOAD",
+      "kind": "feature",
+      "unit": "image upload feature",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-RELIABILITY",
+      "kind": "feature",
+      "unit": "recovery/backpressure design",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-DISCOVERY",
+      "kind": "feature",
+      "unit": "discovery-only engagement",
+      "pricing": "role-hour WBS allocation only;no additional fixed fee",
+      "rates": null,
+      "source_status": "hypothetical documentation catalog"
+    },
+    {
+      "id": "ITEM-BA",
+      "kind": "labor",
+      "unit": "hours",
+      "role": "BA",
+      "sell_rate_example": "60.00",
+      "currency": "USD",
+      "status": "hypothetical"
+    },
+    {
+      "id": "ITEM-UX",
+      "kind": "labor",
+      "unit": "hours",
+      "role": "UX",
+      "sell_rate_example": "50.00",
+      "currency": "USD",
+      "status": "hypothetical"
+    },
+    {
+      "id": "ITEM-DEV",
+      "kind": "labor",
+      "unit": "hours",
+      "role": "DEV",
+      "sell_rate_example": "60.00",
+      "currency": "USD",
+      "status": "hypothetical"
+    },
+    {
+      "id": "ITEM-QA",
+      "kind": "labor",
+      "unit": "hours",
+      "role": "QA",
+      "sell_rate_example": "45.00",
+      "currency": "USD",
+      "status": "hypothetical"
+    },
+    {
+      "id": "ITEM-OPS",
+      "kind": "labor",
+      "unit": "hours",
+      "role": "OPS",
+      "sell_rate_example": "45.00",
+      "currency": "USD",
+      "status": "hypothetical"
+    },
+    {
+      "id": "ITEM-CMS",
+      "kind": "matching_service",
+      "unit": "approved deliverable set",
+      "price": null,
+      "status": "fictitious,no live offering"
+    },
+    {
+      "id": "ITEM-CUSTOM",
+      "kind": "matching_service",
+      "unit": "approved deliverable set",
+      "price": null,
+      "status": "fictitious,no live offering"
+    },
+    {
+      "id": "ITEM-COMMERCE-CHECKOUT",
+      "kind": "feature",
+      "unit": "checkout workflow",
+      "pricing": "included in role-hour commerce WBS;no extra fixed fee",
+      "rates": null,
+      "source_status": "hypothetical"
+    }
+  ]
+}

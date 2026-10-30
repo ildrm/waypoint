@@ -1,0 +1,20 @@
+@startuml
+start
+:Authorize and freeze reviewed input revision;
+:Resolve active scope and WBS assumptions;
+if (Material conflict unresolved?) then (yes)
+ :Return partial/manual-review report;
+else (no)
+ :Snapshot approved commercial configuration;
+ if (All required rates available?) then (yes)
+  :Calculate exact lines/adjustments;
+ else (no)
+  :Set price incomplete,null amount;
+ endif
+ :Schedule dependencies against role capacity;
+ :Record team and unresolved assumptions;
+ :Persist immutable sourced result;
+endif
+:Render authorized localized report/export;
+stop
+@enduml

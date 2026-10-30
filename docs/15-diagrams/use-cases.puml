@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+actor "Run owner" as Owner
+actor "Author" as Author
+actor "Reviewer / publisher" as Publisher
+actor "Support / privacy operator" as Support
+rectangle "Free assessment platform" {
+ usecase "Start/resume scoped run" as Start
+ usecase "Answer/review/revise" as Answer
+ usecase "Generate/compare/export" as Result
+ usecase "Maintain draft configuration" as Draft
+ usecase "Validate/simulate" as Validate
+ usecase "Publish immutable release" as Publish
+ usecase "Support verified request" as Assist
+}
+Owner --> Start
+Owner --> Answer
+Owner --> Result
+Author --> Draft
+Author --> Validate
+Publisher --> Publish
+Publish ..> Validate : <<include>>
+Support --> Assist
+Owner --> Assist
+@enduml

@@ -1,0 +1,10 @@
+# Backup, recovery and continuity
+
+Owner: R26. Reviewers: R21, R24. Status: proposed documentation, 2026-10-29; no human approval.
+Sources: [authorized brief](../00-governance/sources/documentation-super-mega-prompt.md) and user clarification (14 named languages; free use; no platform payments). Related IDs: NFR-06, WF-SUPPORT. Open decisions: [register](../00-governance/assumptions-and-open-questions.md). Practice: [performance-operations](../00-governance/skills/performance-operations.md).
+
+Proposed regional-loss target RPO≤1 h, RTO≤4 h. Example: outage at 14:00 with last recoverable data13:30 loses up to 30 min (within1 h RPO); service restored17:00 takes3 h (within4 h RTO). These are plans, not guarantees. Replication is not a substitute for immutable/offline backup against deletion/corruption. Backups include data, config manifests, commercial snapshots, object inventory and necessary key-recovery procedures under separate access.
+
+Restore runbook: trigger loss/corruption or scheduled drill; prerequisites verified backup/checksum, key access, isolated recovery target, incident/privacy authority; authorized recovery operator with reviewer. Intended steps: freeze affected writes if necessary, identify recovery point, restore DB/config/object mapping in isolation, apply deletion tombstones, validate ownership/version/result counts and sampled checksums, compare RPO/RTO, approve cutover and monitor. Failure: preserve evidence, try earlier known-good backup, escalate missed objectives and communicate status. Rollback: maintain original environment isolated; cut back only if integrity and no split-brain/new-write loss assured.
+
+Proposed backup frequency at least hourly recoverable point, daily protected snapshot, retention30 days pending policy. Quarterly restore drill and after major data/renderer changes; retain actual timings/results later. Business continuity includes read-only access to authorized structured reports if exports unavailable and manual support process; no unapproved answer edits.

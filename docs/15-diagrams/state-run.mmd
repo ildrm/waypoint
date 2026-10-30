@@ -1,0 +1,14 @@
+stateDiagram-v2
+ [*] --> Active:authorized start
+ Active --> Paused:save and exit
+ Paused --> Active:authorized resume
+ Active --> Reviewable
+ Reviewable --> Active:edit and invalidate
+ Reviewable --> Completed:complete or partial result snapshot
+ Active --> Suspended:live safety block
+ Suspended --> Active:authorized recovery
+ Active --> Expired:expiry policy
+ Paused --> Expired
+ Completed --> Deleted:verified policy request
+ Expired --> Deleted
+ Deleted --> [*]

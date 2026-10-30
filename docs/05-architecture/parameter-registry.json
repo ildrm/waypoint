@@ -1,0 +1,77 @@
+{
+  "owner": "R18",
+  "reviewers": [
+    "R05",
+    "R29"
+  ],
+  "status": "proposed example definitions;commercial values not approved",
+  "source": "typed settings and estimation contract",
+  "open_decisions": [
+    "production defaults/approval limits"
+  ],
+  "parameters": [
+    {
+      "id": "PARAM-ESTIMATE-VALIDITY",
+      "type": "integer",
+      "unit": "days",
+      "example_value": 30,
+      "allowed_override": "1..90",
+      "consumer": "Estimate.validUntil",
+      "owning_document": "08-estimation/calculation-contract.md"
+    },
+    {
+      "id": "PARAM-WEEK-HOURS",
+      "type": "decimal",
+      "unit": "hours/person/week",
+      "example_value": 40,
+      "allowed_override": "1..60 with calendar evidence",
+      "consumer": "Schedule capacity",
+      "owning_document": "08-estimation/team-sizing-model.md"
+    },
+    {
+      "id": "PARAM-REPORT-UNKNOWN",
+      "type": "enum",
+      "unit": "state",
+      "example_value": "partial_or_review",
+      "allowed_override": "no override",
+      "consumer": "Unknown completeness gate",
+      "owning_document": "05-architecture/flow-and-rule-engine.md"
+    },
+    {
+      "id": "PARAM-STARTUP-PRIORITIES",
+      "type": "integer",
+      "unit": "items",
+      "example_value": 3,
+      "allowed_override": "1..5 startup",
+      "consumer": "RULE-ST-BLOCKER and action prioritization",
+      "owning_document": "03-workflows/startup/derivation-and-recommendations.md"
+    },
+    {
+      "id": "PARAM-REUSE-MAX-AGE",
+      "type": "integer",
+      "unit": "days",
+      "example_value": 30,
+      "allowed_override": "0..365",
+      "consumer": "Reuse confirmation",
+      "owning_document": "03-workflows/shared-facts-and-reuse.md"
+    },
+    {
+      "id": "PARAM-CONTINGENCY",
+      "type": "decimal",
+      "unit": "ratio",
+      "example_value": ".10",
+      "allowed_override": "0..1;commercial approval",
+      "consumer": "Price contingency eligible base",
+      "owning_document": "08-estimation/calculation-contract.md"
+    },
+    {
+      "id": "PARAM-DISCOUNT",
+      "type": "decimal",
+      "unit": "ratio",
+      "example_value": ".05",
+      "allowed_override": "0..1;approval cap",
+      "consumer": "Price discount eligible base",
+      "owning_document": "08-estimation/calculation-contract.md"
+    }
+  ]
+}

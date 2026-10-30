@@ -1,0 +1,41 @@
+{
+  "owner": "R31",
+  "reviewers": [
+    "R22",
+    "R27"
+  ],
+  "status": "unaltered official validation reference copies",
+  "access_date": "2026-10-29",
+  "source_index": "https://spec.openapis.org/oas/",
+  "limitations": "Informational schemas;specification prose prevails. No dependency installation or application execution.",
+  "sources": [
+    {
+      "file": "schema-base-2026-08-03.json",
+      "url": "https://spec.openapis.org/oas/3.1/schema-base/2026-08-03",
+      "id": "https://spec.openapis.org/oas/3.1/schema-base/2026-08-03",
+      "sha256": "ffdd07e28417bfa89de635d23a7476f7625497b8edd279f18c1424e613966d9a",
+      "status": "retrieved"
+    },
+    {
+      "file": "schema-2026-08-03.json",
+      "url": "https://spec.openapis.org/oas/3.1/schema/2026-08-03",
+      "id": "https://spec.openapis.org/oas/3.1/schema/2026-08-03",
+      "sha256": "59f106413cb48c31299f96f024c938d3628aed6cd02cd14bcfb2fcaae7a130b6",
+      "status": "retrieved"
+    },
+    {
+      "file": "dialect-2024-11-10.json",
+      "url": "https://spec.openapis.org/oas/3.1/dialect/2024-11-10",
+      "id": "https://spec.openapis.org/oas/3.1/dialect/2024-11-10",
+      "sha256": "647f32dfff64949d5020a28ecd1af4ffeffb1e9c695f861a52255a8004e07460",
+      "status": "retrieved"
+    },
+    {
+      "file": "meta-2024-11-10.json",
+      "url": "https://spec.openapis.org/oas/3.1/meta/2024-11-10",
+      "id": "https://spec.openapis.org/oas/3.1/meta/2024-11-10",
+      "sha256": "80706a9a404affedbf84ac4dc1328c9ce0d2a00804cdfc4d95c0ddd0053121dd",
+      "status": "retrieved"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Environments and deployment design
+
+Owner: R26. Reviewers: R17, R23. Status: proposed documentation, 2026-10-29; no human approval.
+Sources: [authorized brief](../00-governance/sources/documentation-super-mega-prompt.md) and user clarification (14 named languages; free use; no platform payments). Related IDs: NFR-05,06,08. Open decisions: [register](../00-governance/assumptions-and-open-questions.md). Practice: [performance-operations](../00-governance/skills/performance-operations.md).
+
+Proposed environments: local development with synthetic fixtures, isolated staging with sanitized data and production in owner-approved geography. Production PHP application/admin and workers share versioned modules; relational database, private object storage, queue and cache are separate managed boundaries where justified. Secrets supplied by controlled secret store, never docs/config imports. Public assessment and staff admin may have separate origins/session scopes. No Kubernetes/microservices requirement without evidence.
+
+Deployment runbook (document only): trigger approved application/config release; prerequisites tested artifact, compatible schema plan, backup/checkpoint, rollback owner and translation/catalog gates; authorized role release operator. Intended steps: verify artifact/version/secret refs, apply compatible release procedure, shift limited traffic, observe core saves/reports and compare pinned-version behavior, then expand. Verify SLO/errors/ownership and canary fixtures. Failure: halt rollout, route to last compatible artifact and suspend new config publication. Rollback must respect schema compatibility and never restore over new user answers without recovery decision. No deployment or command was executed.

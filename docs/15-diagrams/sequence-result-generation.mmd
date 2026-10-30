@@ -1,0 +1,17 @@
+sequenceDiagram
+ actor U as Owner
+ participant A as API
+ participant D as Store
+ participant Q as Queue/worker
+ participant P as Live policy
+ U->>A: Generate(input revision,idempotency key)
+ A->>P: Authorize
+ A->>D: Deduplicate key/payload;create operation + snapshots
+ A->>Q: Enqueue bounded job
+ A-->>U: 202 operation
+ Q->>P: Recheck live authorization
+ Q->>D: Read pinned inputs/book;persist immutable result
+ Q-->>U: Status available through authorized polling
+ U->>A: Export/download
+ A->>P: Live check
+ A-->>U: Authorized structured/export result

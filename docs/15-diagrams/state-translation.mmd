@@ -1,0 +1,9 @@
+stateDiagram-v2
+ [*] --> Draft
+ Draft --> InReview
+ InReview --> Approved: qualified review of exact source hash
+ InReview --> Draft: corrections
+ Approved --> Published: manifest coverage gate
+ Published --> Stale: source hash changes
+ Approved --> Stale: source hash changes
+ Stale --> Draft: translate updated source

@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "owner": "R10",
+    "reviewers": [
+      "R09",
+      "R13"
+    ],
+    "status": "proposed",
+    "source": "authorized brief;design-system1.0.0",
+    "open_decisions": [
+      "licensed fonts",
+      "source and region/script variants"
+    ],
+    "format": "documentation token specification,not claimed DTCG conformance"
+  },
+  "primitive": {
+    "color": {
+      "paper": "#F5F7F6",
+      "surface": "#FFFFFF",
+      "ink": "#172B2A",
+      "muted": "#526260",
+      "teal": "#006B5E",
+      "selected": "#E5F2EE",
+      "boundary": "#748582",
+      "line": "#D6DEDB",
+      "danger": "#A12835",
+      "warning": "#775100"
+    },
+    "space": {
+      "s1": 4,
+      "s2": 8,
+      "s3": 12,
+      "s4": 16,
+      "s6": 24,
+      "s8": 32,
+      "s12": 48,
+      "s16": 64
+    },
+    "type": {
+      "meta": 14,
+      "body": 16,
+      "card": 20,
+      "section": 28,
+      "hero": 40,
+      "arabicBody": 18
+    },
+    "radius": {
+      "card": 12,
+      "control": 8
+    },
+    "duration": {
+      "feedback": 120,
+      "reveal": 160,
+      "transition": 200
+    }
+  },
+  "semantic": {
+    "canvas": "{primitive.color.paper}",
+    "surface": "{primitive.color.surface}",
+    "text": "{primitive.color.ink}",
+    "supporting": "{primitive.color.muted}",
+    "action": "{primitive.color.teal}",
+    "actionText": "{primitive.color.surface}",
+    "focus": "{primitive.color.ink}",
+    "inputBoundary": "{primitive.color.boundary}",
+    "decorativeLine": "{primitive.color.line}",
+    "error": "{primitive.color.danger}",
+    "caution": "{primitive.color.warning}",
+    "selected": "{primitive.color.selected}"
+  },
+  "component": {
+    "question": {
+      "maxWidth": 680,
+      "padding": "{primitive.space.s6}",
+      "background": "{semantic.surface}"
+    },
+    "button": {
+      "minHeight": 48,
+      "minWidth": 48,
+      "background": "{semantic.action}",
+      "foreground": "{semantic.actionText}",
+      "radius": "{primitive.radius.control}"
+    },
+    "choice": {
+      "minHeight": 56,
+      "border": "{semantic.inputBoundary}",
+      "selected": "{semantic.selected}"
+    },
+    "focus": {
+      "width": 3,
+      "offset": 2,
+      "color": "{semantic.focus}"
+    },
+    "adminRow": {
+      "minHeight": 48
+    },
+    "body": {
+      "lineHeight": 1.5,
+      "arabicLineHeight": 1.7
+    }
+  },
+  "modes": {
+    "light": "release-one baseline;forced-colors support required",
+    "dark": {
+      "status": "deferred;needs complete pair verification before use",
+      "canvas": "#172B2A",
+      "surface": "#203C39",
+      "text": "#FFFFFF",
+      "action": "#81D8C6"
+    }
+  }
+}

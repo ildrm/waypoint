@@ -1,0 +1,7 @@
+<div class="action-plan">
+@foreach($actionPlan ?? [] as $plan)
+    <article class="action-plan-item"><div class="action-plan-heading"><span dir="auto" class="priority-index" aria-hidden="true">{{ str_pad((string)$loop->iteration,2,'0',STR_PAD_LEFT) }}</span><h4 dir="auto">{{ $plan['action'] ?? __('Agree the next action') }}</h4></div><dl class="action-plan-meta"><div><dt dir="auto">{{ __('Owner role') }}</dt><dd dir="auto">{{ $plan['owner_role'] ?? __('To be agreed') }}</dd></div><div><dt dir="auto">{{ __('Target') }}</dt><dd dir="auto">@include('components.value',['value'=>$plan['target'] ?? __('To be agreed')])</dd></div><div><dt dir="auto">{{ __('Review date') }}</dt><dd dir="auto"><bdi dir="auto">{{ $plan['review_date'] ?? __('To be agreed') }}</bdi></dd></div></dl>
+        <details class="help-disclosure"><summary dir="auto">{{ __('Hypothesis, measure & decision rule') }}</summary><dl class="value-map">@foreach(['hypothesis'=>'Hypothesis','measure'=>'Observable measure','decision_rule'=>'Decision rule','review_trigger'=>'Review trigger'] as $key=>$label)<div><dt dir="auto">{{ __($label) }}</dt><dd dir="auto">@include('components.value',['value'=>$plan[$key] ?? __('To be agreed')])</dd></div>@endforeach<div><dt dir="auto">{{ __('Source evidence') }}</dt><dd dir="auto">@include('components.value',['value'=>$plan['sources'] ?? []])</dd></div></dl></details>
+    </article>
+@endforeach
+</div>

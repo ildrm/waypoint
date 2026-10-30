@@ -1,0 +1,10 @@
+# Dependency and resource schedule
+
+Owner: R28. Reviewers: R26, R27. Status: proposed documentation, 2026-10-29; no human approval.
+Sources: [authorized brief](../00-governance/sources/documentation-super-mega-prompt.md) and user clarification (14 named languages; free use; no platform payments). Related IDs: OUT-SCHEDULE, AC-05. Open decisions: [register](../00-governance/assumptions-and-open-questions.md). Practice: [estimation-commercial](../00-governance/skills/estimation-commercial.md).
+
+A work package has predecessor IDs, role effort, minimum skills, available hours/week, calendar, review wait and external lead time. Earliest start=max(predecessor completion, resource availability, external readiness); reserve named capacity before scheduling. Split work only where dependency/ownership permits; track coordination/handoff cost. Critical path includes gates and resource contention.
+
+C01 balanced example,40 h/week available per person, no holidays: BA40 in W1 -> UX40 in W2 -> DEV160 in W3–6 -> QA64 at 32 h/week in W7–8; OPS16 in W8 after passed critical QA by midweek. QA has16 h of defect/retest work after OPS release readiness as explicit shared gate. Critical path8 weeks under exact stated ordering. QA32+OPS16 are different people. W8 QA performs24 h Monday–Wednesday and 8 h Friday smoke tests; OPS performs8 h Thursday readiness and 8 h Friday release, with Friday smoke after deploy. Dependency finish times and OPS gate must fit daily availability; see worked case daily sequence. Planning range8–11 weeks allows content/review/defect delays; not a statistical interval.
+
+Earliest feasible alternative with second qualified developer splits160 h into two independent80 h tracks after common design: W3–4 implementation, QA W5–6, OPS W6 ->6 weeks, plus explicit coordination effort/rates if priced. Merely adding staff during sequential discovery/design cannot shorten them. Lean scope changes work quantities, not only headcount. Holidays, time zones, part-time availability, store reviews and customer approval waits extend dates. No committed launch date exists.

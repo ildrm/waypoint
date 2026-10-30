@@ -1,0 +1,6 @@
+flowchart LR
+  User["Founder / software sponsor / service seeker"] -->|"HTTPS: answer,review,compare"| Platform["Assessment platform: PHP; free access"]
+  Staff["Content,language,commercial and support staff"] -->|"MFA + authorized draft/review"| Platform
+  Platform -->|"Authorized report/export"| User
+  Platform -->|"Transactional notifications; no raw answers"| Mail["Email service"]
+  Platform -.->|"Optional narrative AI; deferred"| AI["Approved provider,if later authorized"]

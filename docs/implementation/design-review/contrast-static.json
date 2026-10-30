@@ -1,0 +1,35 @@
+{
+  "method": "WCAG sRGB relative luminance; CSS token pairs only, not a complete rendered contrast audit",
+  "pairs": [
+    {
+      "name": "Body ink/paper",
+      "fg": "172b2a",
+      "bg": "f5f7f6",
+      "ratio": 13.79
+    },
+    {
+      "name": "Muted/paper",
+      "fg": "526260",
+      "bg": "f5f7f6",
+      "ratio": 5.96
+    },
+    {
+      "name": "Teal/white",
+      "fg": "006b5e",
+      "bg": "ffffff",
+      "ratio": 6.43
+    },
+    {
+      "name": "Boundary/white",
+      "fg": "748582",
+      "bg": "ffffff",
+      "ratio": 3.87
+    },
+    {
+      "name": "Warning text/tint",
+      "fg": "775100",
+      "bg": "fff6df",
+      "ratio": 6.58
+    }
+  ]
+}

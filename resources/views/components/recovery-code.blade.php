@@ -1,0 +1,3 @@
+@if(session('resume_token'))
+    <section class="notice recovery-notice" aria-labelledby="{{ $recoveryHeadingId ?? 'recovery-title' }}"><h2 dir="auto" id="{{ $recoveryHeadingId ?? 'recovery-title' }}">{{ __('Keep your private recovery code') }}</h2><p dir="auto">{{ __('This code can restore access to this assessment. Store it privately and do not include it in support messages.') }}</p><code class="recovery-code" id="recovery-code" dir="ltr">{{ session('resume_token') }}</code><button dir="auto" class="button button-quiet" type="button" data-copy-target="recovery-code">{{ __('Copy recovery code') }}</button><span dir="auto" class="sr-only" data-copy-status role="status"></span></section>
+@endif

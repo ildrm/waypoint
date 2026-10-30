@@ -1,0 +1,887 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "WF-MATCH",
+  "owner": "R04",
+  "reviewers": [
+    "R01",
+    "R06",
+    "R27"
+  ],
+  "status": "proposed; educational specialization conditional on owner domain decision",
+  "question_count": 8,
+  "questions": [
+    {
+      "id": "Q-MA-GOAL",
+      "baseline_id": null,
+      "semantic_key": "goal",
+      "stage": "Match",
+      "purpose": "Route to a catalog domain and activate proficiency questions only for an actual approved educational program.",
+      "wording": "What outcome are you seeking help with?",
+      "help": "Select the primary outcome; related goals can be assessed in separate flows.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-MA-GOAL-software",
+          "value": "software",
+          "label": "Discover/build software",
+          "translation_key": "q.ma.goal.option.software"
+        },
+        {
+          "id": "OPT-MA-GOAL-startup",
+          "value": "startup",
+          "label": "Clarify startup priorities",
+          "translation_key": "q.ma.goal.option.startup"
+        },
+        {
+          "id": "OPT-MA-GOAL-service",
+          "value": "service",
+          "label": "Select a professional service",
+          "translation_key": "q.ma.goal.option.service"
+        },
+        {
+          "id": "OPT-MA-GOAL-education",
+          "value": "education",
+          "label": "Find a learning/program pathway",
+          "translation_key": "q.ma.goal.option.education"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "software",
+          "startup",
+          "service",
+          "education"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.goal",
+          "source": "Q-MA-GOAL"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-GOAL"
+      ],
+      "effects": {
+        "scope": "Route to a catalog domain and activate proficiency questions only for an actual approved educational program.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.goal.wording",
+        "help": "q.ma.goal.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-NEED",
+      "baseline_id": null,
+      "semantic_key": "need",
+      "stage": "Match",
+      "purpose": "Match required deliverables to catalog coverage; software matching reuses confirmed scope facts.",
+      "wording": "What specific result and deliverables do you need?",
+      "help": "Describe the result, not a package name.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "outcome": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "User outcome and acceptance evidence",
+            "maxLength": 2000
+          },
+          "deliverables": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "description": "Required deliverables"
+          },
+          "exclusions": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "description": "Explicit exclusions"
+          },
+          "software_run": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Linked software discovery run/revision or none",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "outcome",
+          "deliverables",
+          "exclusions",
+          "software_run"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.need",
+          "source": "Q-MA-NEED"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-NEED"
+      ],
+      "effects": {
+        "scope": "Match required deliverables to catalog coverage; software matching reuses confirmed scope facts.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.need.wording",
+        "help": "q.ma.need.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-PREREQUISITES",
+      "baseline_id": null,
+      "semantic_key": "prerequisites",
+      "stage": "Match",
+      "purpose": "Ineligible items cannot win based on a high aggregate match score.",
+      "wording": "Which prerequisites can you demonstrate?",
+      "help": "Do not include sensitive evidence; reviewers can request appropriate records later.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "requirements": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "description": "Catalog prerequisite ID, status, evidence reference"
+          },
+          "unmet": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "description": "Known unmet prerequisites"
+          },
+          "unknown": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "description": "Prerequisites needing review"
+          }
+        },
+        "required": [
+          "requirements",
+          "unmet",
+          "unknown"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.prerequisites",
+          "source": "Q-MA-PREREQUISITES"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-PREREQUISITES"
+      ],
+      "effects": {
+        "scope": "Ineligible items cannot win based on a high aggregate match score.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.prerequisites.wording",
+        "help": "q.ma.prerequisites.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-CONSTRAINTS",
+      "baseline_id": null,
+      "semantic_key": "constraints",
+      "stage": "Match",
+      "purpose": "Filter eligibility before soft preference ranking.",
+      "wording": "What delivery constraints must a suitable option respect?",
+      "help": "Hard constraints exclude incompatible options; preferences are ranked separately.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "budget_currency": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "ISO currency and exact decimal cap or unknown",
+            "maxLength": 2000
+          },
+          "time_window": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Dates and hours available",
+            "maxLength": 2000
+          },
+          "language": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Required service language",
+            "maxLength": 2000
+          },
+          "format": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Remote, in person, asynchronous or mixed",
+            "maxLength": 2000
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Actual service geography, distinct from language",
+            "maxLength": 2000
+          },
+          "accessibility": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Accommodation requirements",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "budget_currency",
+          "time_window",
+          "language",
+          "format",
+          "location",
+          "accessibility"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.constraints",
+          "source": "Q-MA-CONSTRAINTS"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-CONSTRAINTS"
+      ],
+      "effects": {
+        "scope": "Filter eligibility before soft preference ranking.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.constraints.wording",
+        "help": "q.ma.constraints.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-PRIORITY",
+      "baseline_id": null,
+      "semantic_key": "priority",
+      "stage": "Match",
+      "purpose": "Rank eligible matches transparently; commercial margin is not a ranking criterion.",
+      "wording": "Which preference should break ties among eligible options?",
+      "help": "The ranking cannot override an unmet mandatory prerequisite.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-MA-PRIORITY-earliest",
+          "value": "earliest",
+          "label": "Earliest usable outcome",
+          "translation_key": "q.ma.priority.option.earliest"
+        },
+        {
+          "id": "OPT-MA-PRIORITY-initial_cost",
+          "value": "initial_cost",
+          "label": "Lowest initial price",
+          "translation_key": "q.ma.priority.option.initial_cost"
+        },
+        {
+          "id": "OPT-MA-PRIORITY-ongoing_cost",
+          "value": "ongoing_cost",
+          "label": "Lowest ongoing cost",
+          "translation_key": "q.ma.priority.option.ongoing_cost"
+        },
+        {
+          "id": "OPT-MA-PRIORITY-support",
+          "value": "support",
+          "label": "Most hands-on support",
+          "translation_key": "q.ma.priority.option.support"
+        },
+        {
+          "id": "OPT-MA-PRIORITY-balanced",
+          "value": "balanced",
+          "label": "Balanced tradeoff",
+          "translation_key": "q.ma.priority.option.balanced"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "earliest",
+          "initial_cost",
+          "ongoing_cost",
+          "support",
+          "balanced"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.priority",
+          "source": "Q-MA-PRIORITY"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-PRIORITY"
+      ],
+      "effects": {
+        "scope": "Rank eligible matches transparently; commercial margin is not a ranking criterion.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.priority.wording",
+        "help": "q.ma.priority.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-PROFICIENCY",
+      "baseline_id": null,
+      "semantic_key": "proficiency",
+      "stage": "Match",
+      "purpose": "Conditional educational specialization; do not equate proficiency with package or project complexity.",
+      "wording": "For an approved educational program, what can you currently demonstrate?",
+      "help": "Shown only when goal=education and an actual catalog domain is approved. Self-rating is not certification.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "domain": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Approved skill domain",
+            "maxLength": 2000
+          },
+          "evidence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Observable tasks/assessment evidence",
+            "maxLength": 2000
+          },
+          "current_level": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Approved proficiency framework level or unknown",
+            "maxLength": 2000
+          },
+          "target_level": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Desired proficiency level, separately recorded",
+            "maxLength": 2000
+          },
+          "review": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Qualified assessor review needed",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "domain",
+          "evidence",
+          "current_level",
+          "target_level",
+          "review"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "all": [
+          {
+            "eq": {
+              "question_id": "Q-MA-GOAL",
+              "value": "education"
+            }
+          },
+          {
+            "context_eq": {
+              "key": "approved_education_catalog",
+              "value": true
+            }
+          }
+        ]
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-MA-GOAL"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.proficiency",
+          "source": "Q-MA-PROFICIENCY"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-PROFICIENCY"
+      ],
+      "effects": {
+        "scope": "Conditional educational specialization; do not equate proficiency with package or project complexity.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.proficiency.wording",
+        "help": "q.ma.proficiency.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-CAPACITY",
+      "baseline_id": null,
+      "semantic_key": "capacity",
+      "stage": "Match",
+      "purpose": "Check practical delivery fit and prerequisites.",
+      "wording": "What effort and participation can you commit?",
+      "help": "Do not assume selecting a premium tier creates delivery capacity.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "hours_week": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1000000000000,
+            "description": "Available hours/week"
+          },
+          "start_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Earliest participation date",
+            "maxLength": 2000
+          },
+          "support": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Internal skills and assistance available",
+            "maxLength": 2000
+          },
+          "decision_owner": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Role able to approve next action",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "hours_week",
+          "start_date",
+          "support",
+          "decision_owner"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.capacity",
+          "source": "Q-MA-CAPACITY"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-CAPACITY"
+      ],
+      "effects": {
+        "scope": "Check practical delivery fit and prerequisites.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.capacity.wording",
+        "help": "q.ma.capacity.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-MA-REVIEW",
+      "baseline_id": null,
+      "semantic_key": "review",
+      "stage": "Match",
+      "purpose": "Produce an explainable match, no-match or manual-review result.",
+      "wording": "Which eligible option, if any, would you like to discuss next?",
+      "help": "A selection requests a next step; it does not buy, authorize payment or guarantee eligibility.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-MA-REVIEW-candidate",
+          "value": "candidate",
+          "label": "Discuss a displayed eligible candidate",
+          "translation_key": "q.ma.review.option.candidate"
+        },
+        {
+          "id": "OPT-MA-REVIEW-clarify",
+          "value": "clarify",
+          "label": "Clarify missing information",
+          "translation_key": "q.ma.review.option.clarify"
+        },
+        {
+          "id": "OPT-MA-REVIEW-none",
+          "value": "none",
+          "label": "None fits",
+          "translation_key": "q.ma.review.option.none"
+        },
+        {
+          "id": "OPT-MA-REVIEW-compare",
+          "value": "compare",
+          "label": "Compare alternatives",
+          "translation_key": "q.ma.review.option.compare"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "candidate",
+          "clarify",
+          "none",
+          "compare"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Record-scoped need and delivery window; hours/week for capacity; currency only for evaluated service/project costs.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-MA-CONFLICT",
+          "resolution": "Show exact conflicting needs/prerequisites/constraints; clarify or keep manual-review state."
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "match.review",
+          "source": "Q-MA-REVIEW"
+        }
+      ],
+      "consumers": [
+        "RULE-MA-REVIEW"
+      ],
+      "effects": {
+        "scope": "Produce an explainable match, no-match or manual-review result.",
+        "architecture": "Only software/service fit constraints affect architecture; proficiency does not select a stack.",
+        "effort": "Configured included deliverables and quantities define work.",
+        "pricing": "Eligible catalog items only; no-match returns manual review without fabricated price.",
+        "duration": "Catalog prerequisites and available delivery capacity.",
+        "team": "Catalog role capabilities, not commercial tier labels."
+      },
+      "translation_keys": {
+        "wording": "q.ma.review.wording",
+        "help": "q.ma.review.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-12",
+        "AC-09"
+      ]
+    }
+  ],
+  "sources": [
+    "authorized brief",
+    "startup baseline when applicable",
+    "owner clarification:14 named languages,free platform"
+  ],
+  "open_decisions": [
+    "source locale and region/script variants",
+    "production estimate currencies/catalog",
+    "operating model"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "owner": "R04",
+  "reviewers": [
+    "R05",
+    "R27"
+  ],
+  "status": "synthetic fixture",
+  "source": "matching spec",
+  "open_decisions": [
+    "actual catalog"
+  ],
+  "workflow_id": "WF-MATCH",
+  "answers": {
+    "Q-MA-GOAL": {
+      "state": "known",
+      "value": "software"
+    },
+    "Q-MA-NEED": {
+      "state": "known",
+      "value": {
+        "outcome": "Define content website before build",
+        "deliverables": [
+          "requirements brief"
+        ],
+        "exclusions": [
+          "implementation"
+        ],
+        "software_run": "C01 input revision1,confirmed same project"
+      }
+    },
+    "Q-MA-PREREQUISITES": {
+      "state": "known",
+      "value": {
+        "requirements": [
+          "sponsor named",
+          "2h/week available"
+        ],
+        "unmet": [],
+        "unknown": []
+      }
+    },
+    "Q-MA-CONSTRAINTS": {
+      "state": "known",
+      "value": {
+        "budget_currency": "external service cost unknown;assessment free",
+        "time_window": "start within2weeks",
+        "language": "en",
+        "format": "remote",
+        "location": "example region,no restriction",
+        "accessibility": "accessible documents and video alternatives"
+      }
+    },
+    "Q-MA-PRIORITY": {
+      "state": "known",
+      "value": "balanced"
+    },
+    "Q-MA-PROFICIENCY": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-MA-CAPACITY": {
+      "state": "known",
+      "value": {
+        "hours_week": 3,
+        "start_date": "2026-11-05",
+        "support": "content owner available",
+        "decision_owner": "sponsor"
+      }
+    },
+    "Q-MA-REVIEW": {
+      "state": "known",
+      "value": "candidate"
+    }
+  },
+  "output": {
+    "status": "matched",
+    "catalog_version": "CAT-EXAMPLE-v1",
+    "eligible": [
+      {
+        "item_id": "ITEM-DISCOVERY",
+        "reason": "requirements brief,remote,en,3>=2h/week",
+        "sources": [
+          "Q-MA-NEED",
+          "Q-MA-CONSTRAINTS",
+          "Q-MA-CAPACITY"
+        ]
+      }
+    ],
+    "excluded": [
+      {
+        "item_id": "ITEM-CMS",
+        "reason": "content readiness unconfirmed"
+      },
+      {
+        "item_id": "ITEM-CUSTOM",
+        "reason": "implementation outside requested deliverables"
+      }
+    ],
+    "proficiency": "inactive,no educational domain",
+    "price": null,
+    "platform_charge": "0.00"
+  }
+}

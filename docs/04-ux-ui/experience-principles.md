@@ -1,0 +1,15 @@
+# Experience principles
+
+Owner: R08. Reviewers: R06, R13, R14. Status: proposed specification, 2026-10-29; no usability approval. Sources: supplied documentation prompt §§8,13, startup baseline, loaded design-system/accessibility skills and [experience profile](../00-governance/skills/experience-research.md). Related: WF-STARTUP, WF-SOFTWARE, WF-MATCH, WF-RESULT, AC-02, AC-09, AC-11. Open decisions: brand, source/region/script choices, research recruitment.
+
+1. **Answer only what changes the result.** Present one decision per screen, with bounded checkboxes for compatible needs. Each question has a purpose/help link. The question bank owns applicability and answer values; visual position never determines business meaning.
+2. **Make uncertainty usable.** Unknown is an explicit answer where permitted. It produces clarification, a disclosed assumption or specialist review. It never becomes zero, no, or the cheapest configuration. Say what evidence would improve the result.
+3. **Maintain control during adaptation.** Selection does not advance. Next commits validated answers; Back preserves inputs. When an edit invalidates dependent answers, show the affected sections before confirmation. Cancel leaves answers unchanged; confirmation returns focus to the edited question.
+4. **Show useful progress.** Display stage and completed applicable stages, plus “More questions may appear as we learn about your project.” Do not show a fixed completion percentage when future branches are unknown. Completion requires current applicable fields answered or explicitly unknown.
+5. **Explain the consequence.** Architecture, price, schedule and team entries expose source answers, assumptions and version. Critical blockers precede summaries. Startup reports give priorities and experiments, not probability of success.
+6. **Save without doubt.** Show “Saving…,” “Saved at 14:32,” or “Not saved — retry.” Saved requires server acknowledgement. Announce failures once. Leaving with unacknowledged changes requires a recovery choice.
+7. **Keep commercial meaning precise.** Say “Preliminary estimate,” separate tax and recurring costs, show currency and validity, and compare revisions. A generated estimate never authorizes payment.
+8. **Use a quiet hierarchy.** Warm canvas, ink text and deep teal actions; one primary action per decision area. Numbered evidence and plain labels carry meaning. Motion guides attention without delaying input.
+9. **Design for varied language and ability.** Logical start/end layout, expanding text, visible focus, native controls and persistent labels belong to every screen. Fourteen production languages are required; the unresolved roster blocks production language approval.
+
+Reject any design that permits an untraceable charge, silently lost answer, color-only status, inaccessible branch, forced invented number or unsupported success score. Evaluate task completion and understanding through the [research protocol](usability-research-and-validation.md), not preference for screenshots.

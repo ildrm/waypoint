@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="D:\prj\flows\phpunit.xml" tests="50" assertions="610" errors="0" failures="0" skipped="0" time="61.314238">
+    <testsuite name="Application" tests="50" assertions="610" errors="0" failures="0" skipped="0" time="61.314238">
+      <testsuite name="Tests\ApiWireTest" file="D:\prj\flows\tests\ApiWireTest.php" tests="8" assertions="72" errors="0" failures="0" skipped="0" time="2.057106">
+        <testcase name="test_canonical_batch_answer_contract_is_atomic_and_idempotent" file="D:\prj\flows\tests\ApiWireTest.php" line="38" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="26" time="0.979690"/>
+        <testcase name="test_canonical_report_and_export_operations_authorize_every_poll_and_download" file="D:\prj\flows\tests\ApiWireTest.php" line="63" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="16" time="0.257244"/>
+        <testcase name="test_explicit_reprice_creates_a_version_and_matching_project_context" file="D:\prj\flows\tests\ApiWireTest.php" line="87" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="5" time="0.201095"/>
+        <testcase name="test_confirmed_reuse_checks_source_owner_revision_and_typed_value" file="D:\prj\flows\tests\ApiWireTest.php" line="98" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="2" time="0.121452"/>
+        <testcase name="test_unchanged_answer_does_not_deactivate_confirmed_dependents" file="D:\prj\flows\tests\ApiWireTest.php" line="109" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="1" time="0.082695"/>
+        <testcase name="test_published_flow_remains_available_while_its_next_draft_is_edited" file="D:\prj\flows\tests\ApiWireTest.php" line="117" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="6" time="0.103394"/>
+        <testcase name="test_duplicate_public_start_scenario_and_reprice_do_not_create_extra_versions" file="D:\prj\flows\tests\ApiWireTest.php" line="129" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="11" time="0.196783"/>
+        <testcase name="test_html_worker_uses_pinned_ui_and_locale_instead_of_current_dictionary" file="D:\prj\flows\tests\ApiWireTest.php" line="148" class="Tests\ApiWireTest" classname="Tests.ApiWireTest" assertions="5" time="0.114755"/>
+      </testsuite>
+      <testsuite name="Tests\CalculationTest" file="D:\prj\flows\tests\CalculationTest.php" tests="8" assertions="31" errors="0" failures="0" skipped="0" time="0.006587">
+        <testcase name="test_documented_c01_exact_reconciliation" file="D:\prj\flows\tests\CalculationTest.php" line="13" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="5" time="0.000324"/>
+        <testcase name="test_line_rounding_differs_from_aggregation_and_handles_currency_exponents" file="D:\prj\flows\tests\CalculationTest.php" line="28" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="5" time="0.000700"/>
+        <testcase name="test_zero_rate_is_valid_and_missing_rate_is_incomplete" file="D:\prj\flows\tests\CalculationTest.php" line="41" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="2" time="0.000745"/>
+        <testcase name="test_dependency_scheduler_respects_combined_person_capacity_and_holidays" file="D:\prj\flows\tests\CalculationTest.php" line="49" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="7" time="0.003467"/>
+        <testcase name="test_capacity_missing_role_is_unknown_not_shorter_duration" file="D:\prj\flows\tests\CalculationTest.php" line="64" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="2" time="0.000229"/>
+        <testcase name="test_three_valued_predicates_and_canonical_values" file="D:\prj\flows\tests\CalculationTest.php" line="71" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="4" time="0.000227"/>
+        <testcase name="test_locale_format_preserves_large_exact_decimal" file="D:\prj\flows\tests\CalculationTest.php" line="81" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="2" time="0.000592"/>
+        <testcase name="test_adjustments_only_use_eligible_lines" file="D:\prj\flows\tests\CalculationTest.php" line="87" class="Tests\CalculationTest" classname="Tests.CalculationTest" assertions="4" time="0.000302"/>
+      </testsuite>
+      <testsuite name="Tests\ConcurrencyTest" file="D:\prj\flows\tests\ConcurrencyTest.php" tests="1" assertions="7" errors="0" failures="0" skipped="0" time="1.497988">
+        <testcase name="test_two_real_sqlite_processes_serialize_business_writes_before_reading" file="D:\prj\flows\tests\ConcurrencyTest.php" line="10" class="Tests\ConcurrencyTest" classname="Tests.ConcurrencyTest" assertions="7" time="1.497988"/>
+      </testsuite>
+      <testsuite name="Tests\EstimateAssuranceTest" file="D:\prj\flows\tests\EstimateAssuranceTest.php" tests="7" assertions="45" errors="0" failures="0" skipped="0" time="0.785227">
+        <testcase name="test_answer_driven_effort_inclusions_minimums_recurring_and_private_cost_reconcile" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="31" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="11" time="0.098283"/>
+        <testcase name="test_unresolved_quantities_and_required_inactive_predecessors_never_receive_total_or_calendar" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="51" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="6" time="0.086928"/>
+        <testcase name="test_nondiscountable_contingency_is_excluded_from_discount_base" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="64" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="2" time="0.080595"/>
+        <testcase name="test_hard_budget_and_mandatory_date_conflicts_are_manual_review_with_arithmetic_preserved" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="71" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="6" time="0.143300"/>
+        <testcase name="test_unrated_eligible_alternative_does_not_sort_as_zero" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="89" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="3" time="0.117360"/>
+        <testcase name="test_startup_clarification_displays_exact_source_questions_and_selected_labels" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="102" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="7" time="0.109996"/>
+        <testcase name="test_recovery_rebinds_anonymous_ownership_and_revocation_still_applies" file="D:\prj\flows\tests\EstimateAssuranceTest.php" line="114" class="Tests\EstimateAssuranceTest" classname="Tests.EstimateAssuranceTest" assertions="10" time="0.148766"/>
+      </testsuite>
+      <testsuite name="Tests\WorkflowTest" file="D:\prj\flows\tests\WorkflowTest.php" tests="26" assertions="455" errors="0" failures="0" skipped="0" time="56.967330">
+        <testcase name="test_all123_documented_questions_validate_and_once_only_purchase_hides_retention" file="D:\prj\flows\tests\WorkflowTest.php" line="39" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="2" time="0.084766"/>
+        <testcase name="test_public_journey_etags_duplicates_scenarios_and_foreign_access" file="D:\prj\flows\tests\WorkflowTest.php" line="53" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="18" time="0.603348"/>
+        <testcase name="test_upstream_change_removes_hidden_work_and_new_rate_does_not_mutate_history" file="D:\prj\flows\tests\WorkflowTest.php" line="78" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="9" time="0.293603"/>
+        <testcase name="test_unknown_startup_evidence_has_actions_without_success_score" file="D:\prj\flows\tests\WorkflowTest.php" line="103" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.121083"/>
+        <testcase name="test_matching_retains_equal_alternatives_and_rejects_unmet_prerequisites" file="D:\prj\flows\tests\WorkflowTest.php" line="115" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="2" time="0.159016"/>
+        <testcase name="test_general_and_flow_settings_keep_zero_false_and_null_distinct" file="D:\prj\flows\tests\WorkflowTest.php" line="129" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.090483"/>
+        <testcase name="test_translation_source_edit_marks_every_locale_stale_and_placeholders_are_checked" file="D:\prj\flows\tests\WorkflowTest.php" line="147" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.382116"/>
+        <testcase name="test_publishing_requires_review_and_all14_current_critical_translations" file="D:\prj\flows\tests\WorkflowTest.php" line="165" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="1" time="13.578829"/>
+        <testcase name="test_schema_network_references_and_executable_operators_are_rejected" file="D:\prj\flows\tests\WorkflowTest.php" line="177" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="3" time="0.081024"/>
+        <testcase name="test_graph_cycles_and_undefined_question_references_are_rejected" file="D:\prj\flows\tests\WorkflowTest.php" line="190" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="1" time="0.077608"/>
+        <testcase name="test_export_checks_live_revocation_and_retry_preserves_structured_report" file="D:\prj\flows\tests\WorkflowTest.php" line="199" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="4" time="0.157419"/>
+        <testcase name="test_verified_erasure_removes_answers_history_and_private_artifacts" file="D:\prj\flows\tests\WorkflowTest.php" line="215" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="4" time="0.425069"/>
+        <testcase name="test_admin_authorization_and_typed_setting_changes_are_enforced_server_side" file="D:\prj\flows\tests\WorkflowTest.php" line="229" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="4" time="0.606816"/>
+        <testcase name="test_issued_reports_and_released_manifests_are_immutable" file="D:\prj\flows\tests\WorkflowTest.php" line="242" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="2" time="0.172406"/>
+        <testcase name="test_language_switch_keeps_answers_and_renders_rtl_source_preview_honestly" file="D:\prj\flows\tests\WorkflowTest.php" line="255" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="6" time="0.143821"/>
+        <testcase name="test_all_six_software_example_known_values_pass_real_schema_validation" file="D:\prj\flows\tests\WorkflowTest.php" line="264" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="330" time="0.307989"/>
+        <testcase name="test_structured_capacity_preserves_one_person_multiple_roles" file="D:\prj\flows\tests\WorkflowTest.php" line="280" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.083988"/>
+        <testcase name="test_admin_workspace_renders_every_authorized_section_and_support_landing" file="D:\prj\flows\tests\WorkflowTest.php" line="294" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="13" time="1.367315"/>
+        <testcase name="test_staff_mfa_enrollment_and_public_login_cannot_bypass_admin_mfa" file="D:\prj\flows\tests\WorkflowTest.php" line="305" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.594592"/>
+        <testcase name="test_price_approval_requires_distinct_author_and_preserves_approved_book" file="D:\prj\flows\tests\WorkflowTest.php" line="317" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.595508"/>
+        <testcase name="test_password_change_revokes_existing_authenticated_session" file="D:\prj\flows\tests\WorkflowTest.php" line="334" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="2" time="0.643006"/>
+        <testcase name="test_snapshot_publication_changes_never_mutate_existing_release" file="D:\prj\flows\tests\WorkflowTest.php" line="343" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="2" time="12.943977"/>
+        <testcase name="test_typed_rules_control_scope_eligibility_without_executing_code" file="D:\prj\flows\tests\WorkflowTest.php" line="356" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="0.086742"/>
+        <testcase name="test_released_business_settings_are_pinned_and_prod_gate_uses_synthetic_review_stubs" file="D:\prj\flows\tests\WorkflowTest.php" line="373" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="5" time="22.969311"/>
+        <testcase name="test_c01_demo_schedule_and_cost_reconcile_with_documented_partial_release_gate" file="D:\prj\flows\tests\WorkflowTest.php" line="395" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="6" time="0.080214"/>
+        <testcase name="test_public_locale_block_preserves_private_json_and_locale_recovery" file="D:\prj\flows\tests\WorkflowTest.php" line="412" class="Tests\WorkflowTest" classname="Tests.WorkflowTest" assertions="6" time="0.317282"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

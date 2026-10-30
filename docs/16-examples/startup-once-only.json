@@ -1,0 +1,508 @@
+{
+  "owner": "R03",
+  "reviewers": [
+    "R05",
+    "R27"
+  ],
+  "status": "synthetic documentation fixture",
+  "source": "startup baseline",
+  "open_decisions": [
+    "domain/legal validation"
+  ],
+  "workflow_id": "WF-STARTUP",
+  "answers": {
+    "Q-ST-CONTEXT": {
+      "state": "known",
+      "value": {
+        "venture_alias": "Venture-A",
+        "offering": "once-only installation service",
+        "segment": "independent shop owners",
+        "evidence_period": "last90days",
+        "natural_buying_interval": "single lifetime installation",
+        "source": "self-reported synthetic case"
+      }
+    },
+    "Q-ST-01": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-02": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-03": {
+      "state": "known",
+      "value": "A"
+    },
+    "Q-ST-04": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-05": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-06": {
+      "state": "known",
+      "value": "A"
+    },
+    "Q-ST-07": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-08": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-09": {
+      "state": "known",
+      "value": "A"
+    },
+    "Q-ST-10": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-11": {
+      "state": "known",
+      "value": "D"
+    },
+    "Q-ST-12": {
+      "state": "known",
+      "value": "A"
+    },
+    "Q-ST-13": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-14": {
+      "state": "known",
+      "value": "A"
+    },
+    "Q-ST-15": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-16": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-17": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-18": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-19": {
+      "state": "known",
+      "value": "E"
+    },
+    "Q-ST-20": {
+      "state": "known",
+      "value": "D"
+    },
+    "Q-ST-21": {
+      "state": "known",
+      "value": "E"
+    },
+    "Q-ST-22": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-23": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-ST-24": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-25": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-26": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-27": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-28": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-29": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-30": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-C01": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-C02": {
+      "state": "known",
+      "value": "C"
+    },
+    "Q-ST-C03": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-ST-C04": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-ST-C05": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-ST-C06": {
+      "state": "known",
+      "value": "B"
+    },
+    "Q-ST-C07": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-ST-C08": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-ST-EVIDENCE": {
+      "state": "known",
+      "value": {
+        "claims": [
+          "Q-ST-04:6 interviews,last90days,no completed paid delivery"
+        ],
+        "natural_interval": "once-only installation;repeat purchase not expected",
+        "limitations": "small self-reported sample,no payment or external outcome validation",
+        "independent_review": "none"
+      }
+    }
+  },
+  "branch_trace": [
+    {
+      "question_id": "Q-ST-CONTEXT",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-CONTEXT"
+      ]
+    },
+    {
+      "question_id": "Q-ST-01",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-01"
+      ]
+    },
+    {
+      "question_id": "Q-ST-02",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-02"
+      ]
+    },
+    {
+      "question_id": "Q-ST-03",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-03"
+      ]
+    },
+    {
+      "question_id": "Q-ST-04",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-04"
+      ]
+    },
+    {
+      "question_id": "Q-ST-05",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-05"
+      ]
+    },
+    {
+      "question_id": "Q-ST-06",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-06"
+      ]
+    },
+    {
+      "question_id": "Q-ST-07",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-07"
+      ]
+    },
+    {
+      "question_id": "Q-ST-08",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-08"
+      ]
+    },
+    {
+      "question_id": "Q-ST-09",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-09"
+      ]
+    },
+    {
+      "question_id": "Q-ST-10",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-10"
+      ]
+    },
+    {
+      "question_id": "Q-ST-11",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-11"
+      ]
+    },
+    {
+      "question_id": "Q-ST-12",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-12"
+      ]
+    },
+    {
+      "question_id": "Q-ST-13",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-13"
+      ]
+    },
+    {
+      "question_id": "Q-ST-14",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-14"
+      ]
+    },
+    {
+      "question_id": "Q-ST-15",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-15"
+      ]
+    },
+    {
+      "question_id": "Q-ST-16",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-16"
+      ]
+    },
+    {
+      "question_id": "Q-ST-17",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-17"
+      ]
+    },
+    {
+      "question_id": "Q-ST-18",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-18"
+      ]
+    },
+    {
+      "question_id": "Q-ST-19",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-19"
+      ]
+    },
+    {
+      "question_id": "Q-ST-20",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-20"
+      ]
+    },
+    {
+      "question_id": "Q-ST-21",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-21"
+      ]
+    },
+    {
+      "question_id": "Q-ST-22",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-22"
+      ]
+    },
+    {
+      "question_id": "Q-ST-23",
+      "state": "inactive",
+      "rule_ids": [
+        "RULE-ST-23"
+      ]
+    },
+    {
+      "question_id": "Q-ST-24",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-24"
+      ]
+    },
+    {
+      "question_id": "Q-ST-25",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-25"
+      ]
+    },
+    {
+      "question_id": "Q-ST-26",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-26"
+      ]
+    },
+    {
+      "question_id": "Q-ST-27",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-27"
+      ]
+    },
+    {
+      "question_id": "Q-ST-28",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-28"
+      ]
+    },
+    {
+      "question_id": "Q-ST-29",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-29"
+      ]
+    },
+    {
+      "question_id": "Q-ST-30",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-30"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C01",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-C01"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C02",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-C02"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C03",
+      "state": "inactive",
+      "rule_ids": [
+        "RULE-ST-C03"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C04",
+      "state": "inactive",
+      "rule_ids": [
+        "RULE-ST-C04"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C05",
+      "state": "inactive",
+      "rule_ids": [
+        "RULE-ST-C05"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C06",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-C06"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C07",
+      "state": "inactive",
+      "rule_ids": [
+        "RULE-ST-C07"
+      ]
+    },
+    {
+      "question_id": "Q-ST-C08",
+      "state": "inactive",
+      "rule_ids": [
+        "RULE-ST-C08"
+      ]
+    },
+    {
+      "question_id": "Q-ST-EVIDENCE",
+      "state": "known",
+      "rule_ids": [
+        "RULE-ST-EVIDENCE"
+      ]
+    }
+  ],
+  "output": {
+    "profile": "Pilot with interview evidence and unpaid interest;no verified external outcome or paid demand.",
+    "priorities": [
+      {
+        "action": "Check operating prerequisites",
+        "sources": [
+          "Q-ST-16",
+          "Q-ST-C02"
+        ]
+      },
+      {
+        "action": "Measure external pilot outcome and test normal price",
+        "sources": [
+          "Q-ST-07",
+          "Q-ST-10",
+          "Q-ST-11",
+          "Q-ST-18"
+        ]
+      },
+      {
+        "action": "Calculate contribution and milestone resources",
+        "sources": [
+          "Q-ST-21",
+          "Q-ST-22",
+          "Q-ST-25"
+        ]
+      }
+    ],
+    "retention": "Not applicable to naturally once-only purchase;do not label churn.",
+    "evidence": "self-reported;no universal success score",
+    "unresolved": [
+      "licensing/privacy/safety applicability",
+      "contribution",
+      "cash detail"
+    ],
+    "platform_charge": "0.00"
+  }
+}

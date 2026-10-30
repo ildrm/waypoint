@@ -1,0 +1,15 @@
+sequenceDiagram
+ actor U as Run owner
+ participant A as Public API
+ participant P as Live policy
+ participant D as Run store
+ U->>A: Start/resume flow,locale,ownership proof
+ A->>P: Authorize principal/project/action
+ P-->>A: allow or deny
+ alt Allowed
+  A->>D: Create pinned manifest or load authorized run
+  D-->>A: release,input revision,active state
+  A-->>U: Next applicable question + acknowledged save
+ else Denied/expired
+  A-->>U: Safe denial/recovery route
+ end

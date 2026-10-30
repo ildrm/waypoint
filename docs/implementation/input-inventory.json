@@ -1,0 +1,2273 @@
+{
+  "date": "2026-10-29",
+  "owner": "R31",
+  "source": "actual contents read,not filename-only inventory",
+  "documents": [
+    {
+      "file": "docs/00-governance/assumptions-and-open-questions.md",
+      "bytes": 3993,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "DEC-02",
+        "DEC-03",
+        "DEC-04",
+        "DEC-05",
+        "DEC-06",
+        "DEC-07",
+        "DEC-08",
+        "DEC-09",
+        "DEC-10"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/decision-register.md",
+      "bytes": 1596,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-001",
+        "DEC-01",
+        "ADR-002",
+        "ADR-003",
+        "ADR-004",
+        "ADR-005",
+        "DEC-02"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/gap-and-correction-log.md",
+      "bytes": 5836,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-005",
+        "FR-29",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/glossary.md",
+      "bytes": 2439,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/owner-clarification.md",
+      "bytes": 1527,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "FR-26",
+        "FR-29",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/project-charter.md",
+      "bytes": 2383,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/raci.csv",
+      "bytes": 49149,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-001",
+        "ADR-002",
+        "ADR-003",
+        "ADR-004",
+        "ADR-005"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/references/openapi/dialect-2024-11-10.json",
+      "bytes": 1027,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/references/openapi/meta-2024-11-10.json",
+      "bytes": 1957,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/references/openapi/README.md",
+      "bytes": 847,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-06",
+        "FR-15",
+        "AC-15"
+      ],
+      "status": "Status: retrieved references, 2026-10-29. Source: [official schema index](https://spec.openapis.org/oas/). Related: FR-06,FR-15,AC-15. Open decisions: none for reference preservation; API/runtime approval remains separate."
+    },
+    {
+      "file": "docs/00-governance/references/openapi/schema-2026-08-03.json",
+      "bytes": 33483,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/references/openapi/schema-base-2026-08-03.json",
+      "bytes": 721,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/references/openapi/source-index.json",
+      "bytes": 1565,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/reviews.md",
+      "bytes": 3808,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/role-charters.md",
+      "bytes": 5400,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01"
+      ],
+      "status": "Status: assigned perspectives, 2026-10-29. Source: authorized brief. Related: R01–34 and all deliverables. Open decisions: DEC-01–10. Practice: [quality profile](skills/quality-documentation.md)."
+    },
+    {
+      "file": "docs/00-governance/skill-registry.md",
+      "bytes": 5848,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01"
+      ],
+      "status": "Status: applied, 2026-10-29. Source: session-provided available-skills catalog and instructions read locally. Related: all 28 capability families; open DEC-01–10."
+    },
+    {
+      "file": "docs/00-governance/skills/accessibility.md",
+      "bytes": 1059,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/architecture-data-api.md",
+      "bytes": 1199,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/content-localization.md",
+      "bytes": 1181,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/documentation-assurance.md",
+      "bytes": 1121,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/estimation-commercial.md",
+      "bytes": 1181,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/experience-research.md",
+      "bytes": 1079,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/optional-ai.md",
+      "bytes": 1189,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/performance-operations.md",
+      "bytes": 1152,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/product-requirements.md",
+      "bytes": 1077,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/quality-documentation.md",
+      "bytes": 1119,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/security-privacy.md",
+      "bytes": 1118,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/visual-system-motion.md",
+      "bytes": 1220,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/skills/workflow-questionnaire.md",
+      "bytes": 1152,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: incorporated-as-documentation-profile; revision1, 2026-10-29."
+    },
+    {
+      "file": "docs/00-governance/source-inventory.md",
+      "bytes": 2006,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/00-governance/sources/documentation-super-mega-prompt.md",
+      "bytes": 53056,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-STARTUP",
+        "WF-SOFTWARE",
+        "WF-MATCH",
+        "WF-SCENARIO",
+        "WF-RESULT",
+        "WF-AUTHOR",
+        "WF-LOCALIZE",
+        "WF-PRICE",
+        "WF-SETTINGS",
+        "WF-SESSION",
+        "WF-SUPPORT"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/sources/startup-journey-assessment.md",
+      "bytes": 41137,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/00-governance/standards-and-references.md",
+      "bytes": 6183,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01"
+      ],
+      "status": "Status: primary-source register, accessed2026-10-29. Source: pages below and technical-agent source checks. Related: FR/NFR/ADR; open DEC-01–10. Practice: [assurance](skills/quality-documentation.md)."
+    },
+    {
+      "file": "docs/01-product/metrics-and-analytics.md",
+      "bytes": 2224,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "NFR-12"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/01-product/prd.md",
+      "bytes": 2582,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "FR-01"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/01-product/scope-and-release-plan.md",
+      "bytes": 2001,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "FR-01"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/01-product/service-blueprint.md",
+      "bytes": 2174,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "WF-SESSION",
+        "WF-RESULT",
+        "WF-AUTHOR"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/01-product/stakeholders-and-personas.md",
+      "bytes": 2226,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/01-product/user-journeys.md",
+      "bytes": 1987,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01",
+        "WF-SESSION",
+        "WF-STARTUP",
+        "WF-SOFTWARE",
+        "WF-MATCH",
+        "WF-RESULT"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/01-product/vision-and-positioning.md",
+      "bytes": 2060,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/02-requirements/business-rules.md",
+      "bytes": 2477,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-06",
+        "AC-09",
+        "AC-02",
+        "AC-03",
+        "AC-08",
+        "AC-13",
+        "AC-12",
+        "AC-04",
+        "AC-05",
+        "AC-01",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/02-requirements/functional-requirements.md",
+      "bytes": 4183,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "FR-28",
+        "AC-01",
+        "FR-02",
+        "FR-03",
+        "AC-09",
+        "FR-04",
+        "FR-05",
+        "AC-02",
+        "FR-06",
+        "FR-07",
+        "AC-13",
+        "FR-08",
+        "FR-09",
+        "AC-14",
+        "FR-10",
+        "AC-12",
+        "FR-11",
+        "FR-12",
+        "AC-04",
+        "FR-13",
+        "FR-14",
+        "AC-03",
+        "FR-15",
+        "AC-10",
+        "FR-16",
+        "FR-17",
+        "FR-18",
+        "AC-08",
+        "FR-19",
+        "FR-20",
+        "FR-21",
+        "AC-06",
+        "FR-22",
+        "FR-23",
+        "AC-07",
+        "FR-24",
+        "FR-25",
+        "FR-26",
+        "FR-27",
+        "FR-29",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/02-requirements/nonfunctional-requirements.md",
+      "bytes": 3099,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-01",
+        "AC-11",
+        "NFR-02",
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-06",
+        "NFR-07",
+        "AC-03",
+        "NFR-08",
+        "AC-07",
+        "NFR-09",
+        "AC-02",
+        "NFR-10",
+        "AC-06",
+        "NFR-11",
+        "AC-08",
+        "NFR-12",
+        "DEC-02",
+        "NFR-13",
+        "NFR-14",
+        "NFR-15",
+        "AC-10",
+        "NFR-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/02-requirements/traceability.csv",
+      "bytes": 59751,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-08",
+        "FR-09",
+        "FR-12",
+        "WF-SOFTWARE",
+        "AC-09",
+        "AC-03",
+        "AC-02",
+        "AC-14",
+        "AC-05",
+        "FR-07",
+        "WF-STARTUP",
+        "AC-13",
+        "FR-10",
+        "WF-MATCH",
+        "AC-12",
+        "FR-02",
+        "FR-26",
+        "WF-SESSION",
+        "AC-01",
+        "AC-06",
+        "AC-11",
+        "AC-16",
+        "DEC-01",
+        "FR-18",
+        "FR-19",
+        "FR-20",
+        "FR-22",
+        "WF-AUTHOR",
+        "AC-08",
+        "FR-14",
+        "FR-17",
+        "WF-PRICE",
+        "AC-04",
+        "FR-23",
+        "FR-24",
+        "FR-27",
+        "WF-SUPPORT",
+        "AC-07",
+        "AC-10",
+        "FR-01",
+        "FR-03",
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "AC-15",
+        "FR-11",
+        "WF-RESULT",
+        "FR-13",
+        "FR-15",
+        "FR-16",
+        "WF-SCENARIO",
+        "WF-SETTINGS",
+        "FR-21",
+        "WF-LOCALIZE",
+        "FR-25",
+        "FR-28",
+        "FR-29",
+        "NFR-01",
+        "NFR-02",
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-06",
+        "NFR-07",
+        "NFR-08",
+        "NFR-09",
+        "NFR-10",
+        "NFR-11",
+        "NFR-12",
+        "NFR-13",
+        "NFR-14",
+        "NFR-15",
+        "NFR-16"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/02-requirements/use-cases.md",
+      "bytes": 6806,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-09"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/02-requirements/user-stories-and-acceptance.md",
+      "bytes": 2281,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01",
+        "AC-02",
+        "AC-04",
+        "AC-09",
+        "AC-06",
+        "AC-12",
+        "AC-13",
+        "AC-03",
+        "AC-08",
+        "AC-07",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/author/overview.md",
+      "bytes": 1503,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/catalog.md",
+      "bytes": 2517,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-STARTUP",
+        "WF-SOFTWARE",
+        "WF-MATCH",
+        "WF-SCENARIO",
+        "WF-RESULT",
+        "WF-AUTHOR",
+        "WF-LOCALIZE",
+        "WF-PRICE",
+        "WF-SETTINGS",
+        "WF-SESSION",
+        "WF-SUPPORT"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/localize/overview.md",
+      "bytes": 1461,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-LOCALIZE",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/match/branching-and-states.md",
+      "bytes": 1274,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-12"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/match/decision-tables.csv",
+      "bytes": 1799,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-12",
+        "AC-09"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/match/derivation-and-recommendations.md",
+      "bytes": 1393,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/match/example-report.md",
+      "bytes": 1204,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-12"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/match/output-contract.md",
+      "bytes": 1032,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/match/overview.md",
+      "bytes": 987,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-MATCH",
+        "AC-12"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/match/question-bank.yaml",
+      "bytes": 28901,
+      "kind": "question/API specification",
+      "ids": [
+        "WF-MATCH",
+        "AC-12",
+        "AC-09"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/match/scenarios-and-acceptance.md",
+      "bytes": 1060,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-12",
+        "AC-09",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/price/overview.md",
+      "bytes": 1509,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-PRICE",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/result/overview.md",
+      "bytes": 1506,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-RESULT",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/rule-input-map.csv",
+      "bytes": 16881,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/scenario/overview.md",
+      "bytes": 1571,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SCENARIO",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/session/overview.md",
+      "bytes": 1525,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SESSION",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/settings/overview.md",
+      "bytes": 1470,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SETTINGS",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/shared-facts-and-reuse.md",
+      "bytes": 2256,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SESSION",
+        "WF-SCENARIO",
+        "AC-02",
+        "AC-03",
+        "AC-07"
+      ],
+      "status": "Status: proposed. Sources: prompt. IDs: WF-SESSION, WF-SCENARIO; AC-02, AC-03, AC-07."
+    },
+    {
+      "file": "docs/03-workflows/shared-question-model.md",
+      "bytes": 7077,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-STARTUP",
+        "WF-SOFTWARE",
+        "WF-MATCH",
+        "AC-02",
+        "AC-06",
+        "AC-09"
+      ],
+      "status": "Status: proposed. Sources: execution prompt, startup source. IDs: WF-STARTUP, WF-SOFTWARE, WF-MATCH; AC-02, AC-06, AC-09."
+    },
+    {
+      "file": "docs/03-workflows/software/branching-and-states.md",
+      "bytes": 4237,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE",
+        "AC-02",
+        "AC-09",
+        "AC-14"
+      ],
+      "status": "Status: proposed specification; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/software/coverage-matrix.csv",
+      "bytes": 7649,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-09",
+        "AC-14",
+        "AC-05"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/software/decision-tables.csv",
+      "bytes": 3752,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-09",
+        "AC-02",
+        "AC-07",
+        "AC-04",
+        "AC-14",
+        "AC-11",
+        "AC-05",
+        "AC-15"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/software/derivation-and-recommendations.md",
+      "bytes": 3538,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "Status: proposed specification; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/software/example-report.md",
+      "bytes": 2163,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "Status: proposed specification; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/software/output-contract.md",
+      "bytes": 2872,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE",
+        "WF-RESULT",
+        "AC-03",
+        "AC-04",
+        "AC-10",
+        "AC-15"
+      ],
+      "status": "Status: proposed specification; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/software/overview.md",
+      "bytes": 3622,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE",
+        "AC-02",
+        "AC-04",
+        "AC-05",
+        "AC-09",
+        "AC-14"
+      ],
+      "status": "Status: proposed specification; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/software/question-bank.yaml",
+      "bytes": 285781,
+      "kind": "question/API specification",
+      "ids": [
+        "WF-SOFTWARE",
+        "AC-09",
+        "AC-03",
+        "AC-02",
+        "AC-14",
+        "AC-05"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/software/scenarios-and-acceptance.md",
+      "bytes": 2445,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE",
+        "AC-02",
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-07",
+        "AC-09",
+        "AC-14",
+        "AC-15"
+      ],
+      "status": "Status: proposed specification; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/software/semantic-invariants.md",
+      "bytes": 2612,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-14",
+        "AC-09",
+        "AC-05",
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/startup/branching-and-states.md",
+      "bytes": 1695,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/startup/decision-tables.csv",
+      "bytes": 11962,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-13",
+        "AC-09"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/startup/derivation-and-recommendations.md",
+      "bytes": 1729,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/startup/example-report.md",
+      "bytes": 1567,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-13"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/startup/output-contract.md",
+      "bytes": 1310,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-13"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/startup/overview.md",
+      "bytes": 1273,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-STARTUP",
+        "AC-13"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/startup/question-bank.yaml",
+      "bytes": 155160,
+      "kind": "question/API specification",
+      "ids": [
+        "WF-STARTUP",
+        "AC-13",
+        "AC-09"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/03-workflows/startup/scenarios-and-acceptance.md",
+      "bytes": 1229,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-09",
+        "AC-13"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/03-workflows/support/overview.md",
+      "bytes": 1502,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SUPPORT",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/accessibility.md",
+      "bytes": 2406,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-11",
+        "FR-26",
+        "NFR-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/component-specifications.md",
+      "bytes": 4695,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-06",
+        "AC-11"
+      ],
+      "status": "Status: proposed, 2026-10-29. Sources: prompt §13; design-system token/component references; [visual profile](../00-governance/skills/visual-system-motion.md), [accessibility profile](../00-governance/skills/accessibility.md). Related: UI-01–UI-15, AC-02, AC-06, AC-11. Open decisions: frontend library; final script fonts."
+    },
+    {
+      "file": "docs/04-ux-ui/content-and-microcopy.md",
+      "bytes": 2092,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-09"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/design-tokens.json",
+      "bytes": 2620,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/experience-principles.md",
+      "bytes": 3031,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-STARTUP",
+        "WF-SOFTWARE",
+        "WF-MATCH",
+        "WF-RESULT",
+        "AC-02",
+        "AC-09",
+        "AC-11"
+      ],
+      "status": "Status: proposed specification, 2026-10-29; no usability approval. Sources: supplied documentation prompt §§8,13, startup baseline, loaded design-system/accessibility skills and [experience profile](../00-governance/skills/experience-research.md). Related: WF-STARTUP, WF-SOFTWARE, WF-MATCH, WF-RESULT, AC-02, AC-09, AC-11. Open decisions: brand, source/region/script choices, research recruitment."
+    },
+    {
+      "file": "docs/04-ux-ui/graphics-and-assets.md",
+      "bytes": 1994,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/information-architecture.md",
+      "bytes": 3196,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SESSION",
+        "WF-RESULT",
+        "WF-AUTHOR",
+        "WF-SUPPORT",
+        "AC-01",
+        "AC-07"
+      ],
+      "status": "Status: proposed, 2026-10-29. Sources: prompt §§7,13,15; [experience profile](../00-governance/skills/experience-research.md). Related: WF-SESSION, WF-RESULT, WF-AUTHOR, WF-SUPPORT, AC-01, AC-07. Open decisions: public name and authenticated save policy."
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/01-flow-choice.svg",
+      "bytes": 3719,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/02-question-clarification.svg",
+      "bytes": 3574,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/03-answer-review.svg",
+      "bytes": 3456,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/04-result-estimate.svg",
+      "bytes": 4019,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/05-admin-flow-editor.svg",
+      "bytes": 3552,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/06-translation-pricing.svg",
+      "bytes": 2901,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/04-ux-ui/mockups/README.md",
+      "bytes": 1765,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: static preview inspected,2026-10-29; not human/linguistic approval. Sources: authorized brief and [visual verification](../../17-audit/follow-up-verification.md). Related: UI-01, UI-02, UI-04, UI-05, UI-08, UI-09, UI-10. Open decisions: source/region/script choices, brand and qualified language review."
+    },
+    {
+      "file": "docs/04-ux-ui/motion-specification.md",
+      "bytes": 2104,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/responsive-layouts.md",
+      "bytes": 1441,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/screen-inventory.md",
+      "bytes": 3303,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-06",
+        "AC-11"
+      ],
+      "status": "Status: proposed, 2026-10-29. Sources: prompt §§13,15; [visual profile](../00-governance/skills/visual-system-motion.md). Related: UI-01–UI-15, AC-06, AC-11. Open decisions: brand and source/region/script choices."
+    },
+    {
+      "file": "docs/04-ux-ui/usability-research-and-validation.md",
+      "bytes": 1676,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/04-ux-ui/visual-direction.md",
+      "bytes": 2870,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-11"
+      ],
+      "status": "Status: proposed art direction, 2026-10-29; no brand approval. Sources: prompt §13; design/design-system skills; [visual profile](../00-governance/skills/visual-system-motion.md). Related: UI-01–UI-12, CMP-01–CMP-13, AC-11. Open decisions: identity, licensed fonts and source/region/script choices."
+    },
+    {
+      "file": "docs/05-architecture/adr/ADR-001-modular-php-platform.md",
+      "bytes": 1114,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-001",
+        "AC-03"
+      ],
+      "status": "Status: proposed, not owner accepted. Source: PHP requirement. Related: AC-03. Open: ownership/hosting."
+    },
+    {
+      "file": "docs/05-architecture/adr/ADR-002-immutable-releases.md",
+      "bytes": 949,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-002",
+        "AC-03",
+        "AC-04",
+        "AC-06"
+      ],
+      "status": "Status: proposed. Source: prompt invariants. Related: AC-03, AC-04, AC-06. Open: retention."
+    },
+    {
+      "file": "docs/05-architecture/adr/ADR-003-operator-and-ai-boundaries.md",
+      "bytes": 1058,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-003",
+        "AC-07",
+        "AC-09"
+      ],
+      "status": "Status: proposed. Source: prompt distinctions. Related: AC-07, AC-09. Open: organizations/AI business need."
+    },
+    {
+      "file": "docs/05-architecture/adr/ADR-004-restricted-rules.md",
+      "bytes": 1217,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-004",
+        "AC-08"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/05-architecture/adr/ADR-005-free-platform.md",
+      "bytes": 1203,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-005",
+        "FR-29",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/05-architecture/concurrency-and-idempotency.md",
+      "bytes": 1743,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-08",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-02, AC-08, AC-15. Open: retry/retention tuning."
+    },
+    {
+      "file": "docs/05-architecture/customer-solution-recommendation.md",
+      "bytes": 2249,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE",
+        "AC-09",
+        "AC-14"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: WF-SOFTWARE, OUT-ARCH, AC-09, AC-14. Open: customer evidence/integration contracts."
+    },
+    {
+      "file": "docs/05-architecture/domain-model.md",
+      "bytes": 1777,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-03",
+        "AC-04"
+      ],
+      "status": "Status: proposed. Sources: prompt, startup baseline. Related: AC-02, AC-03, AC-04. Open: organization model."
+    },
+    {
+      "file": "docs/05-architecture/flow-and-rule-engine.md",
+      "bytes": 2307,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-09",
+        "AC-14"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-02, AC-09, AC-14. Open: empirical calibration unavailable."
+    },
+    {
+      "file": "docs/05-architecture/module-responsibilities.md",
+      "bytes": 1729,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-04",
+        "AC-08",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-02, AC-04, AC-08, AC-15. Open: package selection."
+    },
+    {
+      "file": "docs/05-architecture/parameter-registry.json",
+      "bytes": 2292,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/05-architecture/platform-architecture.md",
+      "bytes": 2494,
+      "kind": "product specification/proposal",
+      "ids": [
+        "ADR-001",
+        "ADR-002",
+        "AC-03",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Sources: prompt; official references below. Related: ADR-001, ADR-002, AC-03, AC-15. Open: hosting, patch selection, owner approval."
+    },
+    {
+      "file": "docs/05-architecture/settings-inheritance.md",
+      "bytes": 1671,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SETTINGS",
+        "AC-03",
+        "AC-08"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: WF-SETTINGS, AC-03, AC-08. Open: approval thresholds/retention."
+    },
+    {
+      "file": "docs/05-architecture/system-context.md",
+      "bytes": 1956,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE",
+        "WF-STARTUP",
+        "WF-MATCH",
+        "AC-07"
+      ],
+      "status": "Status: proposed, 2026-10-29. Sources: execution prompt; architecture practice profile. Related: WF-SOFTWARE, WF-STARTUP, WF-MATCH, AC-07. Open: operator/organization model, jurisdictions."
+    },
+    {
+      "file": "docs/05-architecture/versioning-and-snapshots.md",
+      "bytes": 1713,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-03",
+        "AC-06",
+        "AC-08"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-03, AC-06, AC-08. Open: jurisdiction/retention."
+    },
+    {
+      "file": "docs/06-data/data-dictionary.md",
+      "bytes": 2713,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-04",
+        "AC-06"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-02, AC-04, AC-06. Open: locale/currency registry and retention."
+    },
+    {
+      "file": "docs/06-data/data-model.md",
+      "bytes": 2785,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-03",
+        "AC-07",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-02, AC-03, AC-07, AC-15. Open: retention and organization ownership."
+    },
+    {
+      "file": "docs/06-data/import-export-and-migration-plan.md",
+      "bytes": 2179,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-08",
+        "AC-10"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-08, AC-10. Open: source systems and legal portability scope."
+    },
+    {
+      "file": "docs/06-data/integrity-and-lifecycle.md",
+      "bytes": 2254,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02",
+        "AC-03",
+        "AC-07",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-02, AC-03, AC-07, AC-15. Open: jurisdiction-specific retention."
+    },
+    {
+      "file": "docs/07-api/api-design.md",
+      "bytes": 2939,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01",
+        "AC-02",
+        "AC-07",
+        "AC-15"
+      ],
+      "status": "Status: proposed specification. Source: prompt; [OpenAPI 3.1.2](https://spec.openapis.org/oas/v3.1.2.html), accessed 2026-10-29. Related: AC-01, AC-02, AC-07, AC-15. Open: production domain/auth provider."
+    },
+    {
+      "file": "docs/07-api/events-and-webhooks.md",
+      "bytes": 2011,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-03",
+        "AC-08",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-03, AC-08, AC-15. Open: whether external subscribers are needed."
+    },
+    {
+      "file": "docs/07-api/integration-contracts.md",
+      "bytes": 2092,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-09",
+        "AC-10",
+        "AC-15"
+      ],
+      "status": "Status: proposed. Source: prompt. Related: AC-09, AC-10, AC-15. Open: selected vendors and their actual contracts."
+    },
+    {
+      "file": "docs/07-api/openapi.yaml",
+      "bytes": 66766,
+      "kind": "question/API specification",
+      "ids": [
+        "WF-STARTUP",
+        "WF-SOFTWARE",
+        "WF-MATCH"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/08-estimation/calculation-contract.md",
+      "bytes": 2761,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/08-estimation/effort-model.md",
+      "bytes": 2046,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04",
+        "AC-05"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/08-estimation/example-feature-catalog.json",
+      "bytes": 9201,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/08-estimation/operating-cost-model.md",
+      "bytes": 1907,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/08-estimation/pricing-catalog.md",
+      "bytes": 2507,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-13",
+        "AC-04",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/08-estimation/scenarios-and-sensitivity.md",
+      "bytes": 2044,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SCENARIO"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/08-estimation/schedule-model.md",
+      "bytes": 2094,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-05"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/08-estimation/team-sizing-model.md",
+      "bytes": 1975,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-05"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/admin-information-architecture.md",
+      "bytes": 1451,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "WF-PRICE",
+        "WF-LOCALIZE"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/admin-resource-specifications.md",
+      "bytes": 6365,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-18",
+        "AC-08"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/authoring-and-publication.md",
+      "bytes": 1425,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "AC-08"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/general-and-flow-settings.md",
+      "bytes": 1326,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SETTINGS"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/permissions-and-audit.md",
+      "bytes": 1494,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-23",
+        "AC-07"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/pricing-management.md",
+      "bytes": 1319,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-PRICE",
+        "AC-04",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/simulator-and-validation.md",
+      "bytes": 1421,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "AC-02"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/09-admin/translation-management.md",
+      "bytes": 1375,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-LOCALIZE",
+        "AC-06",
+        "AC-08"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/10-localization/content-schema-and-glossary.md",
+      "bytes": 1470,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-21",
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/10-localization/locale-registry.md",
+      "bytes": 2187,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-26",
+        "NFR-10",
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/10-localization/report-and-pdf-localization.md",
+      "bytes": 1342,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-RESULT",
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/10-localization/rtl-formatting-and-fonts.md",
+      "bytes": 1506,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-10",
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/10-localization/translation-workflow-and-coverage.md",
+      "bytes": 1478,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-LOCALIZE",
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/11-security/abuse-and-failure-cases.md",
+      "bytes": 1536,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-02"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/11-security/privacy-and-data-handling.md",
+      "bytes": 1895,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-12",
+        "WF-SUPPORT"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/11-security/security-requirements.md",
+      "bytes": 2134,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-07"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/11-security/threat-model.md",
+      "bytes": 2852,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-08",
+        "FR-27",
+        "AC-07"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/admin-user-guide.md",
+      "bytes": 1487,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "WF-LOCALIZE",
+        "WF-PRICE",
+        "WF-SETTINGS"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/backup-recovery-and-continuity.md",
+      "bytes": 2033,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-06",
+        "WF-SUPPORT"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/end-user-guide.md",
+      "bytes": 1672,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SESSION",
+        "WF-RESULT",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/environments-and-deployment-design.md",
+      "bytes": 1744,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-05"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/incident-and-support-runbooks.md",
+      "bytes": 2433,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SUPPORT",
+        "AC-07"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/observability-and-slos.md",
+      "bytes": 1968,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-02",
+        "DEC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/12-operations/system-management-guide.md",
+      "bytes": 1518,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "WF-PRICE",
+        "WF-SETTINGS"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/13-quality/acceptance-scenarios.md",
+      "bytes": 7064,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01",
+        "FR-02",
+        "AC-02",
+        "FR-05",
+        "AC-03",
+        "FR-14",
+        "AC-04",
+        "FR-12",
+        "AC-05",
+        "AC-06",
+        "FR-21",
+        "AC-07",
+        "FR-23",
+        "AC-08",
+        "FR-18",
+        "AC-09",
+        "FR-04",
+        "AC-10",
+        "FR-15",
+        "AC-11",
+        "FR-26",
+        "NFR-01",
+        "AC-12",
+        "FR-10",
+        "AC-13",
+        "FR-07",
+        "AC-14",
+        "FR-08",
+        "AC-15",
+        "FR-06",
+        "AC-16",
+        "FR-29"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/13-quality/accessibility-localization-and-visual-qa.md",
+      "bytes": 1860,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-06",
+        "AC-11"
+      ],
+      "status": "Status: static preview review completed,2026-10-29; interactive and linguistic validation pending. Sources: authorized brief,[preview evidence](../17-audit/static-preview-checks.json),[follow-up](../17-audit/follow-up-verification.md). Related: AC-06, AC-11. Open decisions: source/region/script choices and qualified language reviewers."
+    },
+    {
+      "file": "docs/13-quality/performance-and-capacity-validation.md",
+      "bytes": 1664,
+      "kind": "product specification/proposal",
+      "ids": [
+        "NFR-02",
+        "AC-14"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/13-quality/release-readiness.md",
+      "bytes": 2114,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "NFR-01",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/13-quality/verification-strategy.md",
+      "bytes": 1684,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "NFR-01",
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/14-delivery/dependencies-risks-and-handover.md",
+      "bytes": 1655,
+      "kind": "product specification/proposal",
+      "ids": [
+        "DEC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/14-delivery/platform-allocation-example.json",
+      "bytes": 15651,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/14-delivery/platform-estimate-and-roadmap.md",
+      "bytes": 1928,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/14-delivery/platform-team-and-resourcing.md",
+      "bytes": 1748,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-05"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/14-delivery/wbs-and-backlog.md",
+      "bytes": 2664,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "FR-26",
+        "FR-02",
+        "FR-18",
+        "FR-21",
+        "NFR-01",
+        "FR-24",
+        "AC-06"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/15-diagrams/activity-answer.puml",
+      "bytes": 560,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/activity-estimate.puml",
+      "bytes": 575,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/business-process-conceptual.mmd",
+      "bytes": 517,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/c4-containers.mmd",
+      "bytes": 724,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/c4-context-preview.svg",
+      "bytes": 3261,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/c4-context.mmd",
+      "bytes": 483,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/deployment-trust-boundaries.mmd",
+      "bytes": 816,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/domain-classes.mmd",
+      "bytes": 694,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/domain-erd.mmd",
+      "bytes": 1553,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/index.md",
+      "bytes": 3839,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "AC-01",
+        "FR-02"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/15-diagrams/platform-dependency-schedule.mmd",
+      "bytes": 514,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/rule-estimate-components.mmd",
+      "bytes": 725,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/sequence-answer-edit.mmd",
+      "bytes": 571,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/sequence-publication.mmd",
+      "bytes": 526,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/sequence-repricing.mmd",
+      "bytes": 470,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/sequence-result-generation.mmd",
+      "bytes": 553,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/sequence-start-resume.mmd",
+      "bytes": 472,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/state-estimate.mmd",
+      "bytes": 470,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/state-release.mmd",
+      "bytes": 424,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/state-run.mmd",
+      "bytes": 468,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/state-translation.mmd",
+      "bytes": 320,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/15-diagrams/use-cases.puml",
+      "bytes": 718,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C01-informational-website.json",
+      "bytes": 50103,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C01-informational-website.md",
+      "bytes": 2417,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/C01-worked-reconciliation.md",
+      "bytes": 2210,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/C02-commerce-burst.json",
+      "bytes": 55409,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C02-commerce-burst.md",
+      "bytes": 2532,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/C03-web-and-native-apps.json",
+      "bytes": 60492,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C03-web-and-native-apps.md",
+      "bytes": 2708,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/C04-organization-portal.json",
+      "bytes": 55047,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C04-organization-portal.md",
+      "bytes": 2565,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/C05-realtime-demand.json",
+      "bytes": 63744,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C05-realtime-demand.md",
+      "bytes": 2572,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/C06-uncertain-conflicting.json",
+      "bytes": 46203,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-SOFTWARE"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/C06-uncertain-conflicting.md",
+      "bytes": 2591,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-04"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/failure-cases.md",
+      "bytes": 3167,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01",
+        "AC-09",
+        "AC-13",
+        "AC-04",
+        "AC-12",
+        "AC-06",
+        "AC-02",
+        "AC-03",
+        "AC-15",
+        "AC-07",
+        "AC-10",
+        "AC-16"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/README.md",
+      "bytes": 1560,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01"
+      ],
+      "status": "Status: proposed documentation, 2026-10-29; no human approval."
+    },
+    {
+      "file": "docs/16-examples/service-match.json",
+      "bytes": 2368,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-MATCH"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/16-examples/startup-once-only.json",
+      "bytes": 9373,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-STARTUP"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/17-audit/documentation-check-results.json",
+      "bytes": 11291,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/17-audit/documentation-validation-report.md",
+      "bytes": 4043,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-01"
+      ],
+      "status": "Status: completed documentation checks including follow-up,2026-10-29; no production approval. Sources: authorized brief,[main check record](documentation-check-results.json),[follow-up](follow-up-verification.md). Related: AC-01–16, G01–G20. Open decisions: [owner register](../00-governance/assumptions-and-open-questions.md)."
+    },
+    {
+      "file": "docs/17-audit/final-completeness-matrix.csv",
+      "bytes": 52459,
+      "kind": "product specification/proposal",
+      "ids": [
+        "WF-AUTHOR",
+        "WF-LOCALIZE",
+        "WF-PRICE",
+        "WF-RESULT",
+        "WF-SCENARIO",
+        "WF-SESSION",
+        "WF-SETTINGS",
+        "WF-SUPPORT",
+        "ADR-001",
+        "ADR-002",
+        "ADR-003",
+        "ADR-004",
+        "ADR-005"
+      ],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/17-audit/follow-up-verification.md",
+      "bytes": 3752,
+      "kind": "product specification/proposal",
+      "ids": [
+        "AC-06",
+        "AC-11",
+        "AC-15"
+      ],
+      "status": "Status: completed documentation checks,2026-10-29. Sources: [prior report](documentation-validation-report.md),[official OpenAPI references](../00-governance/references/openapi/README.md),[SVG text anchoring](https://www.w3.org/TR/SVG2/text.html#TextAnchoringProperties). Related: AC-06, AC-11, AC-15, G13, G17–G20. Open decisions: [owner register](../00-governance/assumptions-and-open-questions.md)."
+    },
+    {
+      "file": "docs/17-audit/openapi-schema-verification.json",
+      "bytes": 513,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/17-audit/question-schema-verification.json",
+      "bytes": 1309,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/17-audit/static-preview-checks.json",
+      "bytes": 47460,
+      "kind": "product specification/proposal",
+      "ids": [],
+      "status": "see structured metadata"
+    },
+    {
+      "file": "docs/progress.md",
+      "bytes": 2794,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "AC-01"
+      ],
+      "status": "Status: complete proposed documentation set,2026-10-29; production decisions/verification remain open."
+    },
+    {
+      "file": "docs/README.md",
+      "bytes": 4705,
+      "kind": "product specification/proposal",
+      "ids": [
+        "FR-01",
+        "NFR-01",
+        "AC-01"
+      ],
+      "status": "Status: complete proposed documentation set,2026-10-29; production approval/evidence pending. Source: [authorized brief](00-governance/sources/documentation-super-mega-prompt.md),[owner clarification](00-governance/owner-clarification.md). Related: NEED-01–08, FR-01–29, NFR-01–16, AC-01–16. Open decisions: [register](00-governance/assumptions-and-open-questions.md)."
+    }
+  ]
+}

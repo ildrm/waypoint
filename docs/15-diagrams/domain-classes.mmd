@@ -1,0 +1,44 @@
+classDiagram
+ class Flow {
+  +stableId
+  +createDraft()
+ }
+ class Release {
+  +manifestHash
+  +pinVersions()
+ }
+ class Run {
+  +ownerScope
+  +inputRevision
+  +saveAnswer()
+ }
+ class Answer {
+  +questionId
+  +state
+  +typedValue
+  +provenance
+ }
+ class RuleEvaluator {
+  +allowedOperators
+  +deriveActiveFacts()
+ }
+ class Estimate {
+  +priceBookSnapshot
+  +calculateExactLines()
+ }
+ class Schedule {
+  +dependencies
+  +resourceAllocations
+  +checkCapacity()
+ }
+ class Result {
+  +immutableSnapshot
+  +sourceTrace
+ }
+ Flow "1" --> "*" Release
+ Release "1" --> "*" Run
+ Run "1" *-- "*" Answer
+ Run --> RuleEvaluator
+ RuleEvaluator --> Result
+ Result "1" o-- "0..1" Estimate
+ Estimate --> Schedule

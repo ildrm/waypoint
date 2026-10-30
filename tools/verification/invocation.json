@@ -1,0 +1,28 @@
+[
+  {
+    "runner": "public-render-contracts",
+    "command": "rtk proxy php -d display_errors=stderr \"C:\\Users\\Mato\\AppData\\Local\\Temp\\waypoint-frontend-transparency-I4LrFS\\public-render-contracts.php\"",
+    "workingDirectory": "D:/prj/flows",
+    "started": "2026-10-30T04:13:39.767Z",
+    "finished": "2026-10-30T04:13:48.048Z",
+    "exitCode": 0,
+    "renders": 142,
+    "renderFailures": 0,
+    "checks": 96,
+    "failedChecks": 0,
+    "jsonStdoutClean": true
+  },
+  {
+    "runner": "staff-livewire-contracts",
+    "command": "rtk proxy php -d display_errors=stderr \"C:\\Users\\Mato\\AppData\\Local\\Temp\\waypoint-frontend-transparency-I4LrFS\\staff-livewire-contracts.php\"",
+    "workingDirectory": "D:/prj/flows",
+    "started": "2026-10-30T04:13:48.048Z",
+    "finished": "2026-10-30T04:13:52.470Z",
+    "exitCode": 0,
+    "renders": null,
+    "renderFailures": null,
+    "checks": 33,
+    "failedChecks": 0,
+    "jsonStdoutClean": true
+  }
+]

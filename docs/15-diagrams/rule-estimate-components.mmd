@@ -1,0 +1,16 @@
+flowchart LR
+  Input["Typed active answers + revision"] --> Normalize["Facts/provenance"]
+  Manifest["Pinned business manifest"] --> Applicability["Applicability DAG"]
+  Input --> Applicability
+  Applicability --> Normalize
+  Normalize --> Rules["Restricted category rule evaluator"]
+  Rules --> Scope["Scope + alternatives + unresolved"]
+  Scope --> WBS["WBS / role effort"]
+  Book["Approved price book snapshot"] --> Money["Exact price calculator"]
+  WBS --> Money
+  WBS --> Schedule["Dependency + person-capacity scheduler"]
+  Schedule --> Team["Unique people / FTE / peak staff"]
+  Money --> Result["Immutable sourced structured result"]
+  Team --> Result
+  Rules --> Trace["Deterministic rule trace"]
+  Trace --> Result

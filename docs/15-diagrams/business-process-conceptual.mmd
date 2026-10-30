@@ -1,0 +1,14 @@
+flowchart LR
+ subgraph Author["Author responsibility"]
+  Draft["Clone/edit draft"] --> Sim["Validate and simulate"]
+ end
+ subgraph Reviewer["Reviewer responsibility"]
+  Inspect["Inspect exact diff,language/commercial evidence"] --> Decision{"All gates pass?"}
+ end
+ subgraph Publisher["Publisher responsibility"]
+  Publish["Atomic publish"] --> Observe["Verify activation"]
+ end
+ Sim --> Inspect
+ Decision -->|"No: correction"| Draft
+ Decision -->|"Yes"| Publish
+ Observe --> NewRun["Customer starts new pinned run"]

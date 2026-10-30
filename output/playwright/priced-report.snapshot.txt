@@ -1,0 +1,847 @@
+﻿- link "Skip to content" [ref=e215]
+- banner
+  - link "Waypoint home" [ref=e216]
+    - StaticText "waypoint"
+    - StaticText "."
+  - navigation "Main navigation" [ref=e217]
+    - link "Assessments" [ref=e231]
+    - link "Saved sessions" [ref=e232]
+    - link "How it works" [ref=e233]
+  - form
+    - LabelText
+      - StaticText "Interface language"
+    - combobox "Interface language" [expanded=false, ref=e234]: English
+      - MenuListPopup
+        - option "English" [selected, ref=e271]
+        - option "فارسی" [ref=e272]
+        - option "Français" [ref=e273]
+        - option "Deutsch" [ref=e274]
+        - option "Русский" [ref=e275]
+        - option "हिन्दी" [ref=e276]
+        - option "中文" [ref=e277]
+        - option "日本語" [ref=e278]
+        - option "Español" [ref=e279]
+        - option "Português" [ref=e280]
+        - option "العربية" [ref=e281]
+        - option "Türkçe" [ref=e282]
+        - option "Հայերեն" [ref=e283]
+        - option "Italiano" [ref=e284]
+    - button "Apply language" [ref=e235]
+      - StaticText "Apply"
+      - StaticText "language"
+- note
+  - generic
+    - strong
+      - StaticText "Source preview"
+    - StaticText " English source content is shown for evaluation. Selected-language content is not yet approved for publication."
+- main
+  - link "Saved sessions" [ref=e219]
+  - StaticText "Preliminary"
+  - sectionheader
+    - StaticText "YOUR ANSWERS. A CLEARER DIRECTION."
+    - heading "Your preliminary assessment." [level=1, ref=e236]
+      - StaticText "Your preliminary"
+      - LineBreak "\n"
+      - emphasis
+        - StaticText "assessment."
+    - paragraph
+      - StaticText "A preliminary result based on the answers and listed assumptions."
+    - StaticText "Software discovery"
+    - StaticText "Created Oct 30, 2026, 4:15 AM (UTC)"
+    - StaticText "Based on the recorded answers and assumptions"
+  - paragraph
+    - StaticText "Valid until Nov 29, 2026, 4:15 AM (UTC)"
+  - region "Synthetic price-book example" [ref=e220]
+    - heading "Synthetic price-book example" [level=2, ref=e237]
+    - paragraph
+      - StaticText "Synthetic rates and work assumptions are used for demonstration. This is a nonbinding example."
+  - generic "Estimate overview"
+    - StaticText "EFFORT"
+    - strong
+      - StaticText "320 hours"
+    - StaticText "Planning"
+    - StaticText "CALENDAR"
+    - strong
+      - StaticText "8 weeks"
+    - StaticText "Depends on work order & capacity"
+    - StaticText "CONTRIBUTORS"
+    - strong
+      - StaticText "5"
+    - StaticText "Distinct people, not full-time hires"
+    - StaticText "PROJECT ESTIMATE"
+    - strong
+      - StaticText "USD 18392.00"
+    - StaticText "Preliminary; tax treatment shown below"
+  - region "What stands out" [ref=e222]
+    - heading "What stands out" [level=2, ref=e245]
+    - paragraph
+      - StaticText "No additional finding is recorded for this assessment."
+    - heading "Your next useful actions" [level=3, ref=e246]
+    - paragraph
+      - StaticText "No additional action plan is recorded for this assessment."
+    - heading "Next action" [level=3, ref=e247]
+    - paragraph
+      - StaticText "Confirm scope and material assumptions,then validate integration/workload constraints before commissioning."
+    - paragraph
+      - StaticText "Self-reported evidence can guide next steps. It does not establish a probability of startup success or a certified proficiency level."
+  - region "The scope worth discussing" [ref=e223]
+    - heading "The scope worth discussing" [level=2, ref=e248]
+    - list
+      - listitem [level=1]
+        - ListMarker "• "
+        - DescriptionList
+          - term "Id"
+          - definition
+            - StaticText "surface.web"
+          - term "Name"
+          - definition
+            - StaticText "Surface: web."
+          - term "Sources"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Q-SW-SURFACES"
+      - listitem [level=1]
+        - ListMarker "• "
+        - DescriptionList
+          - term "Id"
+          - definition
+            - StaticText "domain.content"
+          - term "Name"
+          - definition
+            - StaticText "Domain: content."
+          - term "Sources"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Q-SW-WEB-KINDS"
+      - listitem [level=1]
+        - ListMarker "• "
+        - DescriptionList
+          - term "Id"
+          - definition
+            - StaticText "ITEM-SHARED-FOUNDATION"
+          - term "Name"
+          - definition
+            - StaticText "Shared account, data and service foundation"
+          - term "Quantity"
+          - definition
+            - StaticText "1"
+          - term "Unit"
+          - definition
+            - StaticText "shared foundation"
+          - term "Surfaces"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "shared"
+          - term "Phase"
+          - definition
+            - StaticText "to_confirm"
+          - term "Sources"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Q-SW-SURFACES"
+          - term "Acceptance"
+          - definition
+            - StaticText "Confirm the supported behavior and acceptance criteria."
+      - listitem [level=1]
+        - ListMarker "• "
+        - DescriptionList
+          - term "Id"
+          - definition
+            - StaticText "ITEM-CMS-CONTENT"
+          - term "Name"
+          - definition
+            - StaticText "Content and editorial workflow"
+          - term "Quantity"
+          - definition
+            - StaticText "12"
+          - term "Unit"
+          - definition
+            - StaticText "pages at launch"
+          - term "Surfaces"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "web"
+          - term "Phase"
+          - definition
+            - StaticText "base"
+          - term "Sources"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Q-SW-CONTENT"
+          - term "Acceptance"
+          - definition
+            - StaticText "Confirm the supported behavior and acceptance criteria."
+      - listitem [level=1]
+        - ListMarker "• "
+        - DescriptionList
+          - term "Id"
+          - definition
+            - StaticText "ITEM-LEAD-ROUTE"
+          - term "Name"
+          - definition
+            - StaticText "Enquiry routing"
+          - term "Quantity"
+          - definition
+            - StaticText "Not known / not decided"
+          - term "Unit"
+          - definition
+            - StaticText "Not known / not decided"
+          - term "Surfaces"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "web"
+          - term "Phase"
+          - definition
+            - StaticText "base"
+          - term "Sources"
+          - definition
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Q-SW-LEADS"
+          - term "Acceptance"
+          - definition
+            - StaticText "Confirm the supported behavior and acceptance criteria."
+    - heading "Feature and delivery matrix" [level=3, ref=e249]
+    - region "Features, quantities and delivery surfaces" [ref=e250] focusable [tabindex]
+      - table "Recorded features and confirmation state"
+        - caption
+          - StaticText "Recorded features and confirmation state"
+        - rowgroup
+          - row
+            - columnheader "FEATURE" [ref=e429]
+            - columnheader "QUANTITY / UNIT" [ref=e430]
+            - columnheader "DELIVERY SURFACES" [ref=e431]
+            - columnheader "PHASE" [ref=e432]
+        - row
+          - rowheader "Shared account, data and service foundation ITEM-SHARED-FOUNDATION Source & acceptance" [ref=e285]
+            - StaticText "Shared account, data and service foundation"
+            - StaticText "ITEM-SHARED-FOUNDATION"
+            - group
+              - DisclosureTriangle "Source & acceptance" [expanded=false]
+                - StaticText "Source & acceptance"
+          - cell "1 shared foundation" [ref=e286]
+            - StaticText "1"
+            - StaticText "shared foundation"
+          - cell "shared" [ref=e287]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "shared"
+          - cell "To confirm" [ref=e288]
+        - row
+          - rowheader "Content and editorial workflow ITEM-CMS-CONTENT Source & acceptance" [ref=e289]
+            - StaticText "Content and editorial workflow"
+            - StaticText "ITEM-CMS-CONTENT"
+            - group
+              - DisclosureTriangle "Source & acceptance" [expanded=false]
+                - StaticText "Source & acceptance"
+          - cell "12 pages at launch" [ref=e290]
+            - StaticText "12"
+            - StaticText "pages at launch"
+          - cell "web" [ref=e291]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "web"
+          - cell "Base scope" [ref=e292]
+        - row
+          - rowheader "Enquiry routing ITEM-LEAD-ROUTE Source & acceptance" [ref=e293]
+            - StaticText "Enquiry routing"
+            - StaticText "ITEM-LEAD-ROUTE"
+            - group
+              - DisclosureTriangle "Source & acceptance" [expanded=false]
+                - StaticText "Source & acceptance"
+          - cell "To confirm" [ref=e294]
+          - cell "web" [ref=e295]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "web"
+          - cell "Base scope" [ref=e296]
+    - group
+      - DisclosureTriangle "Base scope (2)" [expanded=false]
+        - StaticText "Base scope (2)"
+    - group
+      - DisclosureTriangle "Optional scope (0)" [expanded=false]
+        - StaticText "Optional scope (0)"
+    - group
+      - DisclosureTriangle "To confirm (1)" [expanded=false]
+        - StaticText "To confirm (1)"
+    - group
+      - DisclosureTriangle "Architecture constraints and evidence" [expanded=false]
+        - StaticText "Architecture constraints and evidence"
+    - group
+      - DisclosureTriangle "Candidates not supported by this evidence" [expanded=false]
+        - StaticText "Candidates not supported by this evidence"
+    - paragraph
+      - StaticText "PRELIMINARY SOLUTION"
+    - heading "Compare standard managed/self-hosted CMS with server-rendered pages;custom build only if capability constraints fail." [level=3, ref=e251]
+    - heading "Alternatives and tradeoffs" [level=3, ref=e252]
+    - list
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Compare a configured hosted/CMS product against custom behavior,ownership and integration needs."
+    - heading "Validate before committing" [level=3, ref=e253]
+    - list
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Verify external API documentation,sandbox,limits and reconciliation."
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Validate forecast operations,data growth,recovery and jurisdiction with specialists."
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Platform PHP constraint does not restrict customer-project technology."
+  - region "Effort and project price" [ref=e224]
+    - heading "Effort and project price" [level=2, ref=e254]
+    - paragraph
+      - StaticText "These figures describe the project being assessed. Using Waypoint is free."
+    - region "Work breakdown" [ref=e255] focusable [tabindex]
+      - table "Work breakdown and source assumptions"
+        - caption
+          - StaticText "Work breakdown and source assumptions"
+        - rowgroup
+          - row
+            - columnheader "WORK PACKAGE" [ref=e433]
+            - columnheader "ROLE" [ref=e434]
+            - columnheader "HOURS" [ref=e435]
+            - columnheader "SOURCE / ASSUMPTION" [ref=e436]
+        - row
+          - rowheader "WP-C01-discovery" [ref=e297]
+          - cell "B A" [ref=e298]
+          - cell "40" [ref=e299]
+          - cell "See listed assumptions" [ref=e300]
+        - row
+          - rowheader "WP-C01-design" [ref=e301]
+          - cell "U X" [ref=e302]
+          - cell "40" [ref=e303]
+          - cell "See listed assumptions" [ref=e304]
+        - row
+          - rowheader "WP-C01-shared-foundation" [ref=e305]
+          - cell "D E V" [ref=e306]
+          - cell "40" [ref=e307]
+          - cell "See listed assumptions" [ref=e308]
+        - row
+          - rowheader "WP-C01-CMS-3-types-12-pages" [ref=e309]
+          - cell "D E V" [ref=e310]
+          - cell "64" [ref=e311]
+          - cell "See listed assumptions" [ref=e312]
+        - row
+          - rowheader "WP-C01-lead-route" [ref=e313]
+          - cell "D E V" [ref=e314]
+          - cell "24" [ref=e315]
+          - cell "See listed assumptions" [ref=e316]
+        - row
+          - rowheader "WP-C01-SEO-search" [ref=e317]
+          - cell "D E V" [ref=e318]
+          - cell "16" [ref=e319]
+          - cell "See listed assumptions" [ref=e320]
+        - row
+          - rowheader "WP-C01-editorial-permissions" [ref=e321]
+          - cell "D E V" [ref=e322]
+          - cell "16" [ref=e323]
+          - cell "See listed assumptions" [ref=e324]
+        - row
+          - rowheader "WP-C01-quality" [ref=e325]
+          - cell "Q A" [ref=e326]
+          - cell "56" [ref=e327]
+          - cell "See listed assumptions" [ref=e328]
+        - row
+          - rowheader "WP-C01-release" [ref=e329]
+          - cell "O P S" [ref=e330]
+          - cell "16" [ref=e331]
+          - cell "See listed assumptions" [ref=e332]
+        - row
+          - rowheader "Post-release smoke test" [ref=e333]
+          - cell "Q A" [ref=e334]
+          - cell "8" [ref=e335]
+          - cell "See listed assumptions" [ref=e336]
+        - rowgroup
+          - row
+            - rowheader "Total effort" [ref=e437]
+            - cell "320" [ref=e438]
+            - cell "Recorded estimate total" [ref=e439]
+    - heading "Included effort by role" [level=3, ref=e256]
+    - DescriptionList
+      - term "B A"
+      - definition
+        - StaticText "40 hours"
+      - term "U X"
+      - definition
+        - StaticText "40 hours"
+      - term "D E V"
+      - definition
+        - StaticText "160 hours"
+      - term "Q A"
+      - definition
+        - StaticText "64 hours"
+      - term "O P S"
+      - definition
+        - StaticText "16 hours"
+    - heading "One-time estimate" [level=3, ref=e257]
+    - StaticText "USD"
+    - region "Price line items" [ref=e258] focusable [tabindex]
+      - table "Server-calculated price items"
+        - caption
+          - StaticText "Server-calculated price items"
+        - rowgroup
+          - row
+            - columnheader "ITEM" [ref=e440]
+            - columnheader "QUANTITY / HOURS" [ref=e441]
+            - columnheader "RATE" [ref=e442]
+            - columnheader "AMOUNT" [ref=e443]
+        - row
+          - rowheader "WP-C01-discovery" [ref=e337]
+          - cell "40 hours" [ref=e338]
+            - StaticText "40"
+            - StaticText "hours"
+          - cell "60.00" [ref=e339]
+          - cell "2400.00" [ref=e340]
+        - row
+          - rowheader "WP-C01-design" [ref=e341]
+          - cell "40 hours" [ref=e342]
+            - StaticText "40"
+            - StaticText "hours"
+          - cell "50.00" [ref=e343]
+          - cell "2000.00" [ref=e344]
+        - row
+          - rowheader "WP-C01-shared-foundation" [ref=e345]
+          - cell "40 hours" [ref=e346]
+            - StaticText "40"
+            - StaticText "hours"
+          - cell "60.00" [ref=e347]
+          - cell "2400.00" [ref=e348]
+        - row
+          - rowheader "WP-C01-CMS-3-types-12-pages" [ref=e349]
+          - cell "64 hours" [ref=e350]
+            - StaticText "64"
+            - StaticText "hours"
+          - cell "60.00" [ref=e351]
+          - cell "3840.00" [ref=e352]
+        - row
+          - rowheader "WP-C01-lead-route" [ref=e353]
+          - cell "24 hours" [ref=e354]
+            - StaticText "24"
+            - StaticText "hours"
+          - cell "60.00" [ref=e355]
+          - cell "1440.00" [ref=e356]
+        - row
+          - rowheader "WP-C01-SEO-search" [ref=e357]
+          - cell "16 hours" [ref=e358]
+            - StaticText "16"
+            - StaticText "hours"
+          - cell "60.00" [ref=e359]
+          - cell "960.00" [ref=e360]
+        - row
+          - rowheader "WP-C01-editorial-permissions" [ref=e361]
+          - cell "16 hours" [ref=e362]
+            - StaticText "16"
+            - StaticText "hours"
+          - cell "60.00" [ref=e363]
+          - cell "960.00" [ref=e364]
+        - row
+          - rowheader "WP-C01-quality" [ref=e365]
+          - cell "56 hours" [ref=e366]
+            - StaticText "56"
+            - StaticText "hours"
+          - cell "45.00" [ref=e367]
+          - cell "2520.00" [ref=e368]
+        - row
+          - rowheader "WP-C01-release" [ref=e369]
+          - cell "16 hours" [ref=e370]
+            - StaticText "16"
+            - StaticText "hours"
+          - cell "45.00" [ref=e371]
+          - cell "720.00" [ref=e372]
+        - row
+          - rowheader "Post-release smoke test" [ref=e373]
+          - cell "8 hours" [ref=e374]
+            - StaticText "8"
+            - StaticText "hours"
+          - cell "45.00" [ref=e375]
+          - cell "360.00" [ref=e376]
+    - DescriptionList
+      - term "Base subtotal"
+      - definition
+        - StaticText "17600.00"
+      - term "Disclosed contingency"
+      - definition
+        - StaticText "1760.00"
+      - term "Approved discount"
+      - definition
+        - StaticText "968.00"
+      - term "Preliminary total"
+      - definition
+        - StaticText "USD 18392.00"
+    - paragraph
+      - StaticText "Tax: Excluded Unconfigured. Price book: 1."
+    - heading "Recurring ownership costs" [level=3, ref=e259]
+    - list
+      - listitem [level=1]
+        - ListMarker "• "
+        - DescriptionList
+          - term "Interval"
+          - definition
+            - StaticText "month"
+          - term "Currency"
+          - definition
+            - StaticText "USD"
+          - term "Amount"
+          - definition
+            - StaticText "350.00"
+          - term "Description"
+          - definition
+            - StaticText "Hypothetical operations budget; no supplier quote."
+          - term "Status"
+          - definition
+            - StaticText "configured"
+    - paragraph
+      - StaticText "An estimate is a planning aid. It is not a binding quote, contract, invoice or payment authorization. Changed scope or rates create a visibly new result."
+  - region "A feasible delivery shape" [ref=e225]
+    - heading "A feasible delivery shape" [level=2, ref=e260]
+    - paragraph
+      - StaticText "Calendar duration follows dependencies, review lead times and available role capacity. Headcount and full-time allocation are different measures."
+    - strong
+      - StaticText "8"
+    - StaticText "planning weeks"
+    - strong
+      - StaticText "5"
+    - StaticText "distinct contributors"
+    - strong
+      - StaticText "2"
+    - StaticText "peak contributors in a calendar week"
+    - region "Person and role capacity" [ref=e261] focusable [tabindex]
+      - table "Planned allocation"
+        - caption
+          - StaticText "Planned allocation"
+        - rowgroup
+          - row
+            - columnheader "PERSON / ROLE" [ref=e444]
+            - columnheader "WEEK / PHASE" [ref=e445]
+            - columnheader "HOURS" [ref=e446]
+            - columnheader "FTE" [ref=e447]
+        - row
+          - rowheader "BA1" [ref=e377]
+          - cell "1" [ref=e378]
+          - cell "40" [ref=e379]
+          - cell "1" [ref=e380]
+        - row
+          - rowheader "UX1" [ref=e381]
+          - cell "2" [ref=e382]
+          - cell "40" [ref=e383]
+          - cell "1" [ref=e384]
+        - row
+          - rowheader "DEV1" [ref=e385]
+          - cell "3" [ref=e386]
+          - cell "40" [ref=e387]
+          - cell "1" [ref=e388]
+        - row
+          - rowheader "DEV1" [ref=e389]
+          - cell "4" [ref=e390]
+          - cell "40" [ref=e391]
+          - cell "1" [ref=e392]
+        - row
+          - rowheader "DEV1" [ref=e393]
+          - cell "5" [ref=e394]
+          - cell "24" [ref=e395]
+          - cell "0.6" [ref=e396]
+        - row
+          - rowheader "DEV1" [ref=e397]
+          - cell "5" [ref=e398]
+          - cell "16" [ref=e399]
+          - cell "0.4" [ref=e400]
+        - row
+          - rowheader "DEV1" [ref=e401]
+          - cell "6" [ref=e402]
+          - cell "8" [ref=e403]
+          - cell "0.2" [ref=e404]
+        - row
+          - rowheader "DEV1" [ref=e405]
+          - cell "6" [ref=e406]
+          - cell "16" [ref=e407]
+          - cell "0.4" [ref=e408]
+        - row
+          - rowheader "DEV1" [ref=e409]
+          - cell "6" [ref=e410]
+          - cell "16" [ref=e411]
+          - cell "0.4" [ref=e412]
+        - row
+          - rowheader "QA1" [ref=e413]
+          - cell "7" [ref=e414]
+          - cell "40" [ref=e415]
+          - cell "1" [ref=e416]
+        - row
+          - rowheader "QA1" [ref=e417]
+          - cell "8" [ref=e418]
+          - cell "16" [ref=e419]
+          - cell "0.4" [ref=e420]
+        - row
+          - rowheader "OPS1" [ref=e421]
+          - cell "8" [ref=e422]
+          - cell "16" [ref=e423]
+          - cell "0.4" [ref=e424]
+        - row
+          - rowheader "QA1" [ref=e425]
+          - cell "8" [ref=e426]
+          - cell "8" [ref=e427]
+          - cell "0.2" [ref=e428]
+    - paragraph
+      - StaticText "Peak contributor count interval: Calendar week"
+    - heading "Schedule assumptions" [level=3, ref=e262]
+    - list
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Capacity is spread uniformly across the declared week."
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Unspecified start/end weeks use weeks 1/520 as planning boundaries."
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "Unlisted holidays and lead times are assumed zero; confirm them before committing."
+      - listitem [level=1]
+        - ListMarker "• "
+        - StaticText "The planning range is an uncalibrated expert allowance."
+  - region "Follow the reasoning" [ref=e226]
+    - heading "Follow the reasoning" [level=2, ref=e263]
+    - paragraph
+      - StaticText "Material conclusions should point to an answer, an approved catalog entry or a disclosed assumption."
+    - group
+      - DisclosureTriangle "Source answers and assumptions" [expanded=true]
+        - StaticText "Source answers and assumptions"
+      - list
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-discovery"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-design"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-shared-foundation"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-CMS-3-types-12-pages"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-lead-route"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-SEO-search"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-editorial-permissions"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-quality"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-release"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+        - listitem [level=1]
+          - ListMarker "• "
+          - DescriptionList
+            - term "Rule Id"
+            - definition
+              - StaticText "WP-C01-post-release-smoke"
+            - term "Matched"
+            - definition
+              - StaticText "Yes"
+            - term "Sources"
+            - definition
+              - list
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-SURFACES"
+                - listitem [level=2]
+                  - ListMarker "◦ "
+                  - StaticText "Q-SW-WEB-KINDS"
+    - group
+      - DisclosureTriangle "Evidence by assessment stage" [expanded=false]
+        - StaticText "Evidence by assessment stage"
+    - group
+      - DisclosureTriangle "Versions used for this result" [expanded=false]
+        - StaticText "Versions used for this result"
+    - group
+      - DisclosureTriangle "Recorded questions and answers" [expanded=false]
+        - StaticText "Recorded questions and answers"
+  - region "What if the scope changed?" [ref=e227]
+    - heading "What if the scope changed?" [level=2, ref=e264]
+    - paragraph
+      - StaticText "Create a separate scenario and revise its answers. This report keeps its original recorded inputs and results."
+    - form
+      - button "Explore a different scope" [ref=e269]
+    - form
+      - button "Refresh estimate" [ref=e270]
+    - paragraph
+      - StaticText "A refresh uses the applicable approved price book and creates a new revision. Missing rates still produce an incomplete price."
+  - region "Keep the conversation going." [ref=e228]
+    - heading "Keep the conversation going." [level=2, ref=e265]
+    - paragraph
+      - StaticText "Save a structured copy or a readable report to discuss with your team or adviser."
+    - link "Export readable report" [ref=e266]
+    - link "Export JSON" [ref=e267]
+    - button "Print this page" [ref=e268]
+    - paragraph
+      - StaticText "If an export fails, this structured result remains available. Return here to retry."
+    - group
+      - DisclosureTriangle "Need help or a data request?" [expanded=false]
+        - StaticText "Need help or a data request?"
+- contentinfo
+  - link "waypoint ." [ref=e229]
+    - StaticText "waypoint"
+    - StaticText "."
+  - paragraph
+    - StaticText "A clearer next step. Built around your answers."
+  - StaticText "Assessments and exports are free"
+  - StaticText "Project prices are preliminary estimates, not charges for using Waypoint."
+  - link "Help & privacy" [ref=e230]
+

@@ -1,0 +1,2092 @@
+{
+  "owner": "R09",
+  "reviewers": [
+    "R13",
+    "R15",
+    "R31"
+  ],
+  "status": "static preview and text-metric evidence;not browser or linguistic certification",
+  "method": "Pillow FreeType/RAQM with installed Segoe UI/semibold at2x;explicit subset handles every graphic element used in these sources,not general SVG/CSS",
+  "raqm": true,
+  "artifacts": [
+    {
+      "source": "04-ux-ui/mockups/01-flow-choice.svg",
+      "preview": "04-ux-ui/mockups/01-flow-choice.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Choose your next useful step",
+          "bounds": [
+            80,
+            112,
+            606,
+            151.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "A clear assessment, with reasons and room for uncertainty.",
+          "bounds": [
+            80,
+            166,
+            597,
+            185.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1",
+          "bounds": [
+            120,
+            273,
+            131,
+            287
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Startup journey",
+          "bounds": [
+            104,
+            331,
+            280.5,
+            356
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Find your strongest evidence gaps.",
+          "bounds": [
+            104,
+            383,
+            349.5,
+            398.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "15 stages · adaptive questions",
+          "bounds": [
+            104,
+            423.5,
+            302.5,
+            438.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Start startup",
+          "bounds": [
+            124,
+            502.5,
+            215,
+            517.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2",
+          "bounds": [
+            508,
+            273,
+            519,
+            287
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Software project",
+          "bounds": [
+            492,
+            331,
+            679,
+            356
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Define scope, cost, time and team.",
+          "bounds": [
+            492,
+            383,
+            734.5,
+            398.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Web, mobile and integrations",
+          "bounds": [
+            492,
+            423.5,
+            687.5,
+            438.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Start software",
+          "bounds": [
+            512,
+            502,
+            613.5,
+            514
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3",
+          "bounds": [
+            896,
+            273,
+            907,
+            287
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Find suitable help",
+          "bounds": [
+            880,
+            331,
+            1081,
+            356
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Compare eligible services.",
+          "bounds": [
+            880,
+            383,
+            1062.5,
+            398.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Explained matches or no match",
+          "bounds": [
+            880,
+            423.5,
+            1087.5,
+            438.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Explore options",
+          "bounds": [
+            900,
+            502,
+            1013.5,
+            517.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Already started? Resume a saved assessment",
+          "bounds": [
+            80,
+            604.5,
+            435.5,
+            622
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Language: English   ·   14 supported languages   ·   Privacy and help",
+          "bounds": [
+            80,
+            652,
+            553,
+            667.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1  One clear purpose per card; no claims of guaranteed business success.",
+          "bounds": [
+            60,
+            770.5,
+            541,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2  Cards stack on phones;48 px actions and persistent language/help route.",
+          "bounds": [
+            60,
+            797.5,
+            556.5,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3  Free platform: no checkout, payment request or purchase commitment.",
+          "bounds": [
+            60,
+            824.5,
+            547.5,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "b0dfb6750cf13932dd25aa022cc796bf7e6a3b56d32366be280fefb269545a0e",
+      "preview_sha256": "dc8f571923bcabcb3f2dcf0f93e408329c6bdfe867470040c8d86e0ac7736573",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    },
+    {
+      "source": "04-ux-ui/mockups/02-question-clarification.svg",
+      "preview": "04-ux-ui/mockups/02-question-clarification.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Software project / Delivery surfaces",
+          "bounds": [
+            80,
+            110,
+            329,
+            125.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "What must work without a connection?",
+          "bounds": [
+            80,
+            145,
+            650,
+            169.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Select the tasks users must complete while offline.",
+          "bounds": [
+            80,
+            191.5,
+            477,
+            209
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Capture inspection notes and photos",
+          "bounds": [
+            140,
+            266,
+            466.5,
+            285.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Browse previously downloaded records",
+          "bounds": [
+            140,
+            358,
+            485,
+            377.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "No offline work is required",
+          "bounds": [
+            140,
+            450,
+            375,
+            469.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Clarify the requirement",
+          "bounds": [
+            848,
+            257.5,
+            1090,
+            280.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Longest offline period",
+          "bounds": [
+            848,
+            302,
+            1003.5,
+            317.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "8 hours",
+          "bounds": [
+            864,
+            347.5,
+            923.5,
+            361
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Conflicting updates",
+          "bounds": [
+            848,
+            403,
+            985,
+            418.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Ask user to review before sync.",
+          "bounds": [
+            848,
+            434,
+            1065.5,
+            449.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Why this matters: sync and QA effort.",
+          "bounds": [
+            848,
+            477.5,
+            1093.5,
+            492.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "I do not know yet",
+          "bounds": [
+            80,
+            536.5,
+            219.5,
+            554
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Saved at 10:42 · Only acknowledged changes are saved",
+          "bounds": [
+            80,
+            588.5,
+            443.5,
+            603.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Back",
+          "bounds": [
+            80,
+            649.5,
+            117,
+            663
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Next",
+          "bounds": [
+            582,
+            648.5,
+            616.5,
+            660
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1  Compatible needs use checkboxes;“none” is exclusive and checked server-side.",
+          "bounds": [
+            60,
+            770.5,
+            596,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2  Detail has a named unit and explicit conflict policy; unknown stays unknown.",
+          "bounds": [
+            60,
+            797.5,
+            581.5,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3  Help rail moves inline on narrow screens; focus follows logical reading order.",
+          "bounds": [
+            60,
+            824.5,
+            582,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "32a2215e08320257c9596fe5f25d55edba0dc1783c097f5508ac75a3474736a6",
+      "preview_sha256": "d0d2ab962eeac420173889a9699b24d47cea1e370fe59c81d8ac5e0884446a73",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    },
+    {
+      "source": "04-ux-ui/mockups/03-answer-review.svg",
+      "preview": "04-ux-ui/mockups/03-answer-review.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Review your answers",
+          "bounds": [
+            114,
+            116,
+            349.5,
+            141
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Software scope · Saved",
+          "bounds": [
+            114,
+            158.5,
+            266,
+            173.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Website only",
+          "bounds": [
+            130,
+            210,
+            244,
+            229.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Mobile removed from this revision",
+          "bounds": [
+            130,
+            244.5,
+            342.5,
+            255
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Content pages",
+          "bounds": [
+            114,
+            314.5,
+            217,
+            329.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "12 pages · 3 content types",
+          "bounds": [
+            114,
+            342,
+            345.5,
+            360.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Edit",
+          "bounds": [
+            403,
+            314,
+            430,
+            326
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Peak demand",
+          "bounds": [
+            114,
+            398,
+            209.5,
+            410
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "20 requests / second",
+          "bounds": [
+            114,
+            425,
+            297.5,
+            444.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Edit",
+          "bounds": [
+            403,
+            398,
+            430,
+            410
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "One item needs review",
+          "bounds": [
+            130,
+            490.5,
+            316.5,
+            504
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Hosting region is not decided.",
+          "bounds": [
+            130,
+            521.5,
+            329.5,
+            536.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Result will show this assumption.",
+          "bounds": [
+            130,
+            548.5,
+            331.5,
+            562
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Generate preliminary result",
+          "bounds": [
+            134,
+            628,
+            332,
+            643.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free assessment · No payment",
+          "bounds": [
+            114,
+            685,
+            302,
+            698
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Mobile review rules",
+          "bounds": [
+            560,
+            148,
+            825.5,
+            170.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1  390 px frame with 16 px inner spacing.",
+          "bounds": [
+            560,
+            213.5,
+            903,
+            232.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2  Edit links name their question in semantics.",
+          "bounds": [
+            560,
+            259.5,
+            941,
+            278.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3  Unknown context remains visible at review.",
+          "bounds": [
+            560,
+            305.5,
+            940.5,
+            320
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "4  Removed mobile scope cannot add app charges.",
+          "bounds": [
+            560,
+            351.5,
+            988,
+            370.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "5  Primary action stays in normal document flow.",
+          "bounds": [
+            560,
+            397.5,
+            967.5,
+            416.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "UI-04 · At 320 CSS px content wraps; no fixed-height text in production.",
+          "bounds": [
+            60,
+            770.5,
+            532.5,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Review acknowledgement freezes an input revision, not a contract or purchase.",
+          "bounds": [
+            60,
+            797.5,
+            581.5,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Conflict state offers saved/local comparison; no silent overwrite.",
+          "bounds": [
+            60,
+            824.5,
+            481.5,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "5acccde2f32b08f8609fd8744956f20830326dacc4d732de9cf3535cb4209384",
+      "preview_sha256": "cb9061ae52599f26ede441758c3af186e6db57023e452cea179ada6f8ef4641d",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    },
+    {
+      "source": "04-ux-ui/mockups/04-result-estimate.svg",
+      "preview": "04-ux-ui/mockups/04-result-estimate.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Your preliminary project plan",
+          "bounds": [
+            80,
+            101,
+            529,
+            134.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Content website · Based on revision 3 · Hypothetical example rates",
+          "bounds": [
+            80,
+            153,
+            577,
+            170
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "320 hours",
+          "bounds": [
+            100,
+            226.5,
+            226.5,
+            247.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Base effort",
+          "bounds": [
+            100,
+            270.5,
+            171,
+            282
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "8 weeks",
+          "bounds": [
+            386,
+            226.5,
+            487,
+            247.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Dependency plan",
+          "bounds": [
+            386,
+            270.5,
+            501.5,
+            285.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "5 people",
+          "bounds": [
+            672,
+            226.5,
+            783,
+            253.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Distinct contributors",
+          "bounds": [
+            672,
+            270.5,
+            807,
+            282
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "USD 18,392",
+          "bounds": [
+            958,
+            227,
+            1101,
+            250.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Build estimate",
+          "bounds": [
+            958,
+            270.5,
+            1051.5,
+            282
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "One-time estimate",
+          "bounds": [
+            104,
+            362,
+            315.5,
+            381
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Role-based work",
+          "bounds": [
+            104,
+            420,
+            229.5,
+            433
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "17,600.00",
+          "bounds": [
+            674,
+            419.5,
+            754,
+            435.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Contingency 10%",
+          "bounds": [
+            104,
+            474.5,
+            235,
+            491
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1,760.00",
+          "bounds": [
+            684.5,
+            473.5,
+            754,
+            489.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Discount 5% on 19,360",
+          "bounds": [
+            104,
+            528.5,
+            276,
+            543
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "−968.00",
+          "bounds": [
+            685.5,
+            527.5,
+            754,
+            541
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Total excluding unconfigured taxes",
+          "bounds": [
+            104,
+            582,
+            364.5,
+            599
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "18,392.00",
+          "bounds": [
+            674,
+            581.5,
+            754,
+            597.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Why this solution?",
+          "bounds": [
+            836,
+            362,
+            1045,
+            387
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Standard CMS with editorial roles",
+          "bounds": [
+            836,
+            412,
+            1086,
+            425
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "12 pages · 3 content types",
+          "bounds": [
+            836,
+            448,
+            1032.5,
+            464
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Q-SW-CONTENT / Q-SW-IDENTITY",
+          "bounds": [
+            836,
+            485,
+            1053,
+            496.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Alternatives and evidence",
+          "bounds": [
+            836,
+            525,
+            1028,
+            538
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Recurring: USD 350/month",
+          "bounds": [
+            836,
+            562.5,
+            1049,
+            580
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Validate hosting region and content.",
+          "bounds": [
+            836,
+            600.5,
+            1076.5,
+            615.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1  Customer-project price is informational. The assessment platform is free.",
+          "bounds": [
+            60,
+            770.5,
+            555,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2  WBS, price book, validity, assumptions and alternatives remain inspectable.",
+          "bounds": [
+            60,
+            797.5,
+            570.5,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3  Partial/missing prices show “incomplete”, never a fabricated zero total.",
+          "bounds": [
+            60,
+            824.5,
+            540.5,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "95c16c850553fe3b020868bdd3ac3aa2eb29030170a0a034ee9d2389c1dfd798",
+      "preview_sha256": "0c19d34fe0cc15e93a3bac43e3bd395ebf67aa2e38df95722b49866dd0a1ef14",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    },
+    {
+      "source": "04-ux-ui/mockups/05-admin-flow-editor.svg",
+      "preview": "04-ux-ui/mockups/05-admin-flow-editor.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "CONTENT",
+          "bounds": [
+            40,
+            112,
+            101.5,
+            122
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Flows",
+          "bounds": [
+            40,
+            153,
+            82,
+            166
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Questions",
+          "bounds": [
+            40,
+            201.5,
+            115,
+            215.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Rules",
+          "bounds": [
+            40,
+            249,
+            80,
+            262
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Catalog",
+          "bounds": [
+            40,
+            297,
+            97.5,
+            314
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Translations",
+          "bounds": [
+            40,
+            345,
+            128.5,
+            358
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Estimate pricing",
+          "bounds": [
+            40,
+            393.5,
+            160,
+            410
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Releases",
+          "bounds": [
+            40,
+            441,
+            103.5,
+            454
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Software discovery / Draft 7",
+          "bounds": [
+            272,
+            117.5,
+            653.5,
+            147.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Based on release 6 · Changes require validation and review",
+          "bounds": [
+            272,
+            168,
+            685,
+            183.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Delivery surfaces",
+          "bounds": [
+            292,
+            230,
+            447,
+            251
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Q-SW-SURFACES",
+          "bounds": [
+            292,
+            282,
+            397.5,
+            293
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Q-SW-MOBILE-PLATFORMS",
+          "bounds": [
+            292,
+            330,
+            464.5,
+            341
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Q-SW-OFFLINE",
+          "bounds": [
+            292,
+            378,
+            386.5,
+            389
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Q-SW-DEVICE-FEATURES",
+          "bounds": [
+            292,
+            426,
+            447,
+            437
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Move up / Move down",
+          "bounds": [
+            292,
+            508.5,
+            443,
+            523.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Q-SW-OFFLINE",
+          "bounds": [
+            588,
+            227,
+            753.5,
+            246.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Type: structured record",
+          "bounds": [
+            588,
+            274,
+            761,
+            291
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Visible when surfaces contains mobile",
+          "bounds": [
+            588,
+            318,
+            871,
+            331
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Required: mode, tasks, hours, conflict policy",
+          "bounds": [
+            588,
+            363,
+            896,
+            378.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Publication blocked",
+          "bounds": [
+            608,
+            426,
+            795.5,
+            442
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2 stale critical translations need review.",
+          "bounds": [
+            608,
+            465,
+            882,
+            477
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Simulate draft",
+          "bounds": [
+            608,
+            580,
+            711,
+            592
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Request review",
+          "bounds": [
+            856,
+            580.5,
+            969,
+            597
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1  Stable IDs and typed restricted rules; no arbitrary executable expressions.",
+          "bounds": [
+            60,
+            770.5,
+            558,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2  Move buttons provide keyboard/non-drag alternative; published release read-only.",
+          "bounds": [
+            60,
+            797.5,
+            624.5,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3  Reviewer approval binds exact diff; translation/price/schema errors block release.",
+          "bounds": [
+            60,
+            824.5,
+            610,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "aa5cbe8b9098032ce932285ece6e83c553fb89b25ada540dafd4d1a2f687a430",
+      "preview_sha256": "8e6f5b928136b738ab9bce33153c8b9b5a252631ee30123748f936c9e7d8cfea",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    },
+    {
+      "source": "04-ux-ui/mockups/06-translation-pricing.svg",
+      "preview": "04-ux-ui/mockups/06-translation-pricing.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "مدیریت ترجمه و برآورد",
+          "bounds": [
+            906.5,
+            97.5,
+            1200,
+            134
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "فارسی · نسخه پیشنهادی",
+          "bounds": [
+            1017,
+            156,
+            1200,
+            175
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "وضعیت ترجمه",
+          "bounds": [
+            1031,
+            236,
+            1176,
+            256
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "Source hash: e7a1 / Example only",
+          "bounds": [
+            104,
+            238.5,
+            325.5,
+            253.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "q.sw.offline.wording",
+          "bounds": [
+            104,
+            291,
+            254,
+            308
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "نیاز به بازبینی",
+          "bounds": [
+            1076,
+            290.5,
+            1176,
+            308.5
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "q.sw.confirm.wording",
+          "bounds": [
+            104,
+            345,
+            264,
+            362
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "پیش‌نویس",
+          "bounds": [
+            1099.5,
+            346.5,
+            1176,
+            363
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "result.price.disclaimer",
+          "bounds": [
+            104,
+            399,
+            265.5,
+            416
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "پیش‌نویس",
+          "bounds": [
+            1099.5,
+            400.5,
+            1176,
+            417
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "نرخ‌های برآورد پروژه",
+          "bounds": [
+            986.5,
+            510.5,
+            1176,
+            538.5
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "PB-EXAMPLE-v1   ·   DEV   ·   USD 60.00 / hour",
+          "bounds": [
+            104,
+            563,
+            509,
+            580.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "نمونه فرضی",
+          "bounds": [
+            1087,
+            566.5,
+            1176,
+            582.5
+          ],
+          "outside_canvas": false,
+          "direction": "rtl"
+        },
+        {
+          "text": "No platform payments · Old estimates retain original price book",
+          "bounds": [
+            104,
+            617,
+            582.5,
+            634
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "1  RTL structure uses logical start/end; Latin IDs, amounts and currency stay isolated LTR.",
+          "bounds": [
+            60,
+            770.5,
+            643,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "2  Persian labels are illustrative and unreviewed; none is linguistic approval.",
+          "bounds": [
+            60,
+            797.5,
+            554,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "3 14 named languages required; source changes mark translation stale and block critical copy.",
+          "bounds": [
+            60,
+            824.5,
+            681,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "9e74ca3b2a030595484fa326d7b775045e8df964c7e3a06818490a8a05d76b08",
+      "preview_sha256": "0e7666a88cdf2d6c55e6e2685e5d48b95cd983ea83beb1ddb1eb3e92b8e13ab1",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    },
+    {
+      "source": "15-diagrams/c4-context-preview.svg",
+      "preview": "15-diagrams/c4-context-preview.png",
+      "size": [
+        2560,
+        1760
+      ],
+      "unsupported_elements": [],
+      "text_bounds": [
+        {
+          "text": "WAYPOINT / Assessment & planning",
+          "bounds": [
+            40,
+            31.5,
+            338.5,
+            49
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Free to use · Documentation mockup",
+          "bounds": [
+            1011.5,
+            34.5,
+            1240,
+            48
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "System context / Proposed design",
+          "bounds": [
+            80,
+            106,
+            575,
+            138
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Run owner",
+          "bounds": [
+            84,
+            300.5,
+            217,
+            320.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Founder / software sponsor",
+          "bounds": [
+            84,
+            349.5,
+            303,
+            367
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Answers, review, scenarios",
+          "bounds": [
+            84,
+            389.5,
+            280.5,
+            404
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Assessment platform",
+          "bounds": [
+            514,
+            286.5,
+            770.5,
+            313
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "PHP · Free access",
+          "bounds": [
+            514,
+            334.5,
+            680,
+            350
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Scoped sessions and reports",
+          "bounds": [
+            514,
+            381,
+            727,
+            398
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "No payments",
+          "bounds": [
+            514,
+            421,
+            632,
+            439.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Staff roles",
+          "bounds": [
+            984,
+            299.5,
+            1102,
+            320.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Author / review / publish",
+          "bounds": [
+            984,
+            350,
+            1170.5,
+            367
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "MFA + least privilege",
+          "bounds": [
+            984,
+            389,
+            1142,
+            406
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "HTTPS",
+          "bounds": [
+            375,
+            316,
+            415,
+            326
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Reports",
+          "bounds": [
+            365,
+            435,
+            412.5,
+            448
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Config",
+          "bounds": [
+            840,
+            315.5,
+            881,
+            329
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "C4 context scope: people and platform boundary; container details in c4-containers.mmd.",
+          "bounds": [
+            60,
+            770.5,
+            652,
+            785.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Relationships exact and authored as vector; not an AI-generated architecture image.",
+          "bounds": [
+            60,
+            797.5,
+            615,
+            812.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Optional narrative AI is deferred; email notifications do not carry raw answers.",
+          "bounds": [
+            60,
+            824.5,
+            572.5,
+            839.5
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Email service",
+          "bounds": [
+            514,
+            570.5,
+            655,
+            589
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "Transactional notifications",
+          "bounds": [
+            514,
+            613,
+            697,
+            625
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        },
+        {
+          "text": "No raw assessment answers",
+          "bounds": [
+            514,
+            644.5,
+            698,
+            655
+          ],
+          "outside_canvas": false,
+          "direction": "ltr"
+        }
+      ],
+      "source_sha256": "c635107d5f24c23bb0f43eab093507469bb281bc8877f0dfe6a6309016a0ea66",
+      "preview_sha256": "c05ec196a5c492459471779cf89518ac5c1a5fd8390ddfff0555c1268b143117",
+      "actual_png_size": [
+        2560,
+        1760
+      ]
+    }
+  ],
+  "before_correction": {
+    "out_of_canvas_text": [
+      {
+        "source": "04-ux-ui/mockups/06-translation-pricing.svg",
+        "text": "مدیریت ترجمه و برآورد",
+        "bounds": [
+          1200,
+          97.5,
+          1493.5,
+          134
+        ]
+      },
+      {
+        "source": "04-ux-ui/mockups/06-translation-pricing.svg",
+        "text": "فارسی · نسخه پیشنهادی",
+        "bounds": [
+          1200,
+          156,
+          1383,
+          175
+        ]
+      },
+      {
+        "source": "04-ux-ui/mockups/06-translation-pricing.svg",
+        "text": "وضعیت ترجمه",
+        "bounds": [
+          1176,
+          236,
+          1321,
+          256
+        ]
+      },
+      {
+        "source": "04-ux-ui/mockups/06-translation-pricing.svg",
+        "text": "نرخ‌های برآورد پروژه",
+        "bounds": [
+          1176,
+          510.5,
+          1365.5,
+          538.5
+        ]
+      }
+    ],
+    "rtl_anchors_corrected": 8
+  },
+  "visual_review": {
+    "reviewer": "R09/R13 perspectives simulated by coordinating agent",
+    "artifacts_inspected": [
+      "04-ux-ui/mockups/01-flow-choice.png",
+      "04-ux-ui/mockups/02-question-clarification.png",
+      "04-ux-ui/mockups/03-answer-review.png",
+      "04-ux-ui/mockups/04-result-estimate.png",
+      "04-ux-ui/mockups/05-admin-flow-editor.png",
+      "04-ux-ui/mockups/06-translation-pricing.png",
+      "15-diagrams/c4-context-preview.png"
+    ],
+    "findings_resolved": [
+      "RTL text-anchor end placed Persian headings outside canvas;changed RTL text-anchor to start",
+      "Checkbox Unicode glyphs missing in Segoe UI;replaced with vector controls",
+      "Added explicit arrowheads and email boundary in C4 context preview",
+      "Improved English spacing around commas,units,versions and amounts"
+    ],
+    "remaining": [
+      "Browser/SVG-engine equivalence not tested",
+      "Persian copy not linguistically approved",
+      "Application semantics,keyboard/assistive technology and responsive interaction untested"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+sequenceDiagram
+ actor A as Author
+ actor R as Reviewer/publisher
+ participant S as Draft service
+ participant V as Validator/simulator
+ participant D as Release store
+ A->>S: Save draft(expected revision)
+ S->>V: Schema,graph,translation,price,fixture checks
+ V-->>S: Findings and trace
+ R->>S: Approve exact hash + publish
+ S->>D: Atomic manifest activation + audit
+ alt Checks/hash/auth fail
+  D-->>S: Reject;previous release active
+ else Valid
+  D-->>S: New release for new runs
+ end
+ S-->>R: Status + verification record

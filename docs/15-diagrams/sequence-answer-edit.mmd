@@ -1,0 +1,18 @@
+sequenceDiagram
+ actor U as Owner
+ participant A as Answer service
+ participant P as Live policy
+ participant D as Transaction store
+ participant R as Rule engine
+ U->>A: Answer + expected revision
+ A->>P: Check ownership/action
+ A->>D: Begin,lock/check revision
+ alt Revision matches and answer valid
+  A->>R: Applicability and dependency closure
+  R-->>A: Active facts + invalidations
+  A->>D: Save answer + invalidations + revision;commit
+  A-->>U: New revision + changed scope
+ else Conflict/invalid
+  A->>D: Roll back
+  A-->>U: 409/422 with safe repair details
+ end

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-30",
+  "timezone": "Asia/Tehran",
+  "scope": "Local implementation verification; no production deployment or human approval",
+  "regression": {
+    "tests": 50,
+    "assertions": 610,
+    "result": "passed",
+    "elapsed_seconds": 61.366,
+    "memory_mb": 100,
+    "artifact": "../phpunit.xml"
+  },
+  "frontend": {
+    "renders": 142,
+    "public_assertions": 96,
+    "staff_assertions": 33,
+    "runner_hashes": {
+      "public-render-contracts.php": "46aee810a86e57136f1dd49033a7782fd6ac2a61b7e2b742f58abf4b0639e346",
+      "staff-livewire-contracts.php": "279f3957452f7c8c033986227e49d01d833d265a7e77561e272872546eafab17"
+    },
+    "evidence": "../../../tools/verification/"
+  },
+  "checks": {
+    "pint": "passed; generated exact runner fixtures excluded",
+    "javascript_syntax": "passed",
+    "blade_cache": "passed",
+    "composer_platform_requirements": "passed",
+    "composer_manifest": "valid; strict exits1 on missing owner license",
+    "composer_advisories": "blocked by Packagist SSL/advisory timeouts; no clean audit claim",
+    "migrations": "four applied",
+    "health": "up, no pending/failed queue or exports",
+    "retention_prune": "refused because policy unapproved; no personal deletion",
+    "ui_copy": {
+      "required_per_locale": 966,
+      "approved_per_locale": 0,
+      "configured_locales": 14
+    }
+  },
+  "sqlite_concurrency": {
+    "real_processes": 2,
+    "overlap_handshake": true,
+    "wait_assertion_min_seconds": 0.15,
+    "committed_counter": 2,
+    "result": "passed"
+  },
+  "browser": {
+    "engine": "Isolated Chromium; cached build directory chromium-1234 (not a claimed browser version)",
+    "uncaught_page_errors": 0,
+    "priced_report_axe": {
+      "version": "4.12.1",
+      "violations": 0,
+      "passes": 30,
+      "incomplete": [
+        "color-contrast: aria-hidden decorative glyphs"
+      ]
+    },
+    "admin_axe": {
+      "violations": 0,
+      "passes": 30,
+      "incomplete": [
+        "dynamic dropdown aria-controls reference"
+      ]
+    },
+    "rtl": {
+      "layout": "rtl",
+      "content_lang": "en",
+      "viewport": 1440,
+      "scroll_width": 1440,
+      "reduced_motion": true
+    }
+  },
+  "privacy_cleanup": {
+    "qa_staff_enabled": false,
+    "grants": [],
+    "mfa_cleared": true,
+    "password_rotated_unretained": true,
+    "temporary_credential_files_removed": true,
+    "qa_browser_closed": true
+  },
+  "original_inventory": {
+    "text_files_present": 216,
+    "lengths_unchanged": true,
+    "note": "Historical bytes field stores JavaScript text length, not UTF-8 byte size; no original cryptographic baseline was recorded."
+  },
+  "backup_restore": {
+    "result": "passed integrity/row counts/SHA256 to a new private file",
+    "counts": {
+      "flows": 3,
+      "releases": 6,
+      "runs": 4,
+      "reports": 2
+    },
+    "sha256": "0ee81ce508ee9b31fe7821f2ab4758e94b806c9cae02ef7d773c34090ae7fdab"
+  }
+}

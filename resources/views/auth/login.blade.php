@@ -1,0 +1,13 @@
+@extends('layouts.app')
+@section('title',__('Sign in'))
+@section('content')
+<div class="shell auth-space"><section class="auth-sheet" aria-labelledby="login-title"><a dir="auto" class="back-link" href="{{ route('home') }}"><span dir="auto" aria-hidden="true">←</span> {{ __('Back to assessments') }}</a><p dir="auto" class="eyebrow">{{ __('A PLACE FOR YOUR WORK') }}</p><h1 dir="auto" id="login-title">{{ __('Welcome back.') }}</h1><p dir="auto">{{ __('Sign in to access sessions linked to your account. Basic assessments remain available without contact information.') }}</p><form method="post" action="{{ route('login.store') }}" data-submitting>@csrf<div class="field-group"><label dir="auto" for="email">{{ __('Email address') }}</label><input name="email" id="email" type="email" value="{{ old('email') }}" required autocomplete="username" dir="ltr" aria-describedby="email-error" @error('email') aria-invalid="true" @enderror><span dir="auto" id="email-error" class="field-error">@error('email')
+@php
+$localizedMessage=__($message);
+@endphp
+{{ is_string($localizedMessage)?$localizedMessage:$message }}@enderror</span></div><div class="field-group"><label dir="auto" for="password">{{ __('Password') }}</label><input name="password" id="password" type="password" required autocomplete="current-password" aria-describedby="password-error" @error('password') aria-invalid="true" @enderror><span dir="auto" id="password-error" class="field-error">@error('password')
+@php
+$localizedMessage=__($message);
+@endphp
+{{ is_string($localizedMessage)?$localizedMessage:$message }}@enderror</span></div><button dir="auto" class="button button-primary button-block" type="submit" data-loading-text="{{ __('Signing in…') }}">{{ __('Sign in') }}<span dir="auto" aria-hidden="true"> →</span></button></form><div class="auth-note"><strong dir="auto">{{ __('Staff administration') }}</strong><p dir="auto">{{ __('Use the separate staff sign-in for authoring, translation and publication tools.') }}</p><a dir="auto" class="text-link" href="{{ url('/admin') }}">{{ __('Open staff workspace') }}<span dir="auto" aria-hidden="true"> ↗</span></a></div></section><aside class="auth-aside"><p dir="auto" class="tiny-label">{{ __('YOUR CONTEXT. YOUR PACE.') }}</p><h2 dir="auto">{{ __('A little clarity') }}<br>{{ __('goes a long way.') }}</h2><p dir="auto">{{ __('Return to your answers, compare a different scenario and keep the reasoning that led you there.') }}</p><div class="auth-waypoints" aria-hidden="true"><span dir="auto"></span><span dir="auto"></span><span dir="auto"></span></div></aside></div>
+@endsection

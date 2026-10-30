@@ -1,0 +1,21 @@
+@startuml
+start
+:Verify live ownership and release;
+if (Authorized?) then (yes)
+ :Validate question applicability,type and revision;
+ if (Valid?) then (yes)
+  :Recompute dependent closure;
+  :Atomically save answer and invalidate dependent facts;
+  :Evaluate next active question;
+  if (Material unknown/conflict?) then (yes)
+   :Clarify or preserve provisional status;
+  endif
+  :Return acknowledged revision and next/review;
+ else (no)
+  :Return 422 invalid or412 stale-revision conflict;
+ endif
+else (no)
+ :Deny without exposing answers;
+endif
+stop
+@enduml

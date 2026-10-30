@@ -1,0 +1,987 @@
+{
+  "owner": "R28",
+  "reviewers": [
+    "R16",
+    "R27"
+  ],
+  "status": "hypothetical resource scenario",
+  "source": "platform WBS expert assumptions",
+  "open_decisions": [
+    "actual personnel",
+    "source language",
+    "rates"
+  ],
+  "calendar": {
+    "hours_week": 40,
+    "weeks": 38,
+    "holidays": "none assumed"
+  },
+  "allocations": [
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 1,
+      "hours": 40
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 2,
+      "hours": 40
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 3,
+      "hours": 40
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 4,
+      "hours": 40
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 5,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 6,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 7,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 8,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 9,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 10,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 11,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 12,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 13,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 14,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 15,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 16,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 17,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 18,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 19,
+      "hours": 5
+    },
+    {
+      "person": "BA1",
+      "role": "BA",
+      "week": 20,
+      "hours": 5
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 3,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 4,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 5,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 6,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 7,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 8,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 9,
+      "hours": 40
+    },
+    {
+      "person": "UX1",
+      "role": "UX",
+      "week": 10,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 7,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 8,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 9,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 10,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 11,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 12,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 13,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 14,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 15,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 16,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 17,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 18,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 19,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 20,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 21,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 22,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 23,
+      "hours": 40
+    },
+    {
+      "person": "BE1",
+      "role": "BE",
+      "week": 24,
+      "hours": 20
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 11,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 12,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 13,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 14,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 15,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 16,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 17,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 18,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 19,
+      "hours": 40
+    },
+    {
+      "person": "FE1",
+      "role": "FE",
+      "week": 20,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 7,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 8,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 9,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 10,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 11,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 12,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 13,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 14,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 15,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 16,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 17,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 18,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 19,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 20,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 21,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 22,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 23,
+      "hours": 40
+    },
+    {
+      "person": "BE2",
+      "role": "BE",
+      "week": 24,
+      "hours": 20
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 11,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 12,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 13,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 14,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 15,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 16,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 17,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 18,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 19,
+      "hours": 40
+    },
+    {
+      "person": "FE2",
+      "role": "FE",
+      "week": 20,
+      "hours": 40
+    },
+    {
+      "person": "I18N1",
+      "role": "I18N",
+      "week": 11,
+      "hours": 40
+    },
+    {
+      "person": "I18N1",
+      "role": "I18N",
+      "week": 12,
+      "hours": 40
+    },
+    {
+      "person": "I18N1",
+      "role": "I18N",
+      "week": 13,
+      "hours": 40
+    },
+    {
+      "person": "I18N1",
+      "role": "I18N",
+      "week": 14,
+      "hours": 40
+    },
+    {
+      "person": "I18N1",
+      "role": "I18N",
+      "week": 15,
+      "hours": 40
+    },
+    {
+      "person": "I18N1",
+      "role": "I18N",
+      "week": 16,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 25,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 26,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 27,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 28,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 29,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 30,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 31,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 32,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 33,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 34,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 35,
+      "hours": 40
+    },
+    {
+      "person": "QA1",
+      "role": "QA",
+      "week": 36,
+      "hours": 40
+    },
+    {
+      "person": "OPS1",
+      "role": "OPS",
+      "week": 35,
+      "hours": 40
+    },
+    {
+      "person": "OPS1",
+      "role": "OPS",
+      "week": 36,
+      "hours": 40
+    },
+    {
+      "person": "OPS1",
+      "role": "OPS",
+      "week": 37,
+      "hours": 40
+    },
+    {
+      "person": "OPS1",
+      "role": "OPS",
+      "week": 38,
+      "hours": 40
+    },
+    {
+      "person": "SOURCE1",
+      "role": "LANG",
+      "week": 19,
+      "hours": 20
+    },
+    {
+      "person": "SOURCE1",
+      "role": "LANG",
+      "week": 20,
+      "hours": 20
+    },
+    {
+      "person": "SOURCE1",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR1",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR1",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER1",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER1",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR2",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR2",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER2",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER2",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR3",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR3",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER3",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER3",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR4",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR4",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER4",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER4",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR5",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR5",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER5",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER5",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR6",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR6",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER6",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER6",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR7",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR7",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER7",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER7",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR8",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR8",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER8",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER8",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR9",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR9",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER9",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER9",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR10",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR10",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER10",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER10",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR11",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR11",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER11",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER11",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR12",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR12",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER12",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER12",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    },
+    {
+      "person": "TRANSLATOR13",
+      "role": "LANG",
+      "week": 21,
+      "hours": 20
+    },
+    {
+      "person": "TRANSLATOR13",
+      "role": "LANG",
+      "week": 22,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER13",
+      "role": "LANG",
+      "week": 23,
+      "hours": 20
+    },
+    {
+      "person": "REVIEWER13",
+      "role": "LANG",
+      "week": 25,
+      "hours": 8
+    }
+  ]
+}

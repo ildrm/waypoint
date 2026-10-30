@@ -1,0 +1,4180 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "WF-STARTUP",
+  "owner": "R03",
+  "reviewers": [
+    "R06",
+    "R05",
+    "R27"
+  ],
+  "status": "proposed; source baseline audited, not validated instrument",
+  "source": "../../00-governance/sources/startup-journey-assessment.md",
+  "question_count": 40,
+  "questions": [
+    {
+      "id": "Q-ST-CONTEXT",
+      "baseline_id": null,
+      "semantic_key": "context",
+      "stage": "00 Context",
+      "purpose": "Keep evidence comparable and separate different offerings/segments.",
+      "wording": "Which venture, offering, customer segment and period should this assessment describe?",
+      "help": "Use a venture alias rather than personal identifiers. Natural buying interval matters for interpreting return behavior.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "venture_alias": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Nonpersonal project alias",
+            "maxLength": 2000
+          },
+          "offering": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "One primary offering",
+            "maxLength": 2000
+          },
+          "segment": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "One initial customer segment",
+            "maxLength": 2000
+          },
+          "evidence_period": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Start/end dates or stated recent period",
+            "maxLength": 2000
+          },
+          "natural_buying_interval": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Expected next relevant use/buying opportunity",
+            "maxLength": 2000
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Self-reported or independently reviewed; name role not person",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "venture_alias",
+          "offering",
+          "segment",
+          "evidence_period",
+          "natural_buying_interval",
+          "source"
+        ]
+      },
+      "requiredness": "required; unknown scope yields insufficient-evidence report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.context",
+          "source": "Q-ST-CONTEXT"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-CONTEXT"
+      ],
+      "effects": {
+        "scope": "Keep evidence comparable and separate different offerings/segments.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.context.wording",
+        "help": "q.st.context.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-01",
+      "baseline_id": "Q01",
+      "semantic_key": "ambition",
+      "stage": "01 Ambition and current position",
+      "purpose": "A: emphasize owner income and cash discipline. B: emphasize repeatable profitable expansion. C: evaluate the requirements and tradeoffs of equity-backed growth. D/E: define ambition and constraints before financing choices. This answer never increases readiness.",
+      "wording": "What is your main goal for this venture?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-01-A",
+          "value": "A",
+          "label": "A profitable business that supports my income",
+          "translation_key": "q.st.ambition.option.A"
+        },
+        {
+          "id": "OPT-ST-01-B",
+          "value": "B",
+          "label": "A scalable company with sustainable profits",
+          "translation_key": "q.st.ambition.option.B"
+        },
+        {
+          "id": "OPT-ST-01-C",
+          "value": "C",
+          "label": "Rapid growth with outside equity investment",
+          "translation_key": "q.st.ambition.option.C"
+        },
+        {
+          "id": "OPT-ST-01-D",
+          "value": "D",
+          "label": "Testing an opportunity before choosing a direction",
+          "translation_key": "q.st.ambition.option.D"
+        },
+        {
+          "id": "OPT-ST-01-E",
+          "value": "E",
+          "label": "I have not decided",
+          "translation_key": "q.st.ambition.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.ambition",
+          "source": "Q-ST-01"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-01"
+      ],
+      "effects": {
+        "scope": "A: emphasize owner income and cash discipline. B: emphasize repeatable profitable expansion. C: evaluate the requirements and tradeoffs of equity-backed growth. D/E: define ambition and constraints before financing choices. This answer never increases readiness.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.ambition.wording",
+        "help": "q.st.ambition.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-02",
+      "baseline_id": "Q02",
+      "semantic_key": "position",
+      "stage": "01 Ambition and current position",
+      "purpose": "Record self-described position. Derive recommendations from evidence answers; do not accept this choice as proof of maturity.",
+      "wording": "Which description best matches your venture today?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-02-A",
+          "value": "A",
+          "label": "I am exploring problems or opportunities",
+          "translation_key": "q.st.position.option.A"
+        },
+        {
+          "id": "OPT-ST-02-B",
+          "value": "B",
+          "label": "I have selected an idea but have no usable offering",
+          "translation_key": "q.st.position.option.B"
+        },
+        {
+          "id": "OPT-ST-02-C",
+          "value": "C",
+          "label": "I have a prototype or pilot",
+          "translation_key": "q.st.position.option.C"
+        },
+        {
+          "id": "OPT-ST-02-D",
+          "value": "D",
+          "label": "I have customers but demand is not yet consistently repeatable",
+          "translation_key": "q.st.position.option.D"
+        },
+        {
+          "id": "OPT-ST-02-E",
+          "value": "E",
+          "label": "I am growing a business with repeated customer demand",
+          "translation_key": "q.st.position.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.position",
+          "source": "Q-ST-02"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-02"
+      ],
+      "effects": {
+        "scope": "Record self-described position. Derive recommendations from evidence answers; do not accept this choice as proof of maturity.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.position.wording",
+        "help": "q.st.position.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-03",
+      "baseline_id": "Q03",
+      "semantic_key": "customer",
+      "stage": "02 Customer and problem",
+      "purpose": "A: use the defined segment. B: identify buyer and decision maker. C/D: narrow the first segment. E: clarify segment and purchasing roles.",
+      "wording": "How clearly have you identified the initial customer?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-03-A",
+          "value": "A",
+          "label": "A specific segment, users, buyers, and decision makers are identified",
+          "translation_key": "q.st.customer.option.A"
+        },
+        {
+          "id": "OPT-ST-03-B",
+          "value": "B",
+          "label": "A specific user segment is identified, but the buyer is unclear",
+          "translation_key": "q.st.customer.option.B"
+        },
+        {
+          "id": "OPT-ST-03-C",
+          "value": "C",
+          "label": "The target is a broad market",
+          "translation_key": "q.st.customer.option.C"
+        },
+        {
+          "id": "OPT-ST-03-D",
+          "value": "D",
+          "label": "No initial customer segment has been selected",
+          "translation_key": "q.st.customer.option.D"
+        },
+        {
+          "id": "OPT-ST-03-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.customer.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.customer",
+          "source": "Q-ST-03"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-03"
+      ],
+      "effects": {
+        "scope": "A: use the defined segment. B: identify buyer and decision maker. C/D: narrow the first segment. E: clarify segment and purchasing roles.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.customer.wording",
+        "help": "q.st.customer.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-04",
+      "baseline_id": "Q04",
+      "semantic_key": "problem_evidence",
+      "stage": "02 Customer and problem",
+      "purpose": "A: document observations and check representativeness. B: quantify frequency and consequences through observation or records. C/D/E: investigate recent behavior and workarounds before major product commitments.",
+      "wording": "What is your strongest evidence that the problem matters?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-04-A",
+          "value": "A",
+          "label": "Repeated observation or records show the problem and its consequences",
+          "translation_key": "q.st.problem_evidence.option.A"
+        },
+        {
+          "id": "OPT-ST-04-B",
+          "value": "B",
+          "label": "Several target customers described recent examples and workarounds",
+          "translation_key": "q.st.problem_evidence.option.B"
+        },
+        {
+          "id": "OPT-ST-04-C",
+          "value": "C",
+          "label": "Informal opinions or general complaints",
+          "translation_key": "q.st.problem_evidence.option.C"
+        },
+        {
+          "id": "OPT-ST-04-D",
+          "value": "D",
+          "label": "My own assumptions or experience only",
+          "translation_key": "q.st.problem_evidence.option.D"
+        },
+        {
+          "id": "OPT-ST-04-E",
+          "value": "E",
+          "label": "No evidence has been gathered",
+          "translation_key": "q.st.problem_evidence.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.problem_evidence",
+          "source": "Q-ST-04"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-04"
+      ],
+      "effects": {
+        "scope": "A: document observations and check representativeness. B: quantify frequency and consequences through observation or records. C/D/E: investigate recent behavior and workarounds before major product commitments.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.problem_evidence.wording",
+        "help": "q.st.problem_evidence.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-05",
+      "baseline_id": "Q05",
+      "semantic_key": "alternatives",
+      "stage": "03 Market and alternatives",
+      "purpose": "A: test why a customer would switch. B: add indirect alternatives and doing nothing. C/D/E: compare alternatives against the specific customer job.",
+      "wording": "How thoroughly have you investigated existing alternatives?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-05-A",
+          "value": "A",
+          "label": "Direct competitors, indirect alternatives, and doing nothing are mapped",
+          "translation_key": "q.st.alternatives.option.A"
+        },
+        {
+          "id": "OPT-ST-05-B",
+          "value": "B",
+          "label": "Direct competitors have been compared",
+          "translation_key": "q.st.alternatives.option.B"
+        },
+        {
+          "id": "OPT-ST-05-C",
+          "value": "C",
+          "label": "I know some competitor names but have not compared them",
+          "translation_key": "q.st.alternatives.option.C"
+        },
+        {
+          "id": "OPT-ST-05-D",
+          "value": "D",
+          "label": "No alternatives have been investigated",
+          "translation_key": "q.st.alternatives.option.D"
+        },
+        {
+          "id": "OPT-ST-05-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.alternatives.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.alternatives",
+          "source": "Q-ST-05"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-05"
+      ],
+      "effects": {
+        "scope": "A: test why a customer would switch. B: add indirect alternatives and doing nothing. C/D/E: compare alternatives against the specific customer job.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.alternatives.wording",
+        "help": "q.st.alternatives.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-06",
+      "baseline_id": "Q06",
+      "semantic_key": "market_access",
+      "stage": "03 Market and alternatives",
+      "purpose": "A: recruit suitable interviews or pilots. B: test access. C/D/E: build an actionable prospect route; market totals alone do not establish reachability.",
+      "wording": "How can you reach your first suitable customers?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-06-A",
+          "value": "A",
+          "label": "Named prospects and routes to their decision makers are identified",
+          "translation_key": "q.st.market_access.option.A"
+        },
+        {
+          "id": "OPT-ST-06-B",
+          "value": "B",
+          "label": "A relevant audience or prospect source is identified but untested",
+          "translation_key": "q.st.market_access.option.B"
+        },
+        {
+          "id": "OPT-ST-06-C",
+          "value": "C",
+          "label": "I only have broad market statistics",
+          "translation_key": "q.st.market_access.option.C"
+        },
+        {
+          "id": "OPT-ST-06-D",
+          "value": "D",
+          "label": "I cannot yet identify a practical route to customers",
+          "translation_key": "q.st.market_access.option.D"
+        },
+        {
+          "id": "OPT-ST-06-E",
+          "value": "E",
+          "label": "This has not been assessed",
+          "translation_key": "q.st.market_access.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.market_access",
+          "source": "Q-ST-06"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-06"
+      ],
+      "effects": {
+        "scope": "A: recruit suitable interviews or pilots. B: test access. C/D/E: build an actionable prospect route; market totals alone do not establish reachability.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.market_access.wording",
+        "help": "q.st.market_access.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-07",
+      "baseline_id": "Q07",
+      "semantic_key": "outcome",
+      "stage": "04 Value proposition and differentiation",
+      "purpose": "A: record baseline and resulting improvement. B: test the defined outcome. C/D/E: define the customer outcome before expanding features.",
+      "wording": "How clearly is the customer outcome demonstrated?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-07-A",
+          "value": "A",
+          "label": "Real customers have achieved a measurable improvement",
+          "translation_key": "q.st.outcome.option.A"
+        },
+        {
+          "id": "OPT-ST-07-B",
+          "value": "B",
+          "label": "A measurable target is defined but has not been demonstrated",
+          "translation_key": "q.st.outcome.option.B"
+        },
+        {
+          "id": "OPT-ST-07-C",
+          "value": "C",
+          "label": "The offer is mainly described through features",
+          "translation_key": "q.st.outcome.option.C"
+        },
+        {
+          "id": "OPT-ST-07-D",
+          "value": "D",
+          "label": "The customer outcome is unclear",
+          "translation_key": "q.st.outcome.option.D"
+        },
+        {
+          "id": "OPT-ST-07-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.outcome.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.outcome",
+          "source": "Q-ST-07"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-07"
+      ],
+      "effects": {
+        "scope": "A: record baseline and resulting improvement. B: test the defined outcome. C/D/E: define the customer outcome before expanding features.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.outcome.wording",
+        "help": "q.st.outcome.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-08",
+      "baseline_id": "Q08",
+      "semantic_key": "differentiation",
+      "stage": "04 Value proposition and differentiation",
+      "purpose": "A: verify the reason across additional customers. B: test the proposed advantage. C: test price sensitivity and sustainable costs. D/E: investigate a credible buying or switching reason.",
+      "wording": "What supports your reason for customers to choose you?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-08-A",
+          "value": "A",
+          "label": "Customers have chosen us and explained the specific reason",
+          "translation_key": "q.st.differentiation.option.A"
+        },
+        {
+          "id": "OPT-ST-08-B",
+          "value": "B",
+          "label": "A specific advantage is proposed but not tested",
+          "translation_key": "q.st.differentiation.option.B"
+        },
+        {
+          "id": "OPT-ST-08-C",
+          "value": "C",
+          "label": "The main proposed advantage is a lower price, not yet tested",
+          "translation_key": "q.st.differentiation.option.C"
+        },
+        {
+          "id": "OPT-ST-08-D",
+          "value": "D",
+          "label": "No clear reason to switch or buy is defined",
+          "translation_key": "q.st.differentiation.option.D"
+        },
+        {
+          "id": "OPT-ST-08-E",
+          "value": "E",
+          "label": "This has not been assessed",
+          "translation_key": "q.st.differentiation.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.differentiation",
+          "source": "Q-ST-08"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-08"
+      ],
+      "effects": {
+        "scope": "A: verify the reason across additional customers. B: test the proposed advantage. C: test price sensitivity and sustainable costs. D/E: investigate a credible buying or switching reason.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.differentiation.wording",
+        "help": "q.st.differentiation.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-09",
+      "baseline_id": "Q09",
+      "semantic_key": "revenue_model",
+      "stage": "05 Revenue model and pricing",
+      "purpose": "Record the primary revenue model. A triggers C01; C triggers C04; E triggers C05; F prompts comparison of revenue hypotheses. Model choice is not a readiness score.",
+      "wording": "What is your primary intended revenue model?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-09-A",
+          "value": "A",
+          "label": "One-time product sales or fixed projects",
+          "translation_key": "q.st.revenue_model.option.A"
+        },
+        {
+          "id": "OPT-ST-09-B",
+          "value": "B",
+          "label": "Subscriptions or ongoing service contracts",
+          "translation_key": "q.st.revenue_model.option.B"
+        },
+        {
+          "id": "OPT-ST-09-C",
+          "value": "C",
+          "label": "Marketplace commissions",
+          "translation_key": "q.st.revenue_model.option.C"
+        },
+        {
+          "id": "OPT-ST-09-D",
+          "value": "D",
+          "label": "Usage-based or transaction fees for our own service",
+          "translation_key": "q.st.revenue_model.option.D"
+        },
+        {
+          "id": "OPT-ST-09-E",
+          "value": "E",
+          "label": "Advertising or sponsorship",
+          "translation_key": "q.st.revenue_model.option.E"
+        },
+        {
+          "id": "OPT-ST-09-F",
+          "value": "F",
+          "label": "Not yet decided",
+          "translation_key": "q.st.revenue_model.option.F"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.revenue_model",
+          "source": "Q-ST-09"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-09"
+      ],
+      "effects": {
+        "scope": "Record the primary revenue model. A triggers C01; C triggers C04; E triggers C05; F prompts comparison of revenue hypotheses. Model choice is not a readiness score.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.revenue_model.wording",
+        "help": "q.st.revenue_model.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-10",
+      "baseline_id": "Q10",
+      "semantic_key": "price_evidence",
+      "stage": "05 Revenue model and pricing",
+      "purpose": "A: examine repeatability and discounts. B: test normal pricing. C/D/E: run a transparent price or paid-offer test. Never describe hypothetical interest as proven willingness to pay.",
+      "wording": "What is your strongest evidence for the intended price?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "independent-customer",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-10-A",
+          "value": "A",
+          "label": "Independent target customers have paid the intended normal price",
+          "translation_key": "q.st.price_evidence.option.A"
+        },
+        {
+          "id": "OPT-ST-10-B",
+          "value": "B",
+          "label": "Customers have paid a discounted or introductory price only",
+          "translation_key": "q.st.price_evidence.option.B"
+        },
+        {
+          "id": "OPT-ST-10-C",
+          "value": "C",
+          "label": "Prospects have expressed interest without paying",
+          "translation_key": "q.st.price_evidence.option.C"
+        },
+        {
+          "id": "OPT-ST-10-D",
+          "value": "D",
+          "label": "The price was selected internally without customer testing",
+          "translation_key": "q.st.price_evidence.option.D"
+        },
+        {
+          "id": "OPT-ST-10-E",
+          "value": "E",
+          "label": "No price has been proposed",
+          "translation_key": "q.st.price_evidence.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.price_evidence",
+          "source": "Q-ST-10"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-10"
+      ],
+      "effects": {
+        "scope": "A: examine repeatability and discounts. B: test normal pricing. C/D/E: run a transparent price or paid-offer test. Never describe hypothetical interest as proven willingness to pay.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.price_evidence.wording",
+        "help": "q.st.price_evidence.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-11",
+      "baseline_id": "Q11",
+      "semantic_key": "commitment",
+      "stage": "06 Demand evidence and experimentation",
+      "purpose": "A: inspect concentration and repetition appropriate to the model. B: replicate with independent customers. C: fulfill the commitment and measure outcomes. D/E: seek a suitably scoped commercial test after prerequisites are met.",
+      "wording": "What is the strongest commercial commitment achieved?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "independent-customer",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-11-A",
+          "value": "A",
+          "label": "Multiple independent customers have completed purchases, with repeat purchases where applicable",
+          "translation_key": "q.st.commitment.option.A"
+        },
+        {
+          "id": "OPT-ST-11-B",
+          "value": "B",
+          "label": "At least one independent customer has completed a purchase",
+          "translation_key": "q.st.commitment.option.B"
+        },
+        {
+          "id": "OPT-ST-11-C",
+          "value": "C",
+          "label": "There are paid pilots, deposits, or orders awaiting delivery",
+          "translation_key": "q.st.commitment.option.C"
+        },
+        {
+          "id": "OPT-ST-11-D",
+          "value": "D",
+          "label": "There are only unpaid signups, promises, or expressions of interest",
+          "translation_key": "q.st.commitment.option.D"
+        },
+        {
+          "id": "OPT-ST-11-E",
+          "value": "E",
+          "label": "There are no customer commitments yet",
+          "translation_key": "q.st.commitment.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.commitment",
+          "source": "Q-ST-11"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-11"
+      ],
+      "effects": {
+        "scope": "A: inspect concentration and repetition appropriate to the model. B: replicate with independent customers. C: fulfill the commitment and measure outcomes. D/E: seek a suitably scoped commercial test after prerequisites are met.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.commitment.wording",
+        "help": "q.st.commitment.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-12",
+      "baseline_id": "Q12",
+      "semantic_key": "experiments",
+      "stage": "06 Demand evidence and experimentation",
+      "purpose": "A: preserve an experiment log. B: define decision rules before the next test. C/D/E: specify one hypothesis, observable outcome, measure, and review decision.",
+      "wording": "How do you test important business assumptions?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-12-A",
+          "value": "A",
+          "label": "We record hypotheses, measures, and decision rules before tests",
+          "translation_key": "q.st.experiments.option.A"
+        },
+        {
+          "id": "OPT-ST-12-B",
+          "value": "B",
+          "label": "We run tests but mainly decide afterward how to interpret them",
+          "translation_key": "q.st.experiments.option.B"
+        },
+        {
+          "id": "OPT-ST-12-C",
+          "value": "C",
+          "label": "We collect feedback without structured experiments",
+          "translation_key": "q.st.experiments.option.C"
+        },
+        {
+          "id": "OPT-ST-12-D",
+          "value": "D",
+          "label": "We build or launch mainly on intuition",
+          "translation_key": "q.st.experiments.option.D"
+        },
+        {
+          "id": "OPT-ST-12-E",
+          "value": "E",
+          "label": "No testing approach has been chosen",
+          "translation_key": "q.st.experiments.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.experiments",
+          "source": "Q-ST-12"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-12"
+      ],
+      "effects": {
+        "scope": "A: preserve an experiment log. B: define decision rules before the next test. C/D/E: specify one hypothesis, observable outcome, measure, and review decision.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.experiments.wording",
+        "help": "q.st.experiments.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-13",
+      "baseline_id": "Q13",
+      "semantic_key": "responsibilities",
+      "stage": "07 People and responsibilities",
+      "purpose": "A: confirm owners have capacity. B/C: ask C06 and address the constraining gap. D/E: map essential responsibilities and current coverage.",
+      "wording": "How are the essential responsibilities covered?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-13-A",
+          "value": "A",
+          "label": "All critical responsibilities have capable named owners",
+          "translation_key": "q.st.responsibilities.option.A"
+        },
+        {
+          "id": "OPT-ST-13-B",
+          "value": "B",
+          "label": "One important capability gap is known",
+          "translation_key": "q.st.responsibilities.option.B"
+        },
+        {
+          "id": "OPT-ST-13-C",
+          "value": "C",
+          "label": "Several important capabilities are missing",
+          "translation_key": "q.st.responsibilities.option.C"
+        },
+        {
+          "id": "OPT-ST-13-D",
+          "value": "D",
+          "label": "Responsibilities have not been mapped",
+          "translation_key": "q.st.responsibilities.option.D"
+        },
+        {
+          "id": "OPT-ST-13-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.responsibilities.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.responsibilities",
+          "source": "Q-ST-13"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-13"
+      ],
+      "effects": {
+        "scope": "A: confirm owners have capacity. B/C: ask C06 and address the constraining gap. D/E: map essential responsibilities and current coverage.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.responsibilities.wording",
+        "help": "q.st.responsibilities.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-14",
+      "baseline_id": "Q14",
+      "semantic_key": "founder_agreement",
+      "stage": "07 People and responsibilities",
+      "purpose": "A: review whether agreements still fit. B/C: document expectations, contributions, ownership, and decision rights with appropriate advice. D: resolve the disagreement before further shared commitments. E: do not prescribe a cofounder agreement; check personal capacity and continuity.",
+      "wording": "How clear are ownership, roles, and decision rights among founders?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-14-A",
+          "value": "A",
+          "label": "Written agreements exist and work in practice",
+          "translation_key": "q.st.founder_agreement.option.A"
+        },
+        {
+          "id": "OPT-ST-14-B",
+          "value": "B",
+          "label": "There is informal agreement but little documentation",
+          "translation_key": "q.st.founder_agreement.option.B"
+        },
+        {
+          "id": "OPT-ST-14-C",
+          "value": "C",
+          "label": "Important points are unclear or have not been discussed",
+          "translation_key": "q.st.founder_agreement.option.C"
+        },
+        {
+          "id": "OPT-ST-14-D",
+          "value": "D",
+          "label": "There is an unresolved disagreement",
+          "translation_key": "q.st.founder_agreement.option.D"
+        },
+        {
+          "id": "OPT-ST-14-E",
+          "value": "E",
+          "label": "I am the only founder",
+          "translation_key": "q.st.founder_agreement.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.founder_agreement",
+          "source": "Q-ST-14"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-14"
+      ],
+      "effects": {
+        "scope": "A: review whether agreements still fit. B/C: document expectations, contributions, ownership, and decision rights with appropriate advice. D: resolve the disagreement before further shared commitments. E: do not prescribe a cofounder agreement; check personal capacity and continuity.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.founder_agreement.wording",
+        "help": "q.st.founder_agreement.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-15",
+      "baseline_id": "Q15",
+      "semantic_key": "feasibility",
+      "stage": "08 Feasibility and operating requirements",
+      "purpose": "A: monitor reliability at the proposed scale. B: test remaining feasibility uncertainties. C/E: run a realistic feasibility test. D: resolve or redesign around the critical obstacle before dependent delivery commitments.",
+      "wording": "How far has delivery feasibility been demonstrated?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-15-A",
+          "value": "A",
+          "label": "The full delivery process has worked repeatedly in realistic conditions",
+          "translation_key": "q.st.feasibility.option.A"
+        },
+        {
+          "id": "OPT-ST-15-B",
+          "value": "B",
+          "label": "A realistic feasibility test has worked, with remaining uncertainties",
+          "translation_key": "q.st.feasibility.option.B"
+        },
+        {
+          "id": "OPT-ST-15-C",
+          "value": "C",
+          "label": "Only an internal concept or demonstration exists",
+          "translation_key": "q.st.feasibility.option.C"
+        },
+        {
+          "id": "OPT-ST-15-D",
+          "value": "D",
+          "label": "A critical technical, supply, or operating obstacle is unresolved",
+          "translation_key": "q.st.feasibility.option.D"
+        },
+        {
+          "id": "OPT-ST-15-E",
+          "value": "E",
+          "label": "Feasibility has not been assessed",
+          "translation_key": "q.st.feasibility.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.feasibility",
+          "source": "Q-ST-15"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-15"
+      ],
+      "effects": {
+        "scope": "A: monitor reliability at the proposed scale. B: test remaining feasibility uncertainties. C/E: run a realistic feasibility test. D: resolve or redesign around the critical obstacle before dependent delivery commitments.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.feasibility.wording",
+        "help": "q.st.feasibility.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-16",
+      "baseline_id": "Q16",
+      "semantic_key": "operating_requirements",
+      "stage": "08 Feasibility and operating requirements",
+      "purpose": "A: monitor changes when the activity or market changes. B/C/E: clarify requirements; ask C02. D: treat the affected activity as blocked pending resolution. Do not imply that the questionnaire determines legal compliance.",
+      "wording": "How well do you understand requirements for operating in your intended market?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-16-A",
+          "value": "A",
+          "label": "Applicable requirements were checked and current prerequisites are addressed",
+          "translation_key": "q.st.operating_requirements.option.A"
+        },
+        {
+          "id": "OPT-ST-16-B",
+          "value": "B",
+          "label": "A review is underway and requirements remain open",
+          "translation_key": "q.st.operating_requirements.option.B"
+        },
+        {
+          "id": "OPT-ST-16-C",
+          "value": "C",
+          "label": "Requirements have not been checked",
+          "translation_key": "q.st.operating_requirements.option.C"
+        },
+        {
+          "id": "OPT-ST-16-D",
+          "value": "D",
+          "label": "A known requirement currently prevents the planned activity",
+          "translation_key": "q.st.operating_requirements.option.D"
+        },
+        {
+          "id": "OPT-ST-16-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.operating_requirements.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.operating_requirements",
+          "source": "Q-ST-16"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-16"
+      ],
+      "effects": {
+        "scope": "A: monitor changes when the activity or market changes. B/C/E: clarify requirements; ask C02. D: treat the affected activity as blocked pending resolution. Do not imply that the questionnaire determines legal compliance.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.operating_requirements.wording",
+        "help": "q.st.operating_requirements.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-17",
+      "baseline_id": "Q17",
+      "semantic_key": "offering",
+      "stage": "09 Minimum viable offering",
+      "purpose": "A: prioritize measured customer outcomes over more features. B: recruit a suitable pilot. C/D: create the smallest usable experiment after feasibility prerequisites. E: explain the redesign hypothesis and maintain existing customer obligations.",
+      "wording": "What can a customer use today?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-17-A",
+          "value": "A",
+          "label": "A functioning offering is used in regular customer delivery",
+          "translation_key": "q.st.offering.option.A"
+        },
+        {
+          "id": "OPT-ST-17-B",
+          "value": "B",
+          "label": "A limited usable pilot is available",
+          "translation_key": "q.st.offering.option.B"
+        },
+        {
+          "id": "OPT-ST-17-C",
+          "value": "C",
+          "label": "Only a mockup, sample concept, or internal demonstration exists",
+          "translation_key": "q.st.offering.option.C"
+        },
+        {
+          "id": "OPT-ST-17-D",
+          "value": "D",
+          "label": "Only an idea or written description exists",
+          "translation_key": "q.st.offering.option.D"
+        },
+        {
+          "id": "OPT-ST-17-E",
+          "value": "E",
+          "label": "The offering is currently being redesigned",
+          "translation_key": "q.st.offering.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.offering",
+          "source": "Q-ST-17"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-17"
+      ],
+      "effects": {
+        "scope": "A: prioritize measured customer outcomes over more features. B: recruit a suitable pilot. C/D: create the smallest usable experiment after feasibility prerequisites. E: explain the redesign hypothesis and maintain existing customer obligations.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.offering.wording",
+        "help": "q.st.offering.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-18",
+      "baseline_id": "Q18",
+      "semantic_key": "customer_outcome",
+      "stage": "09 Minimum viable offering",
+      "purpose": "A: verify consistency across relevant customers. B: investigate variation and ask C08. C/E: measure external customer outcomes. D: diagnose and improve the core result before expanding acquisition.",
+      "wording": "What happens when customers try the core offering?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-18-A",
+          "value": "A",
+          "label": "They consistently achieve the intended outcome",
+          "translation_key": "q.st.customer_outcome.option.A"
+        },
+        {
+          "id": "OPT-ST-18-B",
+          "value": "B",
+          "label": "Some achieve the outcome, while others struggle",
+          "translation_key": "q.st.customer_outcome.option.B"
+        },
+        {
+          "id": "OPT-ST-18-C",
+          "value": "C",
+          "label": "The outcome has not yet been evaluated with external customers",
+          "translation_key": "q.st.customer_outcome.option.C"
+        },
+        {
+          "id": "OPT-ST-18-D",
+          "value": "D",
+          "label": "Most tested customers do not achieve the intended outcome",
+          "translation_key": "q.st.customer_outcome.option.D"
+        },
+        {
+          "id": "OPT-ST-18-E",
+          "value": "E",
+          "label": "Results have not been measured",
+          "translation_key": "q.st.customer_outcome.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.customer_outcome",
+          "source": "Q-ST-18"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-18"
+      ],
+      "effects": {
+        "scope": "A: verify consistency across relevant customers. B: investigate variation and ask C08. C/E: measure external customer outcomes. D: diagnose and improve the core result before expanding acquisition.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.customer_outcome.wording",
+        "help": "q.st.customer_outcome.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-19",
+      "baseline_id": "Q19",
+      "semantic_key": "channel",
+      "stage": "10 Acquisition and sales",
+      "purpose": "A-D: record the observed primary channel and measure its funnel. E: choose and test a plausible channel after identifying suitable customers. No channel is universally superior.",
+      "wording": "Which primary channel currently brings paying customers?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-19-A",
+          "value": "A",
+          "label": "Founder outreach or direct sales",
+          "translation_key": "q.st.channel.option.A"
+        },
+        {
+          "id": "OPT-ST-19-B",
+          "value": "B",
+          "label": "Search, content, or paid digital campaigns",
+          "translation_key": "q.st.channel.option.B"
+        },
+        {
+          "id": "OPT-ST-19-C",
+          "value": "C",
+          "label": "Referrals or partners",
+          "translation_key": "q.st.channel.option.C"
+        },
+        {
+          "id": "OPT-ST-19-D",
+          "value": "D",
+          "label": "Retail, events, distribution, or external marketplaces",
+          "translation_key": "q.st.channel.option.D"
+        },
+        {
+          "id": "OPT-ST-19-E",
+          "value": "E",
+          "label": "No channel has brought paying customers yet",
+          "translation_key": "q.st.channel.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.channel",
+          "source": "Q-ST-19"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-19"
+      ],
+      "effects": {
+        "scope": "A-D: record the observed primary channel and measure its funnel. E: choose and test a plausible channel after identifying suitable customers. No channel is universally superior.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.channel.wording",
+        "help": "q.st.channel.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-20",
+      "baseline_id": "Q20",
+      "semantic_key": "acquisition",
+      "stage": "10 Acquisition and sales",
+      "purpose": "A: test the channel in a controlled incremental expansion. B: measure true acquisition costs and consistency. C: test whether the approach works beyond personal relationships. D: conduct an initial acquisition experiment. E: instrument the funnel and cost records.",
+      "wording": "How repeatable is customer acquisition?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-20-A",
+          "value": "A",
+          "label": "A channel has repeatedly produced customers with acceptable measured acquisition costs",
+          "translation_key": "q.st.acquisition.option.A"
+        },
+        {
+          "id": "OPT-ST-20-B",
+          "value": "B",
+          "label": "A channel has produced customers, but costs or consistency are uncertain",
+          "translation_key": "q.st.acquisition.option.B"
+        },
+        {
+          "id": "OPT-ST-20-C",
+          "value": "C",
+          "label": "Customers have arrived mainly through personal relationships or exceptional deals",
+          "translation_key": "q.st.acquisition.option.C"
+        },
+        {
+          "id": "OPT-ST-20-D",
+          "value": "D",
+          "label": "There are no completed customer acquisitions yet",
+          "translation_key": "q.st.acquisition.option.D"
+        },
+        {
+          "id": "OPT-ST-20-E",
+          "value": "E",
+          "label": "Acquisition performance has not been measured",
+          "translation_key": "q.st.acquisition.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.acquisition",
+          "source": "Q-ST-20"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-20"
+      ],
+      "effects": {
+        "scope": "A: test the channel in a controlled incremental expansion. B: measure true acquisition costs and consistency. C: test whether the approach works beyond personal relationships. D: conduct an initial acquisition experiment. E: instrument the funnel and cost records.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.acquisition.wording",
+        "help": "q.st.acquisition.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-21",
+      "baseline_id": "Q21",
+      "semantic_key": "contribution",
+      "stage": "11 Economics and cash",
+      "purpose": "A: check that variable costs remain complete at higher volumes. B/E: calculate contribution with delivery labor, support, fulfillment, transaction fees, refunds, and relevant usage costs. C: investigate price, costs, scope, or model before expanding loss-making sales. D: create a cost hypothesis and validate after delivery.",
+      "wording": "After all variable delivery costs, what remains from a typical sale?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "contribution",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-21-A",
+          "value": "A",
+          "label": "A positive contribution supported by actual delivery records",
+          "translation_key": "q.st.contribution.option.A"
+        },
+        {
+          "id": "OPT-ST-21-B",
+          "value": "B",
+          "label": "It appears positive, but some variable costs are missing",
+          "translation_key": "q.st.contribution.option.B"
+        },
+        {
+          "id": "OPT-ST-21-C",
+          "value": "C",
+          "label": "Zero or a negative contribution",
+          "translation_key": "q.st.contribution.option.C"
+        },
+        {
+          "id": "OPT-ST-21-D",
+          "value": "D",
+          "label": "No customer delivery has been completed yet",
+          "translation_key": "q.st.contribution.option.D"
+        },
+        {
+          "id": "OPT-ST-21-E",
+          "value": "E",
+          "label": "Contribution has not been calculated",
+          "translation_key": "q.st.contribution.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.contribution",
+          "source": "Q-ST-21"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-21"
+      ],
+      "effects": {
+        "scope": "A: check that variable costs remain complete at higher volumes. B/E: calculate contribution with delivery labor, support, fulfillment, transaction fees, refunds, and relevant usage costs. C: investigate price, costs, scope, or model before expanding loss-making sales. D: create a cost hypothesis and validate after delivery.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.contribution.wording",
+        "help": "q.st.contribution.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-22",
+      "baseline_id": "Q22",
+      "semantic_key": "cash",
+      "stage": "11 Economics and cash",
+      "purpose": "A: confirm cash generation covers actual commitments and the proposed growth plan. B/C: maintain an updated forecast; runway alone proves no fit. D: ask C03 and assess near-term commitments. E: prepare the forecast and ask C03. These are illustrative planning bands, not validated survival thresholds.",
+      "wording": "How long can available cash support the current operating plan?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "cash-runway",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-22-A",
+          "value": "A",
+          "label": "Operations generate enough cash for current commitments without new funding",
+          "translation_key": "q.st.cash.option.A"
+        },
+        {
+          "id": "OPT-ST-22-B",
+          "value": "B",
+          "label": "More than 12 months",
+          "translation_key": "q.st.cash.option.B"
+        },
+        {
+          "id": "OPT-ST-22-C",
+          "value": "C",
+          "label": "At least 3 months and up to 12 months",
+          "translation_key": "q.st.cash.option.C"
+        },
+        {
+          "id": "OPT-ST-22-D",
+          "value": "D",
+          "label": "Less than 3 months",
+          "translation_key": "q.st.cash.option.D"
+        },
+        {
+          "id": "OPT-ST-22-E",
+          "value": "E",
+          "label": "A cash forecast has not been prepared",
+          "translation_key": "q.st.cash.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.cash",
+          "source": "Q-ST-22"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-22"
+      ],
+      "effects": {
+        "scope": "A: confirm cash generation covers actual commitments and the proposed growth plan. B/C: maintain an updated forecast; runway alone proves no fit. D: ask C03 and assess near-term commitments. E: prepare the forecast and ask C03. These are illustrative planning bands, not validated survival thresholds.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.cash.wording",
+        "help": "q.st.cash.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-23",
+      "baseline_id": "Q23",
+      "semantic_key": "return",
+      "stage": "12 Retention and customer pull",
+      "purpose": "A: check cohort definitions, natural intervals, and concentration. B: investigate which groups return. C: diagnose the cause through C08. D: wait for the relevant opportunity while measuring earlier customer outcomes. E: measure return behavior. Do not score structurally inapplicable repeat buying as failure.",
+      "wording": "At the next relevant use or buying opportunity, do users or customers return?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "cohort",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-23-A",
+          "value": "A",
+          "label": "Most eligible groups consistently return or renew",
+          "translation_key": "q.st.return.option.A"
+        },
+        {
+          "id": "OPT-ST-23-B",
+          "value": "B",
+          "label": "Some return, but the pattern is mixed",
+          "translation_key": "q.st.return.option.B"
+        },
+        {
+          "id": "OPT-ST-23-C",
+          "value": "C",
+          "label": "Most eligible users or customers do not return",
+          "translation_key": "q.st.return.option.C"
+        },
+        {
+          "id": "OPT-ST-23-D",
+          "value": "D",
+          "label": "The relevant use, buying, or renewal interval has not occurred yet",
+          "translation_key": "q.st.return.option.D"
+        },
+        {
+          "id": "OPT-ST-23-E",
+          "value": "E",
+          "label": "Return behavior has not been measured",
+          "translation_key": "q.st.return.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "not": {
+          "eq": {
+            "question_id": "Q-ST-C01",
+            "value": "C"
+          }
+        }
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-C01"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.return",
+          "source": "Q-ST-23"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-23"
+      ],
+      "effects": {
+        "scope": "A: check cohort definitions, natural intervals, and concentration. B: investigate which groups return. C: diagnose the cause through C08. D: wait for the relevant opportunity while measuring earlier customer outcomes. E: measure return behavior. Do not score structurally inapplicable repeat buying as failure.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.return.wording",
+        "help": "q.st.return.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-24",
+      "baseline_id": "Q24",
+      "semantic_key": "referrals",
+      "stage": "12 Retention and customer pull",
+      "purpose": "A/B: record relevant referrals or expansion and check whether they generalize. C: distinguish incentivized behavior from voluntary pull. D: investigate without assuming referrals are mandatory for every business. E: mark evidence as insufficient.",
+      "wording": "What evidence exists of customers voluntarily bringing more business?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-24-A",
+          "value": "A",
+          "label": "Repeated unsolicited referrals or voluntary account expansion",
+          "translation_key": "q.st.referrals.option.A"
+        },
+        {
+          "id": "OPT-ST-24-B",
+          "value": "B",
+          "label": "Some unsolicited referrals or voluntary expansion",
+          "translation_key": "q.st.referrals.option.B"
+        },
+        {
+          "id": "OPT-ST-24-C",
+          "value": "C",
+          "label": "Referrals occur mainly after incentives or repeated requests",
+          "translation_key": "q.st.referrals.option.C"
+        },
+        {
+          "id": "OPT-ST-24-D",
+          "value": "D",
+          "label": "None has been observed despite enough customer activity to assess it",
+          "translation_key": "q.st.referrals.option.D"
+        },
+        {
+          "id": "OPT-ST-24-E",
+          "value": "E",
+          "label": "There is not enough customer activity or measurement to judge",
+          "translation_key": "q.st.referrals.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.referrals",
+          "source": "Q-ST-24"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-24"
+      ],
+      "effects": {
+        "scope": "A/B: record relevant referrals or expansion and check whether they generalize. C: distinguish incentivized behavior from voluntary pull. D: investigate without assuming referrals are mandatory for every business. E: mark evidence as insufficient.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.referrals.wording",
+        "help": "q.st.referrals.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-25",
+      "baseline_id": "Q25",
+      "semantic_key": "milestone",
+      "stage": "13 Funding for next milestone",
+      "purpose": "A: tie spending to the documented milestone. B/C: reduce scope, phase commitments, or evaluate suitable financing. D/E: define the milestone, cost, and decision criteria before selecting financing.",
+      "wording": "Are resources for the next defined milestone available?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-25-A",
+          "value": "A",
+          "label": "Yes; its scope, cost, and resources are documented and covered",
+          "translation_key": "q.st.milestone.option.A"
+        },
+        {
+          "id": "OPT-ST-25-B",
+          "value": "B",
+          "label": "Only part of the estimated resources is covered",
+          "translation_key": "q.st.milestone.option.B"
+        },
+        {
+          "id": "OPT-ST-25-C",
+          "value": "C",
+          "label": "The milestone is defined but resources are not covered",
+          "translation_key": "q.st.milestone.option.C"
+        },
+        {
+          "id": "OPT-ST-25-D",
+          "value": "D",
+          "label": "The milestone or its cost has not been defined",
+          "translation_key": "q.st.milestone.option.D"
+        },
+        {
+          "id": "OPT-ST-25-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.milestone.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.milestone",
+          "source": "Q-ST-25"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-25"
+      ],
+      "effects": {
+        "scope": "A: tie spending to the documented milestone. B/C: reduce scope, phase commitments, or evaluate suitable financing. D/E: define the milestone, cost, and decision criteria before selecting financing.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.milestone.wording",
+        "help": "q.st.milestone.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-26",
+      "baseline_id": "Q26",
+      "semantic_key": "funding_preference",
+      "stage": "13 Funding for next milestone",
+      "purpose": "A-D: record preference and compare it with suitability, eligibility, obligations, ownership goals, and cash needs. E: compare the available categories. A preference never proves eligibility or warrants an automatic funding recommendation.",
+      "wording": "Which funding source would you prefer to evaluate next?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-26-A",
+          "value": "A",
+          "label": "Customer revenue or founder funds",
+          "translation_key": "q.st.funding_preference.option.A"
+        },
+        {
+          "id": "OPT-ST-26-B",
+          "value": "B",
+          "label": "Grants or other non-dilutive support",
+          "translation_key": "q.st.funding_preference.option.B"
+        },
+        {
+          "id": "OPT-ST-26-C",
+          "value": "C",
+          "label": "Loans or other debt",
+          "translation_key": "q.st.funding_preference.option.C"
+        },
+        {
+          "id": "OPT-ST-26-D",
+          "value": "D",
+          "label": "Equity investors",
+          "translation_key": "q.st.funding_preference.option.D"
+        },
+        {
+          "id": "OPT-ST-26-E",
+          "value": "E",
+          "label": "I need help comparing suitable options",
+          "translation_key": "q.st.funding_preference.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.funding_preference",
+          "source": "Q-ST-26"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-26"
+      ],
+      "effects": {
+        "scope": "A-D: record preference and compare it with suitability, eligibility, obligations, ownership goals, and cash needs. E: compare the available categories. A preference never proves eligibility or warrants an automatic funding recommendation.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.funding_preference.wording",
+        "help": "q.st.funding_preference.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-27",
+      "baseline_id": "Q27",
+      "semantic_key": "delivery",
+      "stage": "14 Capacity and controlled expansion",
+      "purpose": "A: test a controlled increase in throughput. B: document and transfer critical knowledge. C: stabilize delivery before expanding demand. D/E: establish a baseline through repeated deliveries.",
+      "wording": "How consistently can the core operation deliver?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-27-A",
+          "value": "A",
+          "label": "Documented processes deliver consistent quality with clear owners",
+          "translation_key": "q.st.delivery.option.A"
+        },
+        {
+          "id": "OPT-ST-27-B",
+          "value": "B",
+          "label": "Delivery is repeatable but relies heavily on particular people",
+          "translation_key": "q.st.delivery.option.B"
+        },
+        {
+          "id": "OPT-ST-27-C",
+          "value": "C",
+          "label": "Quality or timing deteriorates as volume increases",
+          "translation_key": "q.st.delivery.option.C"
+        },
+        {
+          "id": "OPT-ST-27-D",
+          "value": "D",
+          "label": "Delivery has not yet been repeated enough to assess consistency",
+          "translation_key": "q.st.delivery.option.D"
+        },
+        {
+          "id": "OPT-ST-27-E",
+          "value": "E",
+          "label": "Consistency has not been measured",
+          "translation_key": "q.st.delivery.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.delivery",
+          "source": "Q-ST-27"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-27"
+      ],
+      "effects": {
+        "scope": "A: test a controlled increase in throughput. B: document and transfer critical knowledge. C: stabilize delivery before expanding demand. D/E: establish a baseline through repeated deliveries.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.delivery.wording",
+        "help": "q.st.delivery.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-28",
+      "baseline_id": "Q28",
+      "semantic_key": "growth_constraint",
+      "stage": "14 Capacity and controlled expansion",
+      "purpose": "A: address capacity only if demand and economics are supported. B: investigate acquisition, value, and retention. C: prioritize cash and contribution. D: identify the dominant constraint. E: concentrate on earlier validation.",
+      "wording": "What is the main constraint on current growth?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-28-A",
+          "value": "A",
+          "label": "Demand is available, but delivery capacity limits us",
+          "translation_key": "q.st.growth_constraint.option.A"
+        },
+        {
+          "id": "OPT-ST-28-B",
+          "value": "B",
+          "label": "Delivery capacity is available, but acquiring customers limits us",
+          "translation_key": "q.st.growth_constraint.option.B"
+        },
+        {
+          "id": "OPT-ST-28-C",
+          "value": "C",
+          "label": "Cash or per-sale economics limits us",
+          "translation_key": "q.st.growth_constraint.option.C"
+        },
+        {
+          "id": "OPT-ST-28-D",
+          "value": "D",
+          "label": "Several constraints exist and the main one is unclear",
+          "translation_key": "q.st.growth_constraint.option.D"
+        },
+        {
+          "id": "OPT-ST-28-E",
+          "value": "E",
+          "label": "It is too early to evaluate growth constraints",
+          "translation_key": "q.st.growth_constraint.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.growth_constraint",
+          "source": "Q-ST-28"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-28"
+      ],
+      "effects": {
+        "scope": "A: address capacity only if demand and economics are supported. B: investigate acquisition, value, and retention. C: prioritize cash and contribution. D: identify the dominant constraint. E: concentrate on earlier validation.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.growth_constraint.wording",
+        "help": "q.st.growth_constraint.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-29",
+      "baseline_id": "Q29",
+      "semantic_key": "dependencies",
+      "stage": "15 Dependencies and learning",
+      "purpose": "A: test fallbacks. B/C: reduce the most consequential dependency. D: map customer, supplier, platform, personnel, and funding dependencies. E: periodically revisit the review; absence of an identified dependency is not proof none exists.",
+      "wording": "How exposed is the venture to a critical dependency?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-29-A",
+          "value": "A",
+          "label": "Major dependencies are mapped and practical fallbacks exist",
+          "translation_key": "q.st.dependencies.option.A"
+        },
+        {
+          "id": "OPT-ST-29-B",
+          "value": "B",
+          "label": "One major dependency is known but has no workable fallback",
+          "translation_key": "q.st.dependencies.option.B"
+        },
+        {
+          "id": "OPT-ST-29-C",
+          "value": "C",
+          "label": "Several major dependencies have no workable fallbacks",
+          "translation_key": "q.st.dependencies.option.C"
+        },
+        {
+          "id": "OPT-ST-29-D",
+          "value": "D",
+          "label": "Dependencies have not been assessed",
+          "translation_key": "q.st.dependencies.option.D"
+        },
+        {
+          "id": "OPT-ST-29-E",
+          "value": "E",
+          "label": "No critical dependency has been identified after review",
+          "translation_key": "q.st.dependencies.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.dependencies",
+          "source": "Q-ST-29"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-29"
+      ],
+      "effects": {
+        "scope": "A: test fallbacks. B/C: reduce the most consequential dependency. D: map customer, supplier, platform, personnel, and funding dependencies. E: periodically revisit the review; absence of an identified dependency is not proof none exists.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.dependencies.wording",
+        "help": "q.st.dependencies.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-30",
+      "baseline_id": "Q30",
+      "semantic_key": "learning",
+      "stage": "15 Dependencies and learning",
+      "purpose": "A: maintain the review cycle. B: record explicit decisions and reasons. C/D: establish a regular evidence review. E: schedule the first review around the next experiment. A review process alone is not evidence of market demand.",
+      "wording": "How are results used to change business decisions?",
+      "help": "Choose the closest accurate statement for the same venture, initial segment, offering and period. A stated strength remains self-reported until independently verified.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-30-A",
+          "value": "A",
+          "label": "Regular reviews use current evidence and recorded continue/change/stop decisions",
+          "translation_key": "q.st.learning.option.A"
+        },
+        {
+          "id": "OPT-ST-30-B",
+          "value": "B",
+          "label": "Regular reviews occur, but decision rules are informal",
+          "translation_key": "q.st.learning.option.B"
+        },
+        {
+          "id": "OPT-ST-30-C",
+          "value": "C",
+          "label": "Reviews mainly follow setbacks or urgent problems",
+          "translation_key": "q.st.learning.option.C"
+        },
+        {
+          "id": "OPT-ST-30-D",
+          "value": "D",
+          "label": "There is no regular review process",
+          "translation_key": "q.st.learning.option.D"
+        },
+        {
+          "id": "OPT-ST-30-E",
+          "value": "E",
+          "label": "The venture is too early for a review history",
+          "translation_key": "q.st.learning.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.learning",
+          "source": "Q-ST-30"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-30"
+      ],
+      "effects": {
+        "scope": "A: maintain the review cycle. B: record explicit decisions and reasons. C/D: establish a regular evidence review. E: schedule the first review around the next experiment. A review process alone is not evidence of market demand.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.learning.wording",
+        "help": "q.st.learning.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C01",
+      "baseline_id": "C01",
+      "semantic_key": "conditional_c01",
+      "stage": "conditional",
+      "purpose": "For C, skip Q23 as not applicable; assess fit using outcomes, paid demand, acquisition economics, and relevant referrals. For B, measure return only when a new need occurs. For D, retention is unknown; do not assume recurring demand.",
+      "wording": "How often can the same customer naturally need this offering?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C01-A",
+          "value": "A",
+          "label": "Regularly or through replenishment",
+          "translation_key": "q.st.conditional_c01.option.A"
+        },
+        {
+          "id": "OPT-ST-C01-B",
+          "value": "B",
+          "label": "Occasionally, when a new need arises",
+          "translation_key": "q.st.conditional_c01.option.B"
+        },
+        {
+          "id": "OPT-ST-C01-C",
+          "value": "C",
+          "label": "It is normally a single lifetime purchase",
+          "translation_key": "q.st.conditional_c01.option.C"
+        },
+        {
+          "id": "OPT-ST-C01-D",
+          "value": "D",
+          "label": "The pattern is unknown",
+          "translation_key": "q.st.conditional_c01.option.D"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "eq": {
+          "question_id": "Q-ST-09",
+          "value": "A"
+        }
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-09"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c01",
+          "source": "Q-ST-C01"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C01"
+      ],
+      "effects": {
+        "scope": "For C, skip Q23 as not applicable; assess fit using outcomes, paid demand, acquisition economics, and relevant referrals. For B, measure return only when a new need occurs. For D, retention is unknown; do not assume recurring demand.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c01.wording",
+        "help": "q.st.conditional_c01.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C02",
+      "baseline_id": "C02",
+      "semantic_key": "conditional_c02",
+      "stage": "conditional",
+      "purpose": "For A/C, clarify applicable requirements with suitable local expertise before the affected activity. A known blocking requirement in Q16=D stays a blocker until resolved. Do not infer a jurisdiction or assert permission from this answer.",
+      "wording": "Could the planned activity involve sector licensing, sensitive personal data, or physical safety requirements?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C02-A",
+          "value": "A",
+          "label": "Yes",
+          "translation_key": "q.st.conditional_c02.option.A"
+        },
+        {
+          "id": "OPT-ST-C02-B",
+          "value": "B",
+          "label": "No, based on an initial review",
+          "translation_key": "q.st.conditional_c02.option.B"
+        },
+        {
+          "id": "OPT-ST-C02-C",
+          "value": "C",
+          "label": "I do not know",
+          "translation_key": "q.st.conditional_c02.option.C"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "any": [
+          {
+            "eq": {
+              "question_id": "Q-ST-16",
+              "value": "B"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-16",
+              "value": "C"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-16",
+              "value": "D"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-16",
+              "value": "E"
+            }
+          }
+        ]
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-16"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c02",
+          "source": "Q-ST-C02"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C02"
+      ],
+      "effects": {
+        "scope": "For A/C, clarify applicable requirements with suitable local expertise before the affected activity. A known blocking requirement in Q16=D stays a blocker until resolved. Do not infer a jurisdiction or assert permission from this answer.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c02.wording",
+        "help": "q.st.conditional_c02.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C03",
+      "baseline_id": "C03",
+      "semantic_key": "conditional_c03",
+      "stage": "conditional",
+      "purpose": "For B/C, prioritize cash forecasting, collections, reviewing discretionary commitments, and an explicit financing or scope decision. For E, establish the forecast first. Do not automatically recommend debt, layoffs, or investor fundraising.",
+      "wording": "Can available cash cover already committed payments falling due in the next 30 days?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C03-A",
+          "value": "A",
+          "label": "Yes, according to a cash forecast",
+          "translation_key": "q.st.conditional_c03.option.A"
+        },
+        {
+          "id": "OPT-ST-C03-B",
+          "value": "B",
+          "label": "Only some committed payments are covered",
+          "translation_key": "q.st.conditional_c03.option.B"
+        },
+        {
+          "id": "OPT-ST-C03-C",
+          "value": "C",
+          "label": "No",
+          "translation_key": "q.st.conditional_c03.option.C"
+        },
+        {
+          "id": "OPT-ST-C03-D",
+          "value": "D",
+          "label": "There are no committed payments in that period",
+          "translation_key": "q.st.conditional_c03.option.D"
+        },
+        {
+          "id": "OPT-ST-C03-E",
+          "value": "E",
+          "label": "I do not know",
+          "translation_key": "q.st.conditional_c03.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "any": [
+          {
+            "eq": {
+              "question_id": "Q-ST-22",
+              "value": "D"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-22",
+              "value": "E"
+            }
+          }
+        ]
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-22"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c03",
+          "source": "Q-ST-C03"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C03"
+      ],
+      "effects": {
+        "scope": "For B/C, prioritize cash forecasting, collections, reviewing discretionary commitments, and an explicit financing or scope decision. For E, establish the forecast first. Do not automatically recommend debt, layoffs, or investor fundraising.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c03.wording",
+        "help": "q.st.conditional_c03.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C04",
+      "baseline_id": "C04",
+      "semantic_key": "conditional_c04",
+      "stage": "conditional",
+      "purpose": "For B/C, focus on the constrained side in one narrow segment or geography. For D/E, test a manually coordinated match before broad recruitment. Analyze completion rates, repeat participation, take rate, and contribution; registrations alone are insufficient.",
+      "wording": "What is the strongest evidence that the marketplace can complete exchanges?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C04-A",
+          "value": "A",
+          "label": "Both sides repeatedly match and complete transactions",
+          "translation_key": "q.st.conditional_c04.option.A"
+        },
+        {
+          "id": "OPT-ST-C04-B",
+          "value": "B",
+          "label": "Supply is available, but demand is insufficient",
+          "translation_key": "q.st.conditional_c04.option.B"
+        },
+        {
+          "id": "OPT-ST-C04-C",
+          "value": "C",
+          "label": "Demand is available, but supply is insufficient",
+          "translation_key": "q.st.conditional_c04.option.C"
+        },
+        {
+          "id": "OPT-ST-C04-D",
+          "value": "D",
+          "label": "Neither side is sufficiently active",
+          "translation_key": "q.st.conditional_c04.option.D"
+        },
+        {
+          "id": "OPT-ST-C04-E",
+          "value": "E",
+          "label": "This has not been tested",
+          "translation_key": "q.st.conditional_c04.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "eq": {
+          "question_id": "Q-ST-09",
+          "value": "C"
+        }
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-09"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c04",
+          "source": "Q-ST-C04"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C04"
+      ],
+      "effects": {
+        "scope": "For B/C, focus on the constrained side in one narrow segment or geography. For D/E, test a manually coordinated match before broad recruitment. Analyze completion rates, repeat participation, take rate, and contribution; registrations alone are insufficient.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c04.wording",
+        "help": "q.st.conditional_c04.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C05",
+      "baseline_id": "C05",
+      "semantic_key": "conditional_c05",
+      "stage": "conditional",
+      "purpose": "Evaluate audience behavior and advertiser/sponsor outcomes separately. Q23 concerns audience return; Q10 and Q11 concern paying advertisers/sponsors. Do not infer commercial fit from audience size alone.",
+      "wording": "Which evidence exists for an advertising or sponsorship model?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C05-A",
+          "value": "A",
+          "label": "A returning audience and paying advertisers or sponsors",
+          "translation_key": "q.st.conditional_c05.option.A"
+        },
+        {
+          "id": "OPT-ST-C05-B",
+          "value": "B",
+          "label": "A returning audience, but no paying advertisers or sponsors",
+          "translation_key": "q.st.conditional_c05.option.B"
+        },
+        {
+          "id": "OPT-ST-C05-C",
+          "value": "C",
+          "label": "Paying advertisers or sponsors, but audience return is unproven",
+          "translation_key": "q.st.conditional_c05.option.C"
+        },
+        {
+          "id": "OPT-ST-C05-D",
+          "value": "D",
+          "label": "Neither side has demonstrated demand",
+          "translation_key": "q.st.conditional_c05.option.D"
+        },
+        {
+          "id": "OPT-ST-C05-E",
+          "value": "E",
+          "label": "This has not been measured",
+          "translation_key": "q.st.conditional_c05.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "eq": {
+          "question_id": "Q-ST-09",
+          "value": "E"
+        }
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-09"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c05",
+          "source": "Q-ST-C05"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C05"
+      ],
+      "effects": {
+        "scope": "Evaluate audience behavior and advertiser/sponsor outcomes separately. Q23 concerns audience return; Q10 and Q11 concern paying advertisers/sponsors. Do not infer commercial fit from audience size alone.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c05.wording",
+        "help": "q.st.conditional_c05.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C06",
+      "baseline_id": "C06",
+      "semantic_key": "conditional_c06",
+      "stage": "conditional",
+      "purpose": "Attach the relevant responsibility to the next milestone. Consider a founder, collaborator, partner, or scoped external help; do not automatically recommend a permanent hire or cofounder.",
+      "wording": "Which capability gap most constrains the next milestone?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C06-A",
+          "value": "A",
+          "label": "Product or service delivery",
+          "translation_key": "q.st.conditional_c06.option.A"
+        },
+        {
+          "id": "OPT-ST-C06-B",
+          "value": "B",
+          "label": "Sales or customer acquisition",
+          "translation_key": "q.st.conditional_c06.option.B"
+        },
+        {
+          "id": "OPT-ST-C06-C",
+          "value": "C",
+          "label": "Domain expertise, supply, or operations",
+          "translation_key": "q.st.conditional_c06.option.C"
+        },
+        {
+          "id": "OPT-ST-C06-D",
+          "value": "D",
+          "label": "Financial or administrative management",
+          "translation_key": "q.st.conditional_c06.option.D"
+        },
+        {
+          "id": "OPT-ST-C06-E",
+          "value": "E",
+          "label": "The main gap is unclear",
+          "translation_key": "q.st.conditional_c06.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "any": [
+          {
+            "eq": {
+              "question_id": "Q-ST-13",
+              "value": "B"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-13",
+              "value": "C"
+            }
+          }
+        ]
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-13"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c06",
+          "source": "Q-ST-C06"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C06"
+      ],
+      "effects": {
+        "scope": "Attach the relevant responsibility to the next milestone. Consider a founder, collaborator, partner, or scoped external help; do not automatically recommend a permanent hire or cofounder.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c06.wording",
+        "help": "q.st.conditional_c06.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C07",
+      "baseline_id": "C07",
+      "semantic_key": "conditional_c07",
+      "stage": "conditional",
+      "purpose": "For A/B/D, reopen affected questions and preserve revisions. For C, separate the assessment by segment or offering; do not combine metrics. For E, keep the conflict visible, lower confidence in related conclusions, and avoid unsupported maturity labels.",
+      "wording": "These two answers appear inconsistent: [show the exact questions and selected answers]. Which explanation applies?",
+      "help": "Clarifies a decision-relevant uncertainty. The exact conflicting questions and selected labels must be shown.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C07-A",
+          "value": "A",
+          "label": "The earlier answer reflects the current situation; the later answer needs updating",
+          "translation_key": "q.st.conditional_c07.option.A"
+        },
+        {
+          "id": "OPT-ST-C07-B",
+          "value": "B",
+          "label": "The later answer reflects the current situation; the earlier answer needs updating",
+          "translation_key": "q.st.conditional_c07.option.B"
+        },
+        {
+          "id": "OPT-ST-C07-C",
+          "value": "C",
+          "label": "Both are true for different segments or offerings",
+          "translation_key": "q.st.conditional_c07.option.C"
+        },
+        {
+          "id": "OPT-ST-C07-D",
+          "value": "D",
+          "label": "Neither answer is current",
+          "translation_key": "q.st.conditional_c07.option.D"
+        },
+        {
+          "id": "OPT-ST-C07-E",
+          "value": "E",
+          "label": "I am not sure",
+          "translation_key": "q.st.conditional_c07.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "conflict": "RULE-ST-CONFLICT"
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c07",
+          "source": "Q-ST-C07"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C07"
+      ],
+      "effects": {
+        "scope": "For A/B/D, reopen affected questions and preserve revisions. For C, separate the assessment by segment or offering; do not combine metrics. For E, keep the conflict visible, lower confidence in related conclusions, and avoid unsupported maturity labels.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c07.wording",
+        "help": "q.st.conditional_c07.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-C08",
+      "baseline_id": "C08",
+      "semantic_key": "conditional_c08",
+      "stage": "conditional",
+      "purpose": "Treat A-D as hypotheses until checked against behavior and interviews. Diagnose the dominant cause and test one focused change; for E, investigate before adding features or increasing acquisition spend.",
+      "wording": "What appears to be the main reason customers do not achieve the outcome or return?",
+      "help": "Clarifies a decision-relevant uncertainty. No option is preselected.",
+      "glossary_term": "evidence",
+      "input_type": "select_one",
+      "options": [
+        {
+          "id": "OPT-ST-C08-A",
+          "value": "A",
+          "label": "They struggle to start or understand the offering",
+          "translation_key": "q.st.conditional_c08.option.A"
+        },
+        {
+          "id": "OPT-ST-C08-B",
+          "value": "B",
+          "label": "The offering does not solve the core problem well enough",
+          "translation_key": "q.st.conditional_c08.option.B"
+        },
+        {
+          "id": "OPT-ST-C08-C",
+          "value": "C",
+          "label": "Price or total customer cost prevents continued use",
+          "translation_key": "q.st.conditional_c08.option.C"
+        },
+        {
+          "id": "OPT-ST-C08-D",
+          "value": "D",
+          "label": "Delivery, reliability, or service quality causes problems",
+          "translation_key": "q.st.conditional_c08.option.D"
+        },
+        {
+          "id": "OPT-ST-C08-E",
+          "value": "E",
+          "label": "The reason has not been established",
+          "translation_key": "q.st.conditional_c08.option.E"
+        }
+      ],
+      "schema": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "requiredness": "required_when_applicable; explicit unknown permits partial report",
+      "applicability": {
+        "any": [
+          {
+            "eq": {
+              "question_id": "Q-ST-18",
+              "value": "B"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-18",
+              "value": "D"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-ST-23",
+              "value": "C"
+            }
+          }
+        ]
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [
+        "Q-ST-18",
+        "Q-ST-23"
+      ],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.conditional_c08",
+          "source": "Q-ST-C08"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-C08"
+      ],
+      "effects": {
+        "scope": "Treat A-D as hypotheses until checked against behavior and interviews. Diagnose the dominant cause and test one focused change; for E, investigate before adding features or increasing acquisition spend.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.conditional_c08.wording",
+        "help": "q.st.conditional_c08.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    },
+    {
+      "id": "Q-ST-EVIDENCE",
+      "baseline_id": null,
+      "semantic_key": "evidence",
+      "stage": "16 Review",
+      "purpose": "Expose denominators, periods and missing evidence before major commitments.",
+      "wording": "What records support claims described as most, repeated or consistent?",
+      "help": "Optional evidence details support review. Do not upload identifiable customer records in this questionnaire.",
+      "glossary_term": "evidence",
+      "input_type": "record",
+      "options": [],
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "claims": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "description": "Question ID, measure, numerator, denominator, dates and source-record reference"
+          },
+          "natural_interval": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Which buying/use opportunity has occurred",
+            "maxLength": 2000
+          },
+          "limitations": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Missing costs, small sample, concentration or confounding",
+            "maxLength": 2000
+          },
+          "independent_review": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Qualified reviewer role/date if actually performed; otherwise none",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "claims",
+          "natural_interval",
+          "limitations",
+          "independent_review"
+        ]
+      },
+      "requiredness": "optional for exploratory report; required evidence or specialist review before major-commitment recommendation",
+      "applicability": {
+        "always": true
+      },
+      "default": null,
+      "answer_states": [
+        "known",
+        "unknown",
+        "not_decided",
+        "not_applicable",
+        "unanswered",
+        "inactive"
+      ],
+      "unit_period_range": "Qualitative evidence for one offering/segment/period; record denominator/natural buying interval in Q-ST-EVIDENCE when material.",
+      "next": "next active question; conditional insertion order in branching-and-states.md",
+      "dependencies": [],
+      "contradictions": [
+        {
+          "rule_id": "RULE-ST-CONFLICT",
+          "resolution": "Q-ST-C07 at review; unresolved result if conflict remains"
+        }
+      ],
+      "derived_facts": [
+        {
+          "key": "startup.evidence",
+          "source": "Q-ST-EVIDENCE"
+        }
+      ],
+      "consumers": [
+        "RULE-ST-EVIDENCE"
+      ],
+      "effects": {
+        "scope": "Expose denominators, periods and missing evidence before major commitments.",
+        "architecture": "No platform/customer stack recommendation is derived from startup maturity labels.",
+        "effort": "Only a separately requested work package is estimated; startup answer is not an automatic fee.",
+        "pricing": "No startup score surcharge or automatic financing offer.",
+        "duration": "Sequence actions by prerequisites and natural observation interval.",
+        "team": "Suggest accountable capability, not automatic hiring."
+      },
+      "translation_keys": {
+        "wording": "q.st.evidence.wording",
+        "help": "q.st.evidence.help"
+      },
+      "sensitivity": "confidential-business",
+      "acceptance": [
+        "AC-13",
+        "AC-09"
+      ]
+    }
+  ],
+  "sources": [
+    "authorized brief",
+    "startup baseline when applicable",
+    "owner clarification:14 named languages,free platform"
+  ],
+  "open_decisions": [
+    "source locale and region/script variants",
+    "production estimate currencies/catalog",
+    "operating model"
+  ]
+}

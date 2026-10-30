@@ -1,0 +1,2658 @@
+{
+  "metadata": {
+    "case_id": "C03",
+    "title": "Website plus Android/iOS field apps",
+    "fictional": true,
+    "owner": "R04",
+    "reviewers": [
+      "R28",
+      "R29",
+      "R27"
+    ],
+    "status": "documentation fixture",
+    "source": "authorized brief;not actual customer",
+    "assumptions": [
+      "ASM-RATES",
+      "ASM-CALENDAR",
+      "ASM-DEMAND"
+    ],
+    "open_decisions": [
+      "jurisdiction",
+      "vendor capability",
+      "actual rates"
+    ]
+  },
+  "workflow_id": "WF-SOFTWARE",
+  "business_release": "BR-EXAMPLE-v1",
+  "price_book": "PB-EXAMPLE-v1",
+  "input_revision": 1,
+  "answers": {
+    "Q-SW-OBJECTIVE": {
+      "state": "known",
+      "value": {
+        "problem": "Shared account/API,assignment web portal,Android+iOS capture,8h offline,camera/GPS/push,sync conflicts",
+        "buyer": "organization sponsor",
+        "beneficiary": "organization staff and reviewers"
+      }
+    },
+    "Q-SW-USERS": {
+      "state": "known",
+      "value": {
+        "groups": [
+          "organization members",
+          "reviewers",
+          "administrator"
+        ],
+        "paid_service": false
+      }
+    },
+    "Q-SW-OUTCOME": {
+      "state": "known",
+      "value": {
+        "metric": "qualified enquiries per month",
+        "baseline": 10,
+        "target": 30,
+        "unit": "enquiries/month",
+        "measurement_period": "first90 days after launch",
+        "owner_role": "marketing owner"
+      }
+    },
+    "Q-SW-CHANGE": {
+      "state": "known",
+      "value": "new"
+    },
+    "Q-SW-EXISTING": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-PRIORITY": {
+      "state": "known",
+      "value": "balanced"
+    },
+    "Q-SW-DEADLINE": {
+      "state": "known",
+      "value": {
+        "mandatory_date": null,
+        "preferred_date": null,
+        "timezone": "UTC",
+        "reason": "No hard external deadline",
+        "release_window": "Customer review within2 working days"
+      }
+    },
+    "Q-SW-BUDGET": {
+      "state": "known",
+      "value": {
+        "currency": "USD",
+        "initial_min": "90000",
+        "initial_max": "120000",
+        "hard_cap": false,
+        "recurring_monthly_cap": "4000",
+        "includes_tax": false,
+        "funding_status": "proposed"
+      }
+    },
+    "Q-SW-PROCUREMENT": {
+      "state": "known",
+      "value": {
+        "restrictions": [
+          "source/data ownership required"
+        ],
+        "approval_lead_days": 2,
+        "evidence": "Fictitious sponsor policy;not actual procurement"
+      }
+    },
+    "Q-SW-OWNERSHIP": {
+      "state": "known",
+      "value": {
+        "product_owner_role": "sponsor",
+        "data_owner_role": "operator",
+        "operator_role": "site administrator",
+        "code_license": "vendor licenses reviewed before selection",
+        "management_model": "customer owns content;delivery partner maintains"
+      }
+    },
+    "Q-SW-SURFACES": {
+      "state": "known",
+      "value": [
+        "web",
+        "mobile"
+      ]
+    },
+    "Q-SW-WEB-KINDS": {
+      "state": "known",
+      "value": [
+        "portal"
+      ]
+    },
+    "Q-SW-MOBILE-PLATFORMS": {
+      "state": "known",
+      "value": [
+        "android",
+        "ios"
+      ]
+    },
+    "Q-SW-DEVICES": {
+      "state": "known",
+      "value": [
+        "phone",
+        "tablet"
+      ]
+    },
+    "Q-SW-DISTRIBUTION": {
+      "state": "known",
+      "value": [
+        "public_store"
+      ]
+    },
+    "Q-SW-OFFLINE": {
+      "state": "known",
+      "value": {
+        "mode": "queue_edits",
+        "workflows": [
+          "capture inspection notes/photos",
+          "read assigned records"
+        ],
+        "max_offline_hours": 8,
+        "conflict_policy": "user reviews conflicting record revisions;server validates permissions and idempotent sync",
+        "sensitive_local_data": "encrypted assigned records;remote revocation clears cache at next connection;offline limitation disclosed"
+      }
+    },
+    "Q-SW-DEVICE-FEATURES": {
+      "state": "known",
+      "value": [
+        "camera",
+        "gps",
+        "push",
+        "background"
+      ]
+    },
+    "Q-SW-DEVICE-DETAILS": {
+      "state": "known",
+      "value": {
+        "behaviors": [
+          "camera image capture",
+          "GPS location",
+          "push reminders"
+        ],
+        "background": "bounded pending upload when OS permits;no guaranteed continuous background",
+        "test_devices": [
+          "two representative Android phones",
+          "two iOS devices",
+          "tablet"
+        ],
+        "latency": "capture feedback<1s target;upload follows connection"
+      }
+    },
+    "Q-SW-SHARED": {
+      "state": "known",
+      "value": {
+        "account": true,
+        "data": true,
+        "backend": true,
+        "sync_frequency": "online changes within30s target;offline queued≤8h then conflict review",
+        "feature_matrix": [
+          "assignments:web/admin yes,Android yes,iOS yes",
+          "capture:web no,Android yes,iOS yes",
+          "report:web yes,Android yes,iOS yes"
+        ]
+      }
+    },
+    "Q-SW-IDENTITY": {
+      "state": "known",
+      "value": "registered"
+    },
+    "Q-SW-ROLES": {
+      "state": "known",
+      "value": {
+        "roles": [
+          "member",
+          "reviewer",
+          "organization admin",
+          "operator"
+        ],
+        "administrators": [
+          "operator"
+        ],
+        "approvals": [
+          "reviewer approves case"
+        ],
+        "delegation": "organization-scoped role administration"
+      }
+    },
+    "Q-SW-ORGANIZATIONS": {
+      "state": "known",
+      "value": "single"
+    },
+    "Q-SW-AUTH": {
+      "state": "known",
+      "value": [
+        "password",
+        "mfa"
+      ]
+    },
+    "Q-SW-ACCESS": {
+      "state": "known",
+      "value": {
+        "recovery": "verified account reset",
+        "deletion": "verified request",
+        "audit": "staff changes recorded",
+        "attributes": "role-based only",
+        "invitations": "administrator invites editors"
+      }
+    },
+    "Q-SW-CONTENT": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-SEARCH": {
+      "state": "known",
+      "value": {
+        "entities": [
+          "published pages"
+        ],
+        "languages": [
+          "en"
+        ],
+        "filters": [
+          "content type"
+        ],
+        "freshness_seconds": 300,
+        "query_examples": [
+          "service by name"
+        ]
+      }
+    },
+    "Q-SW-LOCALES": {
+      "state": "known",
+      "value": {
+        "locales": [
+          "en"
+        ],
+        "source_locale": "en",
+        "rtl": false,
+        "reviewers": "customer English reviewer,fictional role",
+        "markets": [
+          "example market,not legal jurisdiction conclusion"
+        ],
+        "currencies": [
+          "USD"
+        ]
+      }
+    },
+    "Q-SW-SEO": {
+      "state": "known",
+      "value": {
+        "indexable": "Private portal noindex;marketing pages only if approved",
+        "redirects": "No migration;stable URLs",
+        "metadata": "editable titles/descriptions/sitemap",
+        "forms": "one enquiry form",
+        "analytics": "consent/purpose-limited aggregate events"
+      }
+    },
+    "Q-SW-LEADS": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-COMMERCE-GOODS": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-COMMERCE-CATALOG": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-COMMERCE-PRICING": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-COMMERCE-CHECKOUT": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-COMMERCE-FULFILLMENT": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-BOOKING-RESOURCE": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-BOOKING-POLICY": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-MARKET-PARTIES": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-MARKET-MONEY": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-PORTAL-FEATURES": {
+      "state": "known",
+      "value": [
+        "dashboards",
+        "reports",
+        "approvals",
+        "audit"
+      ]
+    },
+    "Q-SW-PORTAL-DETAILS": {
+      "state": "known",
+      "value": {
+        "workflows": [
+          "submit",
+          "approve",
+          "export by organization"
+        ],
+        "reports": [
+          "5 dashboards",
+          "3 export types"
+        ],
+        "entitlements": "organization role permissions;no assumption of billing",
+        "learning": "none",
+        "tenancy_growth": "100 organizations launch,1000 at12 months;100k to2m records"
+      }
+    },
+    "Q-SW-MEDIA-FEATURES": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-MEDIA-DETAILS": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-AI-NEED": {
+      "state": "known",
+      "value": "no"
+    },
+    "Q-SW-AI-TASK": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-INTEGRATIONS": {
+      "state": "known",
+      "value": {
+        "systems": [],
+        "interfaces": "No external business integration required",
+        "auth": "Not applicable",
+        "limits": "Not applicable",
+        "sandbox": "Not applicable",
+        "sync": "Not applicable",
+        "failure": "Email delivery bounded retry;server retains enquiry"
+      }
+    },
+    "Q-SW-MIGRATION": {
+      "state": "inactive",
+      "value": null
+    },
+    "Q-SW-REGISTERED": {
+      "state": "known",
+      "value": {
+        "launch": 1000,
+        "horizon_count": 10000,
+        "horizon": "12 months",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-ACTIVE": {
+      "state": "known",
+      "value": {
+        "dau": 1000,
+        "mau": 5000,
+        "activity": "read or update assigned record",
+        "planning_period": "month12",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-CONCURRENCY": {
+      "state": "known",
+      "value": {
+        "active_people": 400,
+        "in_flight_requests": 100,
+        "window_minutes": 5,
+        "horizon": "daily field shift",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-REQUESTS": {
+      "state": "known",
+      "value": {
+        "typical_rps": 20,
+        "peak_rps": 200,
+        "read_percent": 70,
+        "write_percent": 30,
+        "expensive_operations": [
+          "photo sync1000images/shift"
+        ],
+        "behavior_assumptions": "400 active x0.1 actions/s x5requests=200RPS",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-TRANSACTIONS": {
+      "state": "known",
+      "value": {
+        "orders_min": 0,
+        "bookings_min": 0,
+        "payments_min": 0,
+        "realtime_connections": 0,
+        "messages_sec": 0,
+        "consistency": "enquiries durable after acknowledgement",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-DATA": {
+      "state": "known",
+      "value": {
+        "records_launch": 100000,
+        "records_horizon": 1000000,
+        "files_launch": 10000,
+        "typical_file_mb": 2,
+        "max_file_mb": 10,
+        "stored_gb": 25,
+        "growth_gb_month": 50,
+        "horizon": "12 months",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-BURSTS": {
+      "state": "known",
+      "value": {
+        "events": [
+          "launch campaign"
+        ],
+        "typical_to_peak": 10,
+        "burst_minutes": 15,
+        "ramp_minutes": 5,
+        "batch": "nightly sitemap,noncritical",
+        "growth": "2x demand in12 months"
+      }
+    },
+    "Q-SW-REGIONS": {
+      "state": "known",
+      "value": {
+        "regions": [
+          "one example operating region"
+        ],
+        "devices": "phone and desktop",
+        "networks": "variable mobile broadband",
+        "seasonality": "launch burst",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-AVAILABILITY": {
+      "state": "known",
+      "value": {
+        "journeys": [
+          "read content",
+          "submit enquiry"
+        ],
+        "availability_percent": 99.5,
+        "period": "calendar month",
+        "exclusions": "invalid/auth-denied requests only;planned work counts",
+        "measurement": "synthetic journey and eligible request success"
+      }
+    },
+    "Q-SW-RECOVERY": {
+      "state": "known",
+      "value": {
+        "rto_minutes": 240,
+        "rpo_minutes": 60,
+        "scenario": "primary hosting outage",
+        "owner": "customer operator",
+        "basis": "forecast"
+      }
+    },
+    "Q-SW-CONSISTENCY": {
+      "state": "known",
+      "value": {
+        "invariants": [
+          "acknowledged enquiry not lost beyond accepted RPO"
+        ],
+        "consistency": "transactional writes;eventual search≤300s",
+        "concurrency": "optimistic editorial revisions",
+        "idempotency": "enquiry submission token"
+      }
+    },
+    "Q-SW-DEGRADATION": {
+      "state": "known",
+      "value": {
+        "critical": [
+          "read published content",
+          "save enquiry"
+        ],
+        "deferred": [
+          "search refresh",
+          "email delivery"
+        ],
+        "user_messages": "Saved enquiry;delivery may be delayed",
+        "recovery": "retry bounded queue and reconcile"
+      }
+    },
+    "Q-SW-OBSERVABILITY": {
+      "state": "known",
+      "value": {
+        "signals": [
+          "request failures",
+          "enquiry queue",
+          "backup health"
+        ],
+        "alerts": "business-hours operator alert",
+        "audit": "editorial and access changes",
+        "retention": "30-day log proposal,policy review",
+        "reporting": "monthly service summary"
+      }
+    },
+    "Q-SW-SUPPORT": {
+      "state": "known",
+      "value": {
+        "hours": "business hours,UTC overlap",
+        "severity": "critical outage escalation;response target to agree",
+        "channels": [
+          "product support request"
+        ],
+        "owner": "customer operator",
+        "handover": "operating guide and training"
+      }
+    },
+    "Q-SW-ACCESSIBILITY": {
+      "state": "known",
+      "value": {
+        "target": "WCAG2.2 AA",
+        "audiences": "public including keyboard and screen-reader users",
+        "evaluation": "manual+automated review planned",
+        "mobile": "responsive web",
+        "exceptions": "none accepted"
+      }
+    },
+    "Q-SW-SENSITIVITY": {
+      "state": "known",
+      "value": [
+        "personal",
+        "confidential"
+      ]
+    },
+    "Q-SW-GEOGRAPHY": {
+      "state": "known",
+      "value": {
+        "allowed": [
+          "owner-approved region pending"
+        ],
+        "prohibited": [],
+        "cross_border": "specialist review before supplier selection",
+        "providers": "not selected",
+        "evidence": "not verified"
+      }
+    },
+    "Q-SW-RETENTION": {
+      "state": "known",
+      "value": {
+        "classes": [
+          "enquiry personal data",
+          "staff accounts",
+          "audit"
+        ],
+        "deletion": "policy to approve;verified request",
+        "export": "structured scoped export",
+        "audit_exception": "minimal audit retained only under approved policy"
+      }
+    },
+    "Q-SW-REGULATION": {
+      "state": "known",
+      "value": {
+        "activities": [
+          "ordinary business enquiries"
+        ],
+        "jurisdictions": [
+          "unresolved"
+        ],
+        "requirements": "privacy/accessibility applicability review",
+        "review_owner": "qualified local specialist",
+        "unknowns": "operating country and legal duties"
+      }
+    },
+    "Q-SW-BRAND": {
+      "state": "known",
+      "value": {
+        "audience": "service customers",
+        "tone": "clear and calm",
+        "references": [
+          "no external visual references supplied"
+        ],
+        "brand_assets": "customer logo assumed supplied",
+        "freedom": "moderate",
+        "review": "one design review cycle"
+      }
+    },
+    "Q-SW-ASSETS": {
+      "state": "known",
+      "value": {
+        "assets": [
+          "12 page images supplied"
+        ],
+        "readiness": "owner to deliver before design approval",
+        "ownership": "customer confirms rights",
+        "alternatives": "licensed/original assets only",
+        "data_visuals": "none"
+      }
+    },
+    "Q-SW-MOTION": {
+      "state": "known",
+      "value": {
+        "purposes": [
+          "selection/save feedback"
+        ],
+        "complexity": "simple transitions≤200ms",
+        "reduced_motion": "instant equivalents",
+        "performance": "no essential animation",
+        "review": "keyboard/reduced-motion QA"
+      }
+    },
+    "Q-SW-CONTENT-READINESS": {
+      "state": "known",
+      "value": {
+        "quantity": 12,
+        "units": "pages",
+        "owner": "customer content editor",
+        "ready_percent": 100,
+        "copywriting": "customer-supplied;excluded from build",
+        "translation": "one language reviewed by customer",
+        "due_date": "beforeW2"
+      }
+    },
+    "Q-SW-TEAM": {
+      "state": "known",
+      "value": {
+        "roles": [
+          "BA",
+          "UX",
+          "DEV",
+          "QA",
+          "OPS"
+        ],
+        "gaps": [
+          "none within hypothetical delivery team"
+        ],
+        "specialists": [
+          "fractional privacy/security review within qualified roles;external legal fees unpriced"
+        ],
+        "maintenance": "OPS4h/month after launch"
+      }
+    },
+    "Q-SW-AVAILABILITY-TEAM": {
+      "state": "known",
+      "value": {
+        "capacity": [
+          "BA40h/week",
+          "UX40h/week",
+          "DEV40h/week",
+          "QA40h/week",
+          "OPS40h/week"
+        ],
+        "timezone": "UTC business overlap",
+        "calendar": "5 days/week,8h/day,no holidays assumption",
+        "seniority": "senior delivery roles;no trainee velocity assumed",
+        "contracting": "all available by assigned start;not verified"
+      }
+    },
+    "Q-SW-DECISIONS": {
+      "state": "known",
+      "value": {
+        "decision_roles": [
+          "sponsor",
+          "content owner"
+        ],
+        "turnaround_days": 2,
+        "absence": "none assumed",
+        "acceptance": "review scope,accessibility,content and critical journeys"
+      }
+    },
+    "Q-SW-DEPENDENCIES": {
+      "state": "known",
+      "value": {
+        "items": [
+          "complete content beforeW2"
+        ],
+        "integration_access": "no business API",
+        "content": "12 final pages supplied",
+        "distribution": "web DNS/hosting access before release"
+      }
+    },
+    "Q-SW-MAINTENANCE": {
+      "state": "known",
+      "value": {
+        "coverage": "business hours",
+        "updates": "monthly patch/review",
+        "training": "one admin handover session",
+        "warranty": "defect boundary to agree,no SLA guarantee",
+        "exit": "content export and supplier handover"
+      }
+    },
+    "Q-SW-CONFIRM": {
+      "state": "known",
+      "value": {
+        "accepted_features": [
+          "ITEM-SHARED-API",
+          "ITEM-WEB-PORTAL",
+          "ITEM-ANDROID-APP",
+          "ITEM-IOS-APP",
+          "ITEM-OFFLINE-SYNC",
+          "ITEM-DEVICE-CAPTURE",
+          "ITEM-PUSH"
+        ],
+        "optional_features": [],
+        "assumptions_accepted": [
+          "ASM-RATES",
+          "ASM-CALENDAR",
+          "ASM-DEMAND"
+        ],
+        "unresolved": [
+          "integration/vendor capability review",
+          "jurisdiction",
+          "actual content"
+        ],
+        "decision": "confirm"
+      }
+    }
+  },
+  "branch_trace": [
+    {
+      "question_id": "Q-SW-OBJECTIVE",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-USERS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-OUTCOME",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-CHANGE",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-EXISTING",
+      "applicability": {
+        "any": [
+          {
+            "eq": {
+              "question_id": "Q-SW-CHANGE",
+              "value": "extend"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-SW-CHANGE",
+              "value": "replace"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-SW-CHANGE",
+              "value": "configure"
+            }
+          }
+        ]
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-PRIORITY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DEADLINE",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-BUDGET",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-PROCUREMENT",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-OWNERSHIP",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONSTRAINT"
+      ]
+    },
+    {
+      "question_id": "Q-SW-SURFACES",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-WEB-KINDS",
+      "applicability": {
+        "any": [
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "web"
+            }
+          },
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "internal"
+            }
+          },
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "mobile"
+            }
+          },
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "api"
+            }
+          }
+        ]
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MOBILE-PLATFORMS",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-SURFACES",
+          "value": "mobile"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DEVICES",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-SURFACES",
+          "value": "mobile"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DISTRIBUTION",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-SURFACES",
+          "value": "mobile"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-OFFLINE",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-SURFACES",
+          "value": "mobile"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DEVICE-FEATURES",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-SURFACES",
+          "value": "mobile"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DEVICE-DETAILS",
+      "applicability": {
+        "all": [
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "mobile"
+            }
+          },
+          {
+            "not": {
+              "contains": {
+                "question_id": "Q-SW-DEVICE-FEATURES",
+                "value": "none"
+              }
+            }
+          }
+        ]
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-SHARED",
+      "applicability": {
+        "all": [
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "mobile"
+            }
+          },
+          {
+            "any": [
+              {
+                "contains": {
+                  "question_id": "Q-SW-SURFACES",
+                  "value": "web"
+                }
+              },
+              {
+                "contains": {
+                  "question_id": "Q-SW-SURFACES",
+                  "value": "internal"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-SURFACES"
+      ]
+    },
+    {
+      "question_id": "Q-SW-IDENTITY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-IDENTITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-ROLES",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-IDENTITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-ORGANIZATIONS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-IDENTITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-AUTH",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-IDENTITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-ACCESS",
+      "applicability": {
+        "not": {
+          "eq": {
+            "question_id": "Q-SW-IDENTITY",
+            "value": "anonymous"
+          }
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-IDENTITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-CONTENT",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "content"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-SEARCH",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-LOCALES",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-SEO",
+      "applicability": {
+        "any": [
+          {
+            "contains": {
+              "question_id": "Q-SW-SURFACES",
+              "value": "web"
+            }
+          },
+          {
+            "contains": {
+              "question_id": "Q-SW-WEB-KINDS",
+              "value": "content"
+            }
+          }
+        ]
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-LEADS",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "content"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-COMMERCE-GOODS",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "commerce"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-COMMERCE-CATALOG",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "commerce"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-COMMERCE-PRICING",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "commerce"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-COMMERCE-CHECKOUT",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "commerce"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-COMMERCE-FULFILLMENT",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "commerce"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-BOOKING-RESOURCE",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "booking"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-BOOKING-POLICY",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "booking"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MARKET-PARTIES",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "marketplace"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MARKET-MONEY",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "marketplace"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-PORTAL-FEATURES",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "portal"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-PORTAL-DETAILS",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "portal"
+        }
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MEDIA-FEATURES",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "media"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MEDIA-DETAILS",
+      "applicability": {
+        "contains": {
+          "question_id": "Q-SW-WEB-KINDS",
+          "value": "media"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-AI-NEED",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-AI-TASK",
+      "applicability": {
+        "eq": {
+          "question_id": "Q-SW-AI-NEED",
+          "value": "yes"
+        }
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-DOMAIN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-INTEGRATIONS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-INTEGRATION"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MIGRATION",
+      "applicability": {
+        "any": [
+          {
+            "eq": {
+              "question_id": "Q-SW-CHANGE",
+              "value": "extend"
+            }
+          },
+          {
+            "eq": {
+              "question_id": "Q-SW-CHANGE",
+              "value": "replace"
+            }
+          }
+        ]
+      },
+      "disposition": "inactive",
+      "consumer_rule_ids": [
+        "RULE-SW-INTEGRATION"
+      ]
+    },
+    {
+      "question_id": "Q-SW-REGISTERED",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-ACTIVE",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-CONCURRENCY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-REQUESTS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-TRANSACTIONS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DATA",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-BURSTS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-REGIONS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-WORKLOAD"
+      ]
+    },
+    {
+      "question_id": "Q-SW-AVAILABILITY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-RECOVERY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-CONSISTENCY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DEGRADATION",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-OBSERVABILITY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-SUPPORT",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-ACCESSIBILITY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-SENSITIVITY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-GEOGRAPHY",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-RETENTION",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-REGULATION",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-QUALITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-BRAND",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DESIGN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-ASSETS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DESIGN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MOTION",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DESIGN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-CONTENT-READINESS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-DESIGN"
+      ]
+    },
+    {
+      "question_id": "Q-SW-TEAM",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CAPACITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-AVAILABILITY-TEAM",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CAPACITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DECISIONS",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CAPACITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-DEPENDENCIES",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CAPACITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-MAINTENANCE",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CAPACITY"
+      ]
+    },
+    {
+      "question_id": "Q-SW-CONFIRM",
+      "applicability": {
+        "always": true
+      },
+      "disposition": "known",
+      "consumer_rule_ids": [
+        "RULE-SW-CONFIRM"
+      ]
+    }
+  ],
+  "outputs": {
+    "status": "preliminary",
+    "scope": "Shared account/API,assignment web portal,Android+iOS capture,8h offline,camera/GPS/push,sync conflicts",
+    "architecture": "Shared modular API/relational store plus responsive web and cross-platform mobile clients,subject to OS background/offline capability spike;native clients alternative if required behavior fails.",
+    "alternatives": "PWA must prove camera/offline/distribution/background requirements;public stores and OS constraints may require packaged mobile;separate native apps raise platform-specific work.",
+    "evidence_question_ids": [
+      "Q-SW-OBJECTIVE",
+      "Q-SW-SURFACES",
+      "Q-SW-WEB-KINDS",
+      "Q-SW-INTEGRATIONS",
+      "Q-SW-REQUESTS",
+      "Q-SW-RECOVERY",
+      "Q-SW-AVAILABILITY-TEAM"
+    ],
+    "wbs": [
+      {
+        "item_id": "ITEM-BA",
+        "role": "BA",
+        "hours": 120,
+        "sell_rate": "60.00",
+        "line_amount": "7200.00",
+        "source_status": "hypothetical expert assumption"
+      },
+      {
+        "item_id": "ITEM-UX",
+        "role": "UX",
+        "hours": 160,
+        "sell_rate": "50.00",
+        "line_amount": "8000.00",
+        "source_status": "hypothetical expert assumption"
+      },
+      {
+        "item_id": "ITEM-DEV",
+        "role": "DEV",
+        "hours": 960,
+        "sell_rate": "60.00",
+        "line_amount": "57600.00",
+        "source_status": "hypothetical expert assumption"
+      },
+      {
+        "item_id": "ITEM-QA",
+        "role": "QA",
+        "hours": 320,
+        "sell_rate": "45.00",
+        "line_amount": "14400.00",
+        "source_status": "hypothetical expert assumption"
+      },
+      {
+        "item_id": "ITEM-OPS",
+        "role": "OPS",
+        "hours": 80,
+        "sell_rate": "45.00",
+        "line_amount": "3600.00",
+        "source_status": "hypothetical expert assumption"
+      }
+    ],
+    "effort_hours": 1640,
+    "low_base_high_hours": [
+      {
+        "low": 96,
+        "base": 120,
+        "high": 162
+      },
+      {
+        "low": 128,
+        "base": 160,
+        "high": 216
+      },
+      {
+        "low": 768,
+        "base": 960,
+        "high": 1296
+      },
+      {
+        "low": 256,
+        "base": 320,
+        "high": 432
+      },
+      {
+        "low": 64,
+        "base": 80,
+        "high": 108
+      }
+    ],
+    "price": {
+      "currency": "USD",
+      "base": "90800.00",
+      "contingency": "9080.00",
+      "discount": "4994.00",
+      "one_time_net": "94886.00",
+      "tax_state": "excluded_unconfigured",
+      "scope": "documented_base_scope",
+      "whole_project_price": "94886.00",
+      "internal_cost": "53000.00",
+      "validity_days": 30
+    },
+    "schedule": {
+      "weeks": 23,
+      "calendar": "40h/person/week;5days;no holidays",
+      "planning_range_weeks": [
+        23,
+        30
+      ],
+      "external_wait_weeks": 2,
+      "scope": "base_scope",
+      "allocations": [
+        {
+          "person": "BA1",
+          "role": "BA",
+          "week": 1,
+          "hours": 40
+        },
+        {
+          "person": "BA1",
+          "role": "BA",
+          "week": 2,
+          "hours": 40
+        },
+        {
+          "person": "BA1",
+          "role": "BA",
+          "week": 3,
+          "hours": 40
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 4,
+          "hours": 40
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 5,
+          "hours": 40
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 6,
+          "hours": 40
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 7,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 8,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 8,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 8,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 9,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 9,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 9,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 10,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 10,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 10,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 11,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 11,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 11,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 12,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 12,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 12,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 13,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 13,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 13,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 14,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 14,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 14,
+          "hours": 40
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 15,
+          "hours": 40
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 15,
+          "hours": 40
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 15,
+          "hours": 40
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 16,
+          "hours": 40
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 16,
+          "hours": 40
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 17,
+          "hours": 40
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 17,
+          "hours": 40
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 18,
+          "hours": 40
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 18,
+          "hours": 40
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 19,
+          "hours": 40
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 19,
+          "hours": 40
+        },
+        {
+          "person": "OPS1",
+          "role": "OPS",
+          "week": 20,
+          "hours": 40
+        },
+        {
+          "person": "OPS1",
+          "role": "OPS",
+          "week": 21,
+          "hours": 40
+        }
+      ]
+    },
+    "staffing": {
+      "unique_headcount": 8,
+      "peak_concurrent": 3,
+      "fte_by_person_week": [
+        {
+          "person": "BA1",
+          "role": "BA",
+          "week": 1,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "BA1",
+          "role": "BA",
+          "week": 2,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "BA1",
+          "role": "BA",
+          "week": 3,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 4,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 5,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 6,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "UX1",
+          "role": "UX",
+          "week": 7,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 8,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 8,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 8,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 9,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 9,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 9,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 10,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 10,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 10,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 11,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 11,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 11,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 12,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 12,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 12,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 13,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 13,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 13,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 14,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 14,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 14,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV1",
+          "role": "DEV",
+          "week": 15,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV2",
+          "role": "DEV",
+          "week": 15,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "DEV3",
+          "role": "DEV",
+          "week": 15,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 16,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 16,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 17,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 17,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 18,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 18,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA1",
+          "role": "QA",
+          "week": 19,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "QA2",
+          "role": "QA",
+          "week": 19,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "OPS1",
+          "role": "OPS",
+          "week": 20,
+          "hours": 40,
+          "fte": 1
+        },
+        {
+          "person": "OPS1",
+          "role": "OPS",
+          "week": 21,
+          "hours": 40,
+          "fte": 1
+        }
+      ],
+      "skills": "Senior role capabilities assumed;QA includes specialist review only where qualified;legal/domain external validation unpriced"
+    },
+    "recurring": {
+      "monthly_total": "2200.00",
+      "currency": "USD",
+      "status": "hypothetical budget,not supplier quote",
+      "breakdown": [
+        {
+          "kind": "infrastructure_services",
+          "amount": "1320.00"
+        },
+        {
+          "kind": "maintenance",
+          "amount": "880.00"
+        }
+      ],
+      "excluded": [
+        "store account fees unpriced",
+        "tax",
+        "content/legal fees"
+      ]
+    },
+    "platform_charge": "0.00",
+    "next_action": "Validate catalog/vendor fit,scope and key assumptions before commitment.",
+    "work_packages": [
+      {
+        "id": "WP-C03-discovery",
+        "role": "BA",
+        "hours": 120,
+        "predecessors": [],
+        "sources": [
+          "Q-SW-OBJECTIVE",
+          "Q-SW-INTEGRATIONS"
+        ],
+        "low_hours": 96,
+        "base_hours": 120,
+        "high_hours": 162,
+        "sell_rate": "60.00",
+        "amount": "7200.00"
+      },
+      {
+        "id": "WP-C03-design",
+        "role": "UX",
+        "hours": 160,
+        "predecessors": [
+          "WP-C03-discovery"
+        ],
+        "sources": [
+          "Q-SW-BRAND",
+          "Q-SW-SURFACES"
+        ],
+        "low_hours": 128,
+        "base_hours": 160,
+        "high_hours": 216,
+        "sell_rate": "50.00",
+        "amount": "8000.00"
+      },
+      {
+        "id": "WP-C03-shared-backend-identity",
+        "role": "DEV",
+        "hours": 200,
+        "predecessors": [
+          "WP-C03-design"
+        ],
+        "sources": [
+          "Q-SW-CONFIRM",
+          "Q-SW-WEB-KINDS",
+          "Q-SW-INTEGRATIONS"
+        ],
+        "coefficient_status": "expert assumption;quantity/acceptance scope in case",
+        "low_hours": 160,
+        "base_hours": 200,
+        "high_hours": 270,
+        "sell_rate": "60.00",
+        "amount": "12000.00"
+      },
+      {
+        "id": "WP-C03-web-assignment-portal",
+        "role": "DEV",
+        "hours": 160,
+        "predecessors": [
+          "WP-C03-design"
+        ],
+        "sources": [
+          "Q-SW-CONFIRM",
+          "Q-SW-WEB-KINDS",
+          "Q-SW-INTEGRATIONS"
+        ],
+        "coefficient_status": "expert assumption;quantity/acceptance scope in case",
+        "low_hours": 128,
+        "base_hours": 160,
+        "high_hours": 216,
+        "sell_rate": "60.00",
+        "amount": "9600.00"
+      },
+      {
+        "id": "WP-C03-Android-iOS-interface",
+        "role": "DEV",
+        "hours": 320,
+        "predecessors": [
+          "WP-C03-design"
+        ],
+        "sources": [
+          "Q-SW-CONFIRM",
+          "Q-SW-WEB-KINDS",
+          "Q-SW-INTEGRATIONS"
+        ],
+        "coefficient_status": "expert assumption;quantity/acceptance scope in case",
+        "low_hours": 256,
+        "base_hours": 320,
+        "high_hours": 432,
+        "sell_rate": "60.00",
+        "amount": "19200.00"
+      },
+      {
+        "id": "WP-C03-offline-sync-conflicts",
+        "role": "DEV",
+        "hours": 200,
+        "predecessors": [
+          "WP-C03-design"
+        ],
+        "sources": [
+          "Q-SW-CONFIRM",
+          "Q-SW-WEB-KINDS",
+          "Q-SW-INTEGRATIONS"
+        ],
+        "coefficient_status": "expert assumption;quantity/acceptance scope in case",
+        "low_hours": 160,
+        "base_hours": 200,
+        "high_hours": 270,
+        "sell_rate": "60.00",
+        "amount": "12000.00"
+      },
+      {
+        "id": "WP-C03-device-integration",
+        "role": "DEV",
+        "hours": 80,
+        "predecessors": [
+          "WP-C03-design"
+        ],
+        "sources": [
+          "Q-SW-CONFIRM",
+          "Q-SW-WEB-KINDS",
+          "Q-SW-INTEGRATIONS"
+        ],
+        "coefficient_status": "expert assumption;quantity/acceptance scope in case",
+        "low_hours": 64,
+        "base_hours": 80,
+        "high_hours": 108,
+        "sell_rate": "60.00",
+        "amount": "4800.00"
+      },
+      {
+        "id": "WP-C03-quality",
+        "role": "QA",
+        "hours": 320,
+        "predecessors": [
+          "WP-C03-shared-backend-identity",
+          "WP-C03-web-assignment-portal",
+          "WP-C03-Android-iOS-interface",
+          "WP-C03-offline-sync-conflicts",
+          "WP-C03-device-integration"
+        ],
+        "sources": [
+          "Q-SW-ACCESSIBILITY",
+          "Q-SW-AVAILABILITY",
+          "Q-SW-RECOVERY"
+        ],
+        "low_hours": 256,
+        "base_hours": 320,
+        "high_hours": 432,
+        "sell_rate": "45.00",
+        "amount": "14400.00"
+      },
+      {
+        "id": "WP-C03-release",
+        "role": "OPS",
+        "hours": 80,
+        "predecessors": [
+          "WP-C03-quality"
+        ],
+        "sources": [
+          "Q-SW-DEPENDENCIES",
+          "Q-SW-MAINTENANCE"
+        ],
+        "gate": "quality exit",
+        "low_hours": 64,
+        "base_hours": 80,
+        "high_hours": 108,
+        "sell_rate": "45.00",
+        "amount": "3600.00"
+      }
+    ],
+    "output_provenance": {
+      "scope": [
+        "Q-SW-CONFIRM",
+        "Q-SW-SURFACES",
+        "Q-SW-WEB-KINDS"
+      ],
+      "architecture": [
+        "Q-SW-OBJECTIVE",
+        "Q-SW-SURFACES",
+        "Q-SW-WEB-KINDS",
+        "Q-SW-INTEGRATIONS",
+        "Q-SW-REQUESTS",
+        "Q-SW-RECOVERY",
+        "Q-SW-AVAILABILITY-TEAM"
+      ],
+      "effort": [
+        "work_packages",
+        "ASM-COEFFICIENTS"
+      ],
+      "price": [
+        "work_packages",
+        "PB-EXAMPLE-v1",
+        "PARAM-CONTINGENCY",
+        "PARAM-DISCOUNT"
+      ],
+      "schedule": [
+        "work_packages.predecessors",
+        "schedule.allocations",
+        "Q-SW-DECISIONS",
+        "Q-SW-DEPENDENCIES",
+        "ASM-CALENDAR"
+      ],
+      "team": [
+        "work_packages.role",
+        "schedule.allocations",
+        "ASM-SENIOR-CAPABILITY"
+      ]
+    },
+    "feature_matrix": [
+      {
+        "item_id": "ITEM-SHARED-API",
+        "quantity": 1,
+        "unit": "shared identity/backend",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": true,
+          "android": true,
+          "ios": true,
+          "admin": true
+        }
+      },
+      {
+        "item_id": "ITEM-WEB-PORTAL",
+        "quantity": 1,
+        "unit": "surface",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": true,
+          "android": false,
+          "ios": false,
+          "admin": true
+        }
+      },
+      {
+        "item_id": "ITEM-ANDROID-APP",
+        "quantity": 1,
+        "unit": "surface",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": false,
+          "android": true,
+          "ios": true,
+          "admin": false
+        }
+      },
+      {
+        "item_id": "ITEM-IOS-APP",
+        "quantity": 1,
+        "unit": "surface",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": false,
+          "android": true,
+          "ios": true,
+          "admin": false
+        }
+      },
+      {
+        "item_id": "ITEM-OFFLINE-SYNC",
+        "quantity": 1,
+        "unit": "8h offline workflow",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": false,
+          "android": true,
+          "ios": true,
+          "admin": false
+        }
+      },
+      {
+        "item_id": "ITEM-DEVICE-CAPTURE",
+        "quantity": 1,
+        "unit": "camera/GPS feature set",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": false,
+          "android": true,
+          "ios": true,
+          "admin": false
+        }
+      },
+      {
+        "item_id": "ITEM-PUSH",
+        "quantity": 1,
+        "unit": "notification feature",
+        "phase": "base",
+        "mandatory": true,
+        "surfaces": {
+          "web": false,
+          "android": true,
+          "ios": true,
+          "admin": false
+        }
+      }
+    ]
+  }
+}

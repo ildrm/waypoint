@@ -1,0 +1,13 @@
+stateDiagram-v2
+ [*] --> Draft
+ Draft --> Validated: checks pass
+ Draft --> Invalid: checks fail
+ Invalid --> Draft: correction
+ Validated --> InReview
+ InReview --> Approved: exact hash approved
+ InReview --> Draft: requested changes
+ Approved --> Published: authorized atomic activation
+ Approved --> Scheduled
+ Scheduled --> Published: effective time + recheck
+ Published --> Retired: new starts stopped
+ Retired --> [*]

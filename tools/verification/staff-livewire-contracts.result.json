@@ -1,0 +1,205 @@
+{
+  "admin_checks": [
+    {
+      "section": "flows",
+      "passed": true,
+      "actual": [
+        "clone",
+        "preview",
+        "publish",
+        "retire",
+        "review",
+        "rollback",
+        "save",
+        "simulate"
+      ]
+    },
+    {
+      "section": "translations",
+      "passed": true,
+      "actual": [
+        "approve",
+        "save"
+      ]
+    },
+    {
+      "section": "translation source context",
+      "passed": true
+    },
+    {
+      "section": "prices",
+      "passed": true,
+      "actual": [
+        "approve",
+        "clone",
+        "retire",
+        "save"
+      ]
+    },
+    {
+      "section": "catalog",
+      "passed": true,
+      "actual": [
+        "approve",
+        "retire",
+        "save"
+      ]
+    },
+    {
+      "section": "general",
+      "passed": true,
+      "actual": [
+        "save"
+      ]
+    },
+    {
+      "section": "overrides",
+      "passed": true,
+      "actual": [
+        "reset",
+        "save"
+      ]
+    },
+    {
+      "section": "sessions",
+      "passed": true,
+      "actual": [
+        "restore",
+        "suspend"
+      ]
+    },
+    {
+      "section": "support",
+      "passed": true,
+      "actual": [
+        "fulfil_delete",
+        "save"
+      ]
+    },
+    {
+      "section": "staff",
+      "passed": true,
+      "actual": [
+        "save"
+      ]
+    },
+    {
+      "section": "audit",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "section": "operations",
+      "passed": true,
+      "actual": [
+        "retry"
+      ]
+    },
+    {
+      "section": "capability-filtered navigation",
+      "passed": true
+    },
+    {
+      "section": "reviewer actions",
+      "passed": true,
+      "actual": [
+        "preview",
+        "review",
+        "simulate"
+      ]
+    },
+    {
+      "section": "reviewer read-only content",
+      "passed": true
+    },
+    {
+      "section": "reviewer allowed navigation",
+      "passed": true
+    },
+    {
+      "section": "publisher actions",
+      "passed": true,
+      "actual": [
+        "preview",
+        "publish",
+        "retire",
+        "rollback",
+        "simulate"
+      ]
+    },
+    {
+      "section": "publisher read-only content",
+      "passed": true
+    },
+    {
+      "section": "publisher allowed navigation",
+      "passed": true
+    },
+    {
+      "section": "language_reviewer actions",
+      "passed": true,
+      "actual": [
+        "approve"
+      ]
+    },
+    {
+      "section": "language_reviewer read-only content",
+      "passed": true
+    },
+    {
+      "section": "language_reviewer allowed navigation",
+      "passed": true
+    },
+    {
+      "section": "commercial_approver actions",
+      "passed": true,
+      "actual": [
+        "approve",
+        "retire"
+      ]
+    },
+    {
+      "section": "commercial_approver read-only content",
+      "passed": true
+    },
+    {
+      "section": "commercial_approver allowed navigation",
+      "passed": true
+    },
+    {
+      "section": "privacy_operator actions",
+      "passed": true,
+      "actual": [
+        "fulfil_delete"
+      ]
+    },
+    {
+      "section": "privacy_operator read-only content",
+      "passed": true
+    },
+    {
+      "section": "privacy_operator allowed navigation",
+      "passed": true
+    },
+    {
+      "section": "general definition metadata",
+      "passed": true
+    },
+    {
+      "section": "parameter name readonly",
+      "passed": true
+    },
+    {
+      "section": "scoped hidden text and stable state column",
+      "passed": true
+    },
+    {
+      "section": "override selected context and provenance",
+      "passed": true
+    },
+    {
+      "section": "effective explicit null is visible",
+      "passed": true
+    }
+  ]
+}

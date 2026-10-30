@@ -1,0 +1,10 @@
+stateDiagram-v2
+ [*] --> CalculatingOperation
+ CalculatingOperation --> Partial:missing rate with useful sections
+ CalculatingOperation --> ManualReview:material unresolved conflict
+ CalculatingOperation --> Complete:all required lines and sources
+ Complete --> Expired:validity elapsed
+ Complete --> Superseded:explicit revision
+ Expired --> Superseded:explicit refresh
+ Partial --> Superseded:clarified new revision
+ ManualReview --> Superseded:clarified new revision

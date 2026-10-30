@@ -1,0 +1,25 @@
+flowchart TB
+ subgraph Untrusted["Untrusted browser/content boundary"]
+  User["Public owner"]
+  Staff["Staff browser"]
+  Import["Imported configuration/user text"]
+ end
+ subgraph AppBoundary["Application authorization boundary"]
+  API["PHP API/admin: auth,CSRF,schemas"]
+  Worker["Bounded worker + safe renderer"]
+ end
+ subgraph PrivateData["Private data boundary"]
+  DB[("DB + immutable snapshots")]
+  Store["Private object storage"]
+  Keys["Secret/key management"]
+ end
+ User -->|"TLS"| API
+ Staff -->|"TLS + MFA"| API
+ Import -->|"Size/type/allowlist validation"| API
+ API -->|"Scoped transactions"| DB
+ API --> Worker
+ Worker -->|"Live auth and pinned versions"| DB
+ Worker -->|"Approved output only"| Store
+ API -->|"Authorized short download"| Store
+ Keys -->|"Restricted runtime access"| API
+ Keys --> Worker

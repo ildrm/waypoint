@@ -1,0 +1,471 @@
+{
+  "date": "2026-10-29",
+  "kind": "documentation checks only",
+  "json": [
+    "03-workflows/match/question-bank.yaml",
+    "03-workflows/software/question-bank.yaml",
+    "03-workflows/startup/question-bank.yaml",
+    "04-ux-ui/design-tokens.json",
+    "05-architecture/parameter-registry.json",
+    "07-api/openapi.yaml",
+    "14-delivery/platform-allocation-example.json",
+    "16-examples/C01-informational-website.json",
+    "16-examples/C02-commerce-burst.json",
+    "16-examples/C03-web-and-native-apps.json",
+    "16-examples/C04-organization-portal.json",
+    "16-examples/C05-realtime-demand.json",
+    "16-examples/C06-uncertain-conflicting.json",
+    "16-examples/service-match.json",
+    "16-examples/startup-once-only.json"
+  ],
+  "questionBanks": {
+    "software": {
+      "questions": 75,
+      "uniqueOptions": 74,
+      "acyclic": true,
+      "allConsumersDefined": true,
+      "substantiveDefaults": [],
+      "reachability": "six software paths and startup/match sampled;not exhaustive proof"
+    },
+    "startup": {
+      "questions": 40,
+      "uniqueOptions": 188,
+      "acyclic": true,
+      "allConsumersDefined": true,
+      "substantiveDefaults": [],
+      "reachability": "six software paths and startup/match sampled;not exhaustive proof"
+    },
+    "match": {
+      "questions": 8,
+      "uniqueOptions": 13,
+      "acyclic": true,
+      "allConsumersDefined": true,
+      "substantiveDefaults": [],
+      "reachability": "six software paths and startup/match sampled;not exhaustive proof"
+    }
+  },
+  "links": {
+    "checked": 465,
+    "broken": []
+  },
+  "money": [
+    {
+      "case": "C01",
+      "exactBigIntCents": true,
+      "passed": true,
+      "net_cents": "1839200",
+      "schemaErrors": 0
+    },
+    {
+      "case": "C02",
+      "exactBigIntCents": true,
+      "passed": true,
+      "net_cents": "4869700",
+      "schemaErrors": 0
+    },
+    {
+      "case": "C03",
+      "exactBigIntCents": true,
+      "passed": true,
+      "net_cents": "9488600",
+      "schemaErrors": 0
+    },
+    {
+      "case": "C04",
+      "exactBigIntCents": true,
+      "passed": true,
+      "net_cents": "6228200",
+      "schemaErrors": 0
+    },
+    {
+      "case": "C05",
+      "exactBigIntCents": true,
+      "passed": true,
+      "net_cents": "14671800",
+      "schemaErrors": 0
+    },
+    {
+      "case": "C06",
+      "exactBigIntCents": true,
+      "passed": true,
+      "net_cents": "430540",
+      "schemaErrors": 0
+    }
+  ],
+  "capacity": [
+    {
+      "case": "C01",
+      "passed": true,
+      "hours": 320,
+      "people": 5,
+      "peak": 2,
+      "overallocations": [],
+      "roleMismatches": []
+    },
+    {
+      "case": "C02",
+      "passed": true,
+      "hours": 840,
+      "people": 6,
+      "peak": 2,
+      "overallocations": [],
+      "roleMismatches": []
+    },
+    {
+      "case": "C03",
+      "passed": true,
+      "hours": 1640,
+      "people": 8,
+      "peak": 3,
+      "overallocations": [],
+      "roleMismatches": []
+    },
+    {
+      "case": "C04",
+      "passed": true,
+      "hours": 1080,
+      "people": 6,
+      "peak": 2,
+      "overallocations": [],
+      "roleMismatches": []
+    },
+    {
+      "case": "C05",
+      "passed": true,
+      "hours": 2520,
+      "people": 11,
+      "peak": 4,
+      "overallocations": [],
+      "roleMismatches": []
+    },
+    {
+      "case": "C06",
+      "passed": true,
+      "hours": 72,
+      "people": 4,
+      "peak": 2,
+      "overallocations": [],
+      "roleMismatches": []
+    },
+    {
+      "case": "platform",
+      "passed": true,
+      "hours": 4572,
+      "people": 36,
+      "peak": 15
+    }
+  ],
+  "api": {
+    "version": "3.1.2",
+    "paths": 12,
+    "operations": 12,
+    "localRefs": 174,
+    "unresolvedRefs": [],
+    "duplicateOperationIds": [],
+    "paymentEndpoints": []
+  },
+  "svg": {
+    "passed": true,
+    "count": 7,
+    "method": "PowerShell XmlReader with DTD prohibited;actual output VALID for all7"
+  },
+  "limitations": [
+    "No application/runtime tests or human/linguistic approval",
+    "Official OpenAPI schema does not prove every normative or semantic requirement",
+    "Mermaid/PlantUML full parsers and renders unavailable",
+    "Static preview renderer supports the exact authored SVG subset,not browser/general SVG conformance"
+  ],
+  "failures": [],
+  "csv": [
+    {
+      "file": "02-requirements\\traceability.csv",
+      "rows": 127,
+      "malformed": 0
+    },
+    {
+      "file": "03-workflows\\match\\decision-tables.csv",
+      "rows": 11,
+      "malformed": 0
+    },
+    {
+      "file": "03-workflows\\rule-input-map.csv",
+      "rows": 123,
+      "malformed": 0
+    },
+    {
+      "file": "03-workflows\\software\\coverage-matrix.csv",
+      "rows": 10,
+      "malformed": 0
+    },
+    {
+      "file": "03-workflows\\software\\decision-tables.csv",
+      "rows": 17,
+      "malformed": 0
+    },
+    {
+      "file": "03-workflows\\startup\\decision-tables.csv",
+      "rows": 43,
+      "malformed": 0
+    }
+  ],
+  "docsOnly": {
+    "runtimeFiles": 0
+  },
+  "predicates": {
+    "invalidOptionOrQuestionReferences": []
+  },
+  "parameters": [
+    {
+      "id": "PARAM-ESTIMATE-VALIDITY",
+      "consumer": "Estimate.validUntil",
+      "usage_documents": [
+        "05-architecture/settings-inheritance.md",
+        "08-estimation/pricing-catalog.md"
+      ]
+    },
+    {
+      "id": "PARAM-WEEK-HOURS",
+      "consumer": "Schedule capacity",
+      "usage_documents": [
+        "05-architecture/settings-inheritance.md"
+      ]
+    },
+    {
+      "id": "PARAM-REPORT-UNKNOWN",
+      "consumer": "Unknown completeness gate",
+      "usage_documents": [
+        "05-architecture/settings-inheritance.md"
+      ]
+    },
+    {
+      "id": "PARAM-STARTUP-PRIORITIES",
+      "consumer": "RULE-ST-BLOCKER and action prioritization",
+      "usage_documents": [
+        "05-architecture/settings-inheritance.md"
+      ]
+    },
+    {
+      "id": "PARAM-REUSE-MAX-AGE",
+      "consumer": "Reuse confirmation",
+      "usage_documents": [
+        "05-architecture/settings-inheritance.md"
+      ]
+    },
+    {
+      "id": "PARAM-CONTINGENCY",
+      "consumer": "Price contingency eligible base",
+      "usage_documents": [
+        "08-estimation/pricing-catalog.md"
+      ]
+    },
+    {
+      "id": "PARAM-DISCOUNT",
+      "consumer": "Price discount eligible base",
+      "usage_documents": [
+        "08-estimation/pricing-catalog.md"
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "c4-context.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "c4-containers.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "rule-estimate-components.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "domain-erd.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "use-cases.puml",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "activity-answer.puml",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "activity-estimate.puml",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "sequence-start-resume.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "sequence-answer-edit.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "sequence-result-generation.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "sequence-repricing.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "sequence-publication.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "state-release.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "state-run.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "state-translation.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "state-estimate.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "domain-classes.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "deployment-trust-boundaries.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "business-process-conceptual.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    },
+    {
+      "file": "platform-dependency-schedule.mmd",
+      "recognizedStructure": true,
+      "rendered": false
+    }
+  ],
+  "sources": [
+    {
+      "file": "documentation-super-mega-prompt.md",
+      "sha256": "f7d7afe96747c10848229aaf84fcafecc10e85b03b00ca6c7271714860bc5d13",
+      "sameAsSupplied": true
+    },
+    {
+      "file": "startup-journey-assessment.md",
+      "sha256": "d292c8cd7a89c67a005bcda56bf56b716a01faf486eff3d171064eddbe4b4fb1",
+      "sameAsSupplied": true
+    }
+  ],
+  "finalClosure": {
+    "artifact_count": 223,
+    "required_literal_paths_checked": 101,
+    "missing_required_paths": [],
+    "local_links_checked": 533,
+    "broken_links": [],
+    "structured_artifacts_parsed": 25,
+    "csv_artifacts_parsed": 8,
+    "trace_rows": 172,
+    "raci_artifacts": 223,
+    "invalid_ownership_rows": 0,
+    "final_errors": [],
+    "runtime_source_files": [],
+    "source_preservation": [
+      {
+        "file": "documentation-super-mega-prompt.md",
+        "identical": true
+      },
+      {
+        "file": "startup-journey-assessment.md",
+        "identical": true
+      }
+    ],
+    "official_reference_hashes": [
+      {
+        "file": "schema-base-2026-08-03.json",
+        "unchanged": true
+      },
+      {
+        "file": "schema-2026-08-03.json",
+        "unchanged": true
+      },
+      {
+        "file": "dialect-2024-11-10.json",
+        "unchanged": true
+      },
+      {
+        "file": "meta-2024-11-10.json",
+        "unchanged": true
+      }
+    ],
+    "question_schemas_passed": true,
+    "openapi_official_schema_passed": true,
+    "previews_inspected": 7,
+    "out_of_canvas_text": 0
+  },
+  "catalog": {
+    "items": 36,
+    "undefinedReferences": []
+  },
+  "initial_limitations": [
+    "No application/runtime tests",
+    "No full OpenAPI/JSON-Schema/Mermaid/PlantUML validator installed",
+    "SVG XML parsed;browser rendering failed;no visual QA",
+    "No linguistic/human approval"
+  ],
+  "follow_up": {
+    "date": "2026-10-29",
+    "question_schema_verification": {
+      "file": "question-schema-verification.json",
+      "schemas": 123,
+      "fixtures": 8,
+      "known_answers": 370,
+      "passed": true
+    },
+    "openapi_schema_verification": {
+      "file": "openapi-schema-verification.json",
+      "passed": true,
+      "schema": "https://spec.openapis.org/oas/3.1/schema-base/2026-08-03",
+      "validator": "jsonschema 4.25.1"
+    },
+    "static_preview_verification": {
+      "file": "static-preview-checks.json",
+      "previews": 7,
+      "inspected": true,
+      "unsupported_elements": [],
+      "out_of_canvas_text": 0,
+      "resolved_findings": [
+        "G17",
+        "G18"
+      ]
+    },
+    "canonical_answer_corrections": [
+      "G19",
+      "G20"
+    ],
+    "packages_installed": false
+  }
+}
